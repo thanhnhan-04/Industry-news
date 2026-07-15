@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bảng tin theo dõi ngành</title>
+<style>
+  :root{
+    color-scheme: light;
+    --bg:#f6f7f9; --card:#ffffff; --ink:#1a1f2b; --muted:#6b7280; --line:#e5e7eb;
+    --brand:#1b5e9c; --brand-soft:#e8f1fa;
+    --new:#dc2626;
+    --pos2:#15803d; --pos1:#4d9a5f; --neu:#9ca3af; --neg1:#d97706; --neg2:#dc2626;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:1.5}
+  .wrap{max-width:1020px;margin:0 auto;padding:20px 16px 60px}
+  header{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 14px;margin-bottom:14px}
+  h1{font-size:22px;margin:0;font-weight:700}
+  .updated{color:var(--muted);font-size:13px}
+  .mainnav{display:flex;gap:6px;margin-bottom:18px;border-bottom:2px solid var(--line);flex-wrap:wrap}
+  .mainnav button{background:none;border:none;padding:9px 14px;font-size:15px;font-weight:600;color:var(--muted);cursor:pointer;border-bottom:3px solid transparent;margin-bottom:-2px}
+  .mainnav button.active{color:var(--brand);border-bottom-color:var(--brand)}
+  .sub{color:var(--muted);font-size:13.5px;margin:0 0 16px}
+  .panel{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin-bottom:16px}
+  .panel h2{font-size:13px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin:0 0 10px;font-weight:600}
+  .chips{display:flex;flex-wrap:wrap;gap:7px}
+  .chip{border:1px solid var(--line);background:#fff;border-radius:999px;padding:5px 12px;font-size:13px;cursor:pointer;user-select:none;transition:.12s;color:var(--ink)}
+  .chip:hover{border-color:var(--brand)}
+  .chip.active{background:var(--brand);border-color:var(--brand);color:#fff}
+  .toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:14px}
+  .toolbar input[type=search]{flex:1;min-width:180px;padding:9px 12px;border:1px solid var(--line);border-radius:9px;font-size:14px;background:#fff}
+  .count{color:var(--muted);font-size:13px;white-space:nowrap}
+  .item{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin-bottom:11px;display:flex;flex-direction:column;gap:7px}
+  .item.is-new{border-color:#f3c2c2;box-shadow:0 0 0 1px #f6d4d4 inset}
+  .row1{display:flex;flex-wrap:wrap;align-items:center;gap:9px}
+  .badge{font-size:11.5px;font-weight:600;padding:2px 9px;border-radius:999px;white-space:nowrap}
+  .b-sector{color:#374151;background:#eef0f3}
+  .new-tag{font-size:10.5px;font-weight:700;color:#fff;background:var(--new);padding:2px 7px;border-radius:5px;letter-spacing:.03em}
+  .date{color:var(--muted);font-size:12.5px;margin-left:auto}
+  .ttl{font-weight:600;font-size:15.5px;margin:0}
+  .desc{color:#374151;font-size:14px;margin:0}
+  .src{font-size:13px}.src a{color:var(--brand);text-decoration:none}.src a:hover{text-decoration:underline}
+  .srcd{color:var(--muted)}
+  .empty{text-align:center;color:var(--muted);padding:40px 0}
+  .scaffold{text-align:center;color:var(--muted);padding:34px 16px;background:var(--card);border:1px dashed var(--line);border-radius:12px}
+  .imp{font-size:11.5px;font-weight:700;color:#fff;padding:2px 8px;border-radius:6px}
+  .imp.p2{background:var(--pos2)}.imp.p1{background:var(--pos1)}.imp.z{background:var(--neu)}
+  .imp.n1{background:var(--neg1)}.imp.n2{background:var(--neg2)}
+  .aff{display:flex;flex-wrap:wrap;gap:5px;align-items:center}
+  .aff small{color:var(--muted);font-size:12px}
+  .aff .t{font-size:11.5px;font-weight:600;background:#eef0f3;border-radius:5px;padding:1px 7px}
+  .sent{display:flex;align-items:center;gap:14px;border-radius:12px;padding:14px 16px;margin-bottom:16px;color:#fff}
+  .sent.p2{background:#15803d}.sent.p1{background:#3f8f57}.sent.z{background:#6b7280}
+  .sent.n1{background:#c2700a}.sent.n2{background:#c02626}
+  .sent .score{font-size:30px;font-weight:800;line-height:1;min-width:54px;text-align:center}
+  .sent .lbl{font-size:13px;opacity:.9}.sent .why{font-size:14px;font-weight:500}
+  details{background:var(--card);border:1px solid var(--line);border-radius:12px;margin-bottom:12px}
+  summary{cursor:pointer;padding:13px 16px;font-weight:600;font-size:14.5px}
+  .refbody{padding:0 16px 16px}
+  table{width:100%;border-collapse:collapse;font-size:13px}
+  th,td{text-align:left;padding:7px 9px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{color:var(--muted);font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:.03em}
+  td.mc{font-weight:700;white-space:nowrap}
+  .pos{color:var(--pos2)}.neg{color:var(--neg2)}
+  footer{margin-top:24px;color:var(--muted);font-size:12.5px;border-top:1px solid var(--line);padding-top:16px}
+  footer code{background:#eef0f3;padding:1px 5px;border-radius:4px}
+  .hidden{display:none}
+
+  .autoBar{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;margin:-4px 0 14px;padding:9px 12px;background:#fff;border:1px solid var(--line);border-radius:10px;color:var(--muted);font-size:13px}
+  .autoBar strong{color:var(--ink);font-weight:650}
+  .autoBar button{border:1px solid var(--line);background:#f9fafb;border-radius:8px;padding:6px 10px;font-size:13px;cursor:pointer;color:var(--ink)}
+  .autoBar button:hover{border-color:var(--brand);color:var(--brand)}
+  .autoBar button:disabled{opacity:.55;cursor:not-allowed}
+  .autoDot{width:8px;height:8px;border-radius:50%;background:#9ca3af;display:inline-block}
+  .autoDot.ok{background:#15803d}.autoDot.busy{background:#d97706}.autoDot.err{background:#dc2626}
+
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>📊 Bảng tin theo dõi ngành</h1>
+    <span class="updated" id="updated"></span>
+  </header>
+
+
+  <div class="autoBar" id="autoBar">
+    <span class="autoDot" id="autoDot"></span>
+    <span><strong>Auto web</strong>: <span id="autoStatus">đang kiểm tra...</span></span>
+    <button id="runQuantBtn" type="button" disabled title="Đang kiểm tra server cập nhật">Cập nhật số liệu</button>
+    <button id="runNewsBtn" type="button" disabled title="Đang kiểm tra server cập nhật">Quét tin</button>
+  </div>
+
+  <div class="mainnav" id="sectorNav"></div>
+  <div id="sectorViews"></div>
+
+  <details id="srcRef"><summary>📚 Nguồn dữ liệu — bấm để xem &amp; mở từng nguồn</summary><div class="refbody" id="srcRefBody"></div></details>
+
+  <footer>
+    <p><b>Cách hoạt động:</b> mỗi ngành có một tác vụ tự động chạy mỗi sáng, quét diễn biến theo chuỗi giá trị, <b>chỉ giữ tin có nguồn cập nhật trong 30 ngày qua</b>, chấm điểm tác động và ghi vào file dữ liệu riêng của ngành (<code>data-&lt;ngành&gt;.js</code>). Trang này chỉ là phần hiển thị — nạp dữ liệu từ các file đó.</p>
+    <p><b>Đổi watchlist / thêm ngành:</b> nhắn cho trợ lý (vd: <code>thêm DGC vào ngành hàng hóa</code> hoặc <code>thêm tab ngành ngân hàng</code>).</p>
+    <p><b>Thang điểm tác động:</b> +2 rất tích cực · +1 tích cực · 0 trung tính · −1 tiêu cực · −2 rất tiêu cực. "(truy xuất)" = thời điểm trợ lý lấy số liệu từ trang dữ liệu cập nhật liên tục; ngày khác = ngày bài/nguồn đăng. Luôn bấm link nguồn để kiểm chứng.</p>
+  </footer>
+</div>
+
+<!-- Dữ liệu từng ngành — mỗi task tự cập nhật file của mình. Thêm ngành = thêm 1 dòng script ở đây. -->
+<script src="data-oil.js"></script>
+<script src="data-bds.js"></script>
+<script src="data-thuysan.js"></script>
+<script src="data-detmay.js"></script>
+<script src="data-hanghoa.js"></script>
+
+<script>
+// ====== PHẦN HIỂN THỊ (không chứa dữ liệu — dữ liệu nằm ở các file data-*.js) ======
+const WINDOW_DAYS = 30;
+// Nguồn pháp lý/chính sách dùng chung cho mọi ngành
+const COMMON_SOURCES = {group:"Pháp lý & chính sách (chung)", items:[
+  ["Cổng TTĐT Chính phủ","https://baochinhphu.vn/","Nghị quyết, nghị định, chỉ đạo điều hành"],
+  ["Bộ Công Thương","https://moit.gov.vn/","Chính sách công thương, phòng vệ thương mại, điều hành giá"],
+  ["LuatVietnam – Dự thảo","https://luatvietnam.vn/du-thao.html","Dự thảo luật / nghị định / thông tư"],
+  ["HOSE","https://www.hsx.vn/","Công bố thông tin & dữ liệu sàn HOSE"],
+  ["HNX / UPCoM","https://www.hnx.vn/","Công bố thông tin & dữ liệu sàn HNX, UPCoM"]
+]};
+
+function sectors(){ return Object.values(window.SECTORS||{}).sort((a,b)=>(a.order||99)-(b.order||99)); }
+function fmtDate(d){const[y,m,day]=d.split("-");return `${day}/${m}/${y}`;}
+function within(dateStr, refIso){const cut=new Date(refIso);cut.setHours(0,0,0,0);cut.setDate(cut.getDate()-WINDOW_DAYS);return new Date(dateStr+"T00:00:00")>=cut;}
+function impClass(n){return n>=2?"p2":n==1?"p1":n==0?"z":n==-1?"n1":"n2";}
+function impLabel(n){return (n>0?"+":"")+n;}
+
+const ui = {}; // trạng thái UI mỗi ngành: {factor, }
+let activeSector = null;
+
+function setSectorTab(id){
+  activeSector = id;
+  document.querySelectorAll("#sectorNav [data-stab]").forEach(b=>b.classList.toggle("active",b.dataset.stab===id));
+  document.querySelectorAll(".sectorView").forEach(v=>v.classList.toggle("hidden",v.id!=="view-"+id));
+}
+
+function skeleton(s){
+  return `<section class="sectorView hidden" id="view-${s.id}">
+    <div class="sub">${s.subtitle}</div>
+    <div id="sent-${s.id}"></div>
+    <div class="panel"><h2>Lọc theo nhóm yếu tố</h2><div class="chips" id="ff-${s.id}"></div></div>
+    <div class="toolbar"><input type="search" id="search-${s.id}" placeholder="Tìm tin ngành ${s.name.toLowerCase()}…"><span class="count" id="count-${s.id}"></span></div>
+    <div id="feed-${s.id}"></div>
+    <details><summary>🗺️ Bản đồ chuỗi giá trị &amp; mã cổ phiếu liên quan</summary><div class="refbody"><div style="overflow-x:auto"><table id="vc-${s.id}"></table></div></div></details>
+    <details><summary>📋 Watchlist từng mã: theo dõi gì · tín hiệu tích cực · tiêu cực</summary><div class="refbody"><div style="overflow-x:auto"><table id="tk-${s.id}"></table></div></div></details>
+  </section>`;
+}
+
+function renderFeed(s){
+  const st = ui[s.id];
+  const q = (document.getElementById("search-"+s.id).value||"").trim().toLowerCase();
+  const feed = document.getElementById("feed-"+s.id);
+  const merged = [...(s.items||[]), ...(s.itemsNews||[]), ...(s.itemsPY||[])];
+  if(!merged.length){
+    feed.innerHTML='<div class="scaffold">⏳ Khung ngành đã sẵn sàng — tác vụ tự động sẽ quét và điền tin vào sáng mai.<br>Trong lúc chờ, xem <b>Bản đồ chuỗi giá trị</b>, <b>Watchlist từng mã</b> và <b>Nguồn dữ liệu</b> phía dưới.</div>';
+    document.getElementById("count-"+s.id).textContent="0 tin";
+    return;
+  }
+  let list = merged.filter(i=>within(i.date, s.lastUpdated)).sort((a,b)=>(b.isNew-a.isNew)||b.date.localeCompare(a.date));
+  if(st.factor!=="all") list=list.filter(i=>i.factor===st.factor);
+  if(q) list=list.filter(i=>(i.title+" "+i.desc+" "+(i.aff||[]).join(" ")).toLowerCase().includes(q));
+  document.getElementById("count-"+s.id).textContent=list.length+" tin";
+  if(!list.length){feed.innerHTML='<div class="empty">Không có tin phù hợp bộ lọc.</div>';return;}
+  feed.innerHTML=list.map(i=>`<div class="item ${i.isNew?'is-new':''}">
+    <div class="row1"><span class="badge b-sector">${s.factors[i.factor]||i.factor}</span>
+    <span class="imp ${impClass(i.impact)}">${impLabel(i.impact)}</span>
+    ${i.src==='py'?'<span class="badge" style="color:#1b5e9c;background:#e8f1fa">📊 số liệu</span>':''}
+    ${i.src==='news'?'<span class="badge" style="color:#166534;background:#dcfce7">📰 tin tự động</span>':''}
+    ${i.sourceScope==='intl'?'<span class="badge" style="color:#854d0e;background:#fef3c7">🌐 quốc tế</span>':''}
+    ${i.isNew?'<span class="new-tag">MỚI</span>':''}<span class="date">🕒 ${i.srcDate}</span></div>
+    <p class="ttl">${i.title}</p><p class="desc">${i.desc}</p>
+    <div class="aff"><small>Mã ảnh hưởng:</small> ${(i.aff||[]).map(t=>`<span class="t">${t}</span>`).join("")}</div>
+    <div class="src">🔗 Nguồn: <a href="${i.url}" target="_blank" rel="noopener">${i.srcName}</a> <span class="srcd">· cập nhật ${i.srcDate}</span></div></div>`).join("");
+}
+
+function initSector(s){
+  ui[s.id]={factor:"all"};
+  // sentiment
+  const sc=impClass(s.sentiment.score);
+  document.getElementById("sent-"+s.id).innerHTML=`<div class="sent ${sc}"><div class="score">${impLabel(s.sentiment.score)}</div><div><div class="lbl">Sentiment ngành ${s.name.toLowerCase()} · ${fmtDate(s.sentiment.date)}</div><div class="why">${s.sentiment.reason}</div></div></div>`;
+  // factor filter
+  const ff=document.getElementById("ff-"+s.id);
+  const facs=[["all","Tất cả"]].concat(Object.entries(s.factors));
+  ff.innerHTML=facs.map(([k,l])=>`<span class="chip${k==="all"?" active":""}" data-f="${k}">${l}</span>`).join("");
+  ff.querySelectorAll(".chip").forEach(c=>c.onclick=()=>{ui[s.id].factor=c.dataset.f;ff.querySelectorAll(".chip").forEach(x=>x.classList.toggle("active",x===c));renderFeed(s);});
+  document.getElementById("search-"+s.id).addEventListener("input",()=>renderFeed(s));
+  // value chain + tickers
+  document.getElementById("vc-"+s.id).innerHTML="<tr><th>Khâu</th><th>Theo dõi</th><th>Mã</th><th>Yếu tố sentiment</th></tr>"+(s.valuechain||[]).map(r=>`<tr><td><b>${r[0]}</b></td><td>${r[1]}</td><td>${r[2]}</td><td>${r[3]}</td></tr>`).join("");
+  document.getElementById("tk-"+s.id).innerHTML="<tr><th>Mã</th><th>Theo dõi gì</th><th>Tích cực</th><th>Tiêu cực</th></tr>"+(s.tickers||[]).map(r=>`<tr><td class="mc">${r[0]}</td><td>${r[1]}</td><td class="pos">${r[2]}</td><td class="neg">${r[3]}</td></tr>`).join("");
+  renderFeed(s);
+}
+
+function init(){
+  const list=sectors();
+  if(!list.length){document.getElementById("sectorViews").innerHTML='<div class="empty">Chưa nạp được dữ liệu ngành. Kiểm tra các file data-*.js.</div>';return;}
+  // header updated = lần cập nhật mới nhất trong các ngành
+  const latest=list.map(s=>s.lastUpdated).filter(Boolean).sort().slice(-1)[0];
+  if(latest){const dt=new Date(latest);document.getElementById("updated").textContent="Cập nhật gần nhất: "+dt.toLocaleString("vi-VN",{day:"2-digit",month:"2-digit",year:"numeric",hour:"2-digit",minute:"2-digit"});}
+  // nav + views
+  document.getElementById("sectorNav").innerHTML=list.map(s=>`<button data-stab="${s.id}" onclick="setSectorTab('${s.id}')">${s.icon||""} ${s.name}</button>`).join("");
+  document.getElementById("sectorViews").innerHTML=list.map(skeleton).join("");
+  list.forEach(initSector);
+  // sources: chung + từng ngành
+  const groups=[COMMON_SOURCES].concat(list.map(s=>({group:"Ngành "+s.name.toLowerCase(), items:s.sources||[]})));
+  document.getElementById("srcRefBody").innerHTML=groups.map(g=>`<div style="margin:8px 0 14px"><div style="font-weight:700;font-size:13.5px;color:var(--brand);margin-bottom:6px">${g.group}</div>`+g.items.map(s=>`<div style="padding:5px 0;border-bottom:1px solid var(--line);font-size:13px"><a href="${s[1]}" target="_blank" rel="noopener" style="color:var(--brand);font-weight:600">${s[0]}</a> <span class="srcd">— ${s[2]}</span></div>`).join("")+`</div>`).join("");
+  setSectorTab(list[0].id);
+}
+init();
+
+// ====== AUTO WEB: chạy tốt nhất qua local server stock_monitor_server.py ======
+const AUTO_WEB = { latestMtime: 0, busy: false, canRun: false };
+function setAutoStatus(text, cls){
+  const s=document.getElementById("autoStatus"), d=document.getElementById("autoDot");
+  if(s) s.textContent=text;
+  if(d) d.className="autoDot"+(cls?" "+cls:"");
+}
+function setRunButtons(enabled, reason, hidden){
+  const btns=[document.getElementById("runQuantBtn"),document.getElementById("runNewsBtn")];
+  btns.forEach(b=>{
+    if(!b) return;
+    b.style.display=hidden?"none":"";
+    b.disabled=!enabled || AUTO_WEB.busy;
+    b.title=enabled ? "" : (reason || "Chưa thể chạy cập nhật");
+  });
+}
+async function checkAutoStatus(){
+  try{
+    const r=await fetch("/api/status",{cache:"no-store"});
+    if(!r.ok) throw new Error("HTTP "+r.status);
+    const j=await r.json();
+    const latest=Number(j.latestMtime||0);
+    if(AUTO_WEB.latestMtime && latest && latest>AUTO_WEB.latestMtime && !AUTO_WEB.busy){
+      location.reload();
+      return;
+    }
+    AUTO_WEB.latestMtime=latest||AUTO_WEB.latestMtime;
+    if(j.publicMode){
+      AUTO_WEB.canRun=false;
+      setRunButtons(false,"Public share là read-only; chỉ máy chủ local mới được cập nhật",true);
+      setAutoStatus("public read-only · dữ liệu mới nhất "+(j.latestMtimeText||"chưa rõ"),"ok");
+    }else{
+      AUTO_WEB.canRun=true;
+      setRunButtons(true,"",false);
+      setAutoStatus("0 token LLM · dữ liệu mới nhất "+(j.latestMtimeText||"chưa rõ"),"ok");
+    }
+  }catch(e){
+    AUTO_WEB.canRun=false;
+    setRunButtons(false,"Mở bằng http://127.0.0.1:8787/dashboard.html sau khi chạy start_stock_monitor_web.sh",false);
+    setAutoStatus("server cập nhật chưa chạy · mở http://127.0.0.1:8787/dashboard.html","err");
+  }
+}
+async function runTask(endpoint, label){
+  const btns=[document.getElementById("runQuantBtn"),document.getElementById("runNewsBtn")];
+  if(!AUTO_WEB.canRun){
+    setAutoStatus("chưa có server cập nhật local; mở http://127.0.0.1:8787/dashboard.html","err");
+    return;
+  }
+  AUTO_WEB.busy=true;
+  btns.forEach(b=>{if(b)b.disabled=true;});
+  setAutoStatus("đang "+label+" token-free, có thể mất 2-4 phút...","busy");
+  try{
+    const r=await fetch(endpoint,{method:"POST"});
+    const j=await r.json().catch(()=>({ok:false,error:"Server trả phản hồi không đọc được"}));
+    if(!j.ok) throw new Error(j.output||j.error||"update failed");
+    setAutoStatus(label+" xong, đang tải lại...","ok");
+    setTimeout(()=>location.reload(),700);
+  }catch(e){
+    setAutoStatus("lỗi: "+String(e.message||e).slice(0,160),"err");
+  }finally{
+    AUTO_WEB.busy=false;
+    setRunButtons(AUTO_WEB.canRun,"",false);
+  }
+}
+async function runQuantNow(){
+  return runTask("/api/run-quant","cập nhật số liệu");
+}
+document.getElementById("runQuantBtn")?.addEventListener("click",runQuantNow);
+document.getElementById("runNewsBtn")?.addEventListener("click",()=>runTask("/api/run-news","quét tin"));
+checkAutoStatus();
+setInterval(checkAutoStatus,60000);
+
+</script>
+</body>
+</html>

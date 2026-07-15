@@ -1,0 +1,312 @@
+{
+  "_note": "Bảng luật cho quant_update.py — chỉnh ngưỡng/câu chữ ở đây, không cần sửa code. dir=+1 nghĩa là giá tăng TỐT cho nhóm mã; dir=-1 nghĩa là giá tăng XẤU (chi phí đầu vào).",
+  "oil": {
+    "file": "data-oil.js",
+    "key": "oil",
+    "name": "Dầu khí",
+    "commodities": [
+      {
+        "yf": "BZ=F",
+        "factor": "oil",
+        "name": "Brent crude",
+        "unit": "USD/thùng",
+        "aff": [
+          "PVD",
+          "PVS",
+          "BSR",
+          "PLX",
+          "OIL",
+          "GAS"
+        ],
+        "dir": 1,
+        "thr": 3.0,
+        "up": "Giá dầu tăng hỗ trợ sentiment thượng nguồn PVD/PVS và tồn kho/crack spread ngắn hạn cho BSR, nhưng cần theo dõi tác động chi phí với phân phối.",
+        "down": "Giá dầu giảm gây áp lực sentiment thượng nguồn và tồn kho lọc dầu; PVD/PVS vẫn bám backlog dự án hơn là spot.",
+        "flat": "Giá dầu biến động hẹp, tác động ngắn hạn tới nhóm dầu khí không lớn."
+      },
+      {
+        "yf": "CL=F",
+        "factor": "oil",
+        "name": "WTI crude",
+        "unit": "USD/thùng",
+        "aff": [
+          "PVD",
+          "PVS",
+          "BSR",
+          "PLX",
+          "OIL"
+        ],
+        "dir": 1,
+        "thr": 3.0,
+        "up": "WTI tăng xác nhận đà hồi của dầu thô, hỗ trợ sentiment nhóm dầu khí.",
+        "down": "WTI giảm xác nhận áp lực giá dầu, bất lợi tâm lý nhóm dầu khí.",
+        "flat": "WTI đi ngang, chưa tạo tín hiệu mới."
+      },
+      {
+        "yf": "NG=F",
+        "factor": "gas",
+        "name": "Khí tự nhiên Henry Hub",
+        "unit": "USD/MMBtu",
+        "aff": [
+          "GAS",
+          "POW",
+          "DPM",
+          "DCM"
+        ],
+        "dir": -1,
+        "thr": 5.0,
+        "up": "Giá khí tăng có thể gây áp lực chi phí đầu vào cho điện khí/phân bón nếu truyền dẫn vào giá mua khí.",
+        "down": "Giá khí giảm là tham chiếu tích cực cho chi phí đầu vào điện khí/phân bón.",
+        "flat": "Giá khí đi ngang, ít tác động ngắn hạn."
+      }
+    ],
+    "stocks": {
+      "factor": "market",
+      "name": "Nhóm dầu khí",
+      "tickers": [
+        "PVD",
+        "PVS",
+        "GAS",
+        "PVT",
+        "BSR",
+        "PLX",
+        "OIL",
+        "POW",
+        "DPM",
+        "DCM"
+      ],
+      "breadth_thr": 4
+    }
+  },
+  "bds": {
+    "file": "data-bds.js",
+    "key": "bds",
+    "name": "Bất động sản",
+    "commodities": [],
+    "stocks": {
+      "factor": "market",
+      "name": "Nhóm bất động sản",
+      "tickers": [
+        "VHM",
+        "VRE",
+        "NLG",
+        "KDH",
+        "DXG",
+        "PDR",
+        "DIG",
+        "NVL",
+        "HDG",
+        "KBC"
+      ],
+      "breadth_thr": 4
+    }
+  },
+  "thuysan": {
+    "file": "data-thuysan.js",
+    "key": "thuysan",
+    "name": "Thủy sản",
+    "commodities": [
+      {
+        "yf": "ZM=F",
+        "factor": "feed",
+        "name": "Khô đậu tương CBOT",
+        "unit": "USD/tấn ngắn",
+        "aff": [
+          "VHC",
+          "ANV",
+          "FMC",
+          "MPC"
+        ],
+        "dir": -1,
+        "thr": 3.0,
+        "up": "Khô đậu tăng làm tăng tham chiếu chi phí thức ăn thủy sản, bất lợi biên nuôi trồng/chế biến.",
+        "down": "Khô đậu giảm hỗ trợ chi phí thức ăn thủy sản.",
+        "flat": "Khô đậu đi ngang, chi phí thức ăn ít thay đổi."
+      }
+    ],
+    "fx": {
+      "yf": "VND=X",
+      "factor": "fx",
+      "name": "Tỷ giá USD/VND",
+      "unit": "đồng",
+      "aff": [
+        "VHC",
+        "ANV",
+        "FMC",
+        "MPC",
+        "IDI",
+        "CMX"
+      ],
+      "dir": 1,
+      "thr": 0.5,
+      "up": "USD/VND tăng hỗ trợ quy đổi doanh thu xuất khẩu, nhưng cần bù trừ nợ USD và chi phí nhập khẩu.",
+      "down": "USD/VND giảm làm giảm lợi ích quy đổi doanh thu xuất khẩu.",
+      "flat": "Tỷ giá ổn định, ít tạo tín hiệu mới."
+    },
+    "stocks": {
+      "factor": "market",
+      "name": "Nhóm thủy sản",
+      "tickers": [
+        "VHC",
+        "ANV",
+        "FMC",
+        "MPC",
+        "IDI",
+        "CMX"
+      ],
+      "breadth_thr": 3
+    }
+  },
+  "detmay": {
+    "file": "data-detmay.js",
+    "key": "detmay",
+    "name": "Dệt may",
+    "commodities": [
+      {
+        "yf": "CT=F",
+        "factor": "input",
+        "name": "Bông ICE",
+        "unit": "cent/lb",
+        "aff": [
+          "TCM",
+          "STK",
+          "ADS",
+          "VGT",
+          "TNG",
+          "MSH"
+        ],
+        "dir": -1,
+        "thr": 3.0,
+        "up": "Giá bông tăng gây áp lực chi phí đầu vào sợi/dệt/may nếu đơn giá không kịp điều chỉnh.",
+        "down": "Giá bông giảm hỗ trợ giá vốn đầu vào cho chuỗi sợi-dệt-may.",
+        "flat": "Giá bông đi ngang, tác động chi phí ngắn hạn thấp."
+      }
+    ],
+    "fx": {
+      "yf": "VND=X",
+      "factor": "fx",
+      "name": "Tỷ giá USD/VND",
+      "unit": "đồng",
+      "aff": [
+        "TNG",
+        "MSH",
+        "TCM",
+        "STK",
+        "GIL",
+        "ADS",
+        "VGT",
+        "HTG"
+      ],
+      "dir": 1,
+      "thr": 0.5,
+      "up": "USD/VND tăng hỗ trợ quy đổi doanh thu xuất khẩu dệt may, nhưng cần bù trừ nguyên liệu nhập và nợ USD.",
+      "down": "USD/VND giảm làm giảm lợi ích quy đổi doanh thu xuất khẩu.",
+      "flat": "Tỷ giá ổn định, ít tạo tín hiệu mới."
+    },
+    "stocks": {
+      "factor": "market",
+      "name": "Nhóm dệt may",
+      "tickers": [
+        "TNG",
+        "MSH",
+        "TCM",
+        "STK",
+        "GIL",
+        "ADS",
+        "VGT",
+        "HTG"
+      ],
+      "breadth_thr": 3
+    }
+  },
+  "hanghoa": {
+    "file": "data-hanghoa.js",
+    "key": "hanghoa",
+    "name": "Hàng hóa",
+    "commodities": [
+      {
+        "yf": "SB=F",
+        "factor": "sugar",
+        "name": "Đường thô ICE #11",
+        "unit": "cent/lb",
+        "aff": [
+          "SBT",
+          "SLS",
+          "LSS",
+          "QNS"
+        ],
+        "dir": 1,
+        "thr": 3.0,
+        "up": "Giá đường thế giới tăng là tham chiếu tích cực cho biên mảng đường của SBT/SLS/LSS/QNS (dù giá nội địa mới quyết định trực tiếp).",
+        "down": "Giá đường thế giới giảm tạo áp lực tham chiếu lên giá bán và tồn kho của SBT/SLS/LSS/QNS.",
+        "flat": "Giá đường thế giới đi ngang, ít tác động tới nhóm mía đường trong ngắn hạn."
+      },
+      {
+        "yf": "ZC=F",
+        "factor": "corn",
+        "name": "Ngô CBOT",
+        "unit": "cent/bushel",
+        "aff": [
+          "DBC",
+          "BAF",
+          "HAG"
+        ],
+        "dir": -1,
+        "thr": 3.0,
+        "up": "Giá ngô tăng đẩy chi phí thức ăn chăn nuôi, bất lợi biên cho DBC/BAF/HAG.",
+        "down": "Giá ngô giảm hạ giá thành thức ăn chăn nuôi, hỗ trợ biên cho DBC/BAF/HAG.",
+        "flat": "Giá ngô đi ngang, chi phí thức ăn chăn nuôi ổn định."
+      },
+      {
+        "yf": "ZM=F",
+        "factor": "corn",
+        "name": "Khô đậu tương CBOT",
+        "unit": "USD/tấn ngắn",
+        "aff": [
+          "DBC",
+          "BAF"
+        ],
+        "dir": -1,
+        "thr": 3.0,
+        "up": "Khô đậu tăng đẩy chi phí đạm trong thức ăn chăn nuôi, bất lợi biên DBC/BAF.",
+        "down": "Khô đậu giảm hỗ trợ giá thành thức ăn chăn nuôi cho DBC/BAF.",
+        "flat": "Khô đậu tương đi ngang."
+      }
+    ],
+    "fx": {
+      "yf": "VND=X",
+      "factor": "fx",
+      "name": "Tỷ giá USD/VND",
+      "unit": "đồng",
+      "aff": [
+        "VNM",
+        "IDP",
+        "MCM",
+        "DBC",
+        "BAF"
+      ],
+      "dir": -1,
+      "thr": 0.5,
+      "up": "USD/VND tăng làm đắt chi phí nhập bột sữa/ngô/khô đậu (tính bằng USD), bất lợi biên nhóm nhập nguyên liệu.",
+      "down": "USD/VND hạ nhiệt giảm chi phí nhập nguyên liệu, hỗ trợ biên nhóm nhập khẩu.",
+      "flat": "Tỷ giá USD/VND ổn định, ít tác động chi phí nhập khẩu."
+    },
+    "stocks": {
+      "factor": "market",
+      "name": "Nhóm hàng hóa",
+      "tickers": [
+        "SBT",
+        "SLS",
+        "LSS",
+        "QNS",
+        "VNM",
+        "IDP",
+        "MCM",
+        "DBC",
+        "BAF",
+        "HAG"
+      ],
+      "breadth_thr": 4
+    }
+  }
+}

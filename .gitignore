@@ -1,0 +1,13 @@
+.DS_Store
+
+# Python / local runtime
+__pycache__/
+*.py[cod]
+.venv/
+
+# Local logs and generated caches
+logs/
+
+# Local backup snapshots
+*.bak-*
+
