@@ -7,144 +7,1128 @@
     "oil": {
       "file": "data-oil.js",
       "default_factor": "market",
-      "default_aff": ["PVD", "PVS", "GAS", "BSR", "PLX"],
-      "tickers": ["PVD", "PVS", "GAS", "PVT", "BSR", "PLX", "OIL", "POW", "DPM", "DCM"],
-      "queries": ["PVD PVS GAS BSR dầu khí", "giá dầu Brent WTI Việt Nam BSR PVD PVS", "Lô B Ô Môn PVS PVD GAS", "PLX OIL giá xăng dầu"],
-      "international_queries": [
-        {"query": "Brent crude WTI OPEC supply Strait of Hormuz war", "locale": {"hl": "en", "gl": "US", "ceid": "US:en"}},
-        {"query": "Middle East conflict oil tankers Strait of Hormuz Gulf shipping", "locale": {"hl": "en", "gl": "GB", "ceid": "GB:en"}},
-        {"query": "Asia LNG JKM price natural gas Vietnam power", "locale": {"hl": "en", "gl": "SG", "ceid": "SG:en"}}
+      "default_aff": [
+        "PVD",
+        "PVS",
+        "GAS",
+        "BSR",
+        "PLX"
       ],
-      "include_keywords": ["dầu", "khí", "brent", "wti", "xăng", "lô b", "ô môn", "pvd", "pvs", "gas", "bsr", "plx", "pvt", "crude", "oil", "opec", "hormuz", "lng", "natural gas", "tanker", "shipping", "middle east"],
-      "exclude_keywords": ["bóng đá", "showbiz"],
+      "tickers": [
+        "PVD",
+        "PVS",
+        "GAS",
+        "PVT",
+        "BSR",
+        "PLX",
+        "OIL",
+        "POW",
+        "DPM",
+        "DCM"
+      ],
+      "queries": [
+        "PVD PVS GAS BSR dầu khí",
+        "giá dầu Brent WTI Việt Nam BSR PVD PVS",
+        "Lô B Ô Môn PVS PVD GAS",
+        "PLX OIL giá xăng dầu"
+      ],
+      "international_queries": [
+        {
+          "query": "Brent crude WTI OPEC supply Strait of Hormuz war",
+          "locale": {
+            "hl": "en",
+            "gl": "US",
+            "ceid": "US:en"
+          }
+        },
+        {
+          "query": "Middle East conflict oil tankers Strait of Hormuz Gulf shipping",
+          "locale": {
+            "hl": "en",
+            "gl": "GB",
+            "ceid": "GB:en"
+          }
+        },
+        {
+          "query": "Asia LNG JKM price natural gas Vietnam power",
+          "locale": {
+            "hl": "en",
+            "gl": "SG",
+            "ceid": "SG:en"
+          }
+        }
+      ],
+      "include_keywords": [
+        "dầu",
+        "khí",
+        "brent",
+        "wti",
+        "xăng",
+        "lô b",
+        "ô môn",
+        "pvd",
+        "pvs",
+        "gas",
+        "bsr",
+        "plx",
+        "pvt",
+        "crude",
+        "oil",
+        "opec",
+        "hormuz",
+        "lng",
+        "natural gas",
+        "tanker",
+        "shipping",
+        "middle east"
+      ],
+      "exclude_keywords": [
+        "bóng đá",
+        "showbiz"
+      ],
       "factor_keywords": {
-        "oil": ["brent", "wti", "giá dầu", "opec", "crude", "oil"],
-        "gas": ["khí", "lng", "gas", "điện khí", "natural gas", "jkm"],
-        "project": ["lô b", "ô môn", "lạc đà vàng", "dự án", "epc", "backlog"],
-        "fuel": ["xăng", "giá xăng", "diesel"],
-        "refining": ["bsr", "lọc dầu", "crack", "refinery", "refining"],
-        "finance": ["lợi nhuận", "doanh thu", "kqkd", "cổ tức"],
-        "market": ["cổ phiếu", "khối ngoại", "dòng tiền", "hormuz", "war", "conflict", "tanker", "shipping"]
+        "oil": [
+          "brent",
+          "wti",
+          "giá dầu",
+          "opec",
+          "crude",
+          "oil"
+        ],
+        "gas": [
+          "khí",
+          "lng",
+          "gas",
+          "điện khí",
+          "natural gas",
+          "jkm"
+        ],
+        "project": [
+          "lô b",
+          "ô môn",
+          "lạc đà vàng",
+          "dự án",
+          "epc",
+          "backlog"
+        ],
+        "fuel": [
+          "xăng",
+          "giá xăng",
+          "diesel"
+        ],
+        "refining": [
+          "bsr",
+          "lọc dầu",
+          "crack",
+          "refinery",
+          "refining"
+        ],
+        "finance": [
+          "lợi nhuận",
+          "doanh thu",
+          "kqkd",
+          "cổ tức"
+        ],
+        "market": [
+          "cổ phiếu",
+          "khối ngoại",
+          "dòng tiền",
+          "hormuz",
+          "war",
+          "conflict",
+          "tanker",
+          "shipping"
+        ]
       },
-      "positive_keywords": ["tăng", "hồi phục", "khởi công", "ký hợp đồng", "vượt kế hoạch", "lãi", "cổ tức", "backlog", "đẩy nhanh", "rise", "rises", "higher", "rebound", "tight supply"],
-      "negative_keywords": ["giảm", "lao dốc", "lỗ", "chậm", "sụt", "áp lực", "bán ròng", "fall", "falls", "lower", "slump", "surplus", "ceasefire"],
-      "strong_positive_keywords": ["đột biến", "tăng mạnh", "vượt kế hoạch", "trúng thầu", "surge", "jumps", "disruption"],
-      "strong_negative_keywords": ["lao dốc", "lỗ lớn", "dừng", "hủy", "plunge", "crash", "shutdown"]
+      "positive_keywords": [
+        "tăng",
+        "hồi phục",
+        "khởi công",
+        "ký hợp đồng",
+        "vượt kế hoạch",
+        "lãi",
+        "cổ tức",
+        "backlog",
+        "đẩy nhanh",
+        "rise",
+        "rises",
+        "higher",
+        "rebound",
+        "tight supply"
+      ],
+      "negative_keywords": [
+        "giảm",
+        "lao dốc",
+        "lỗ",
+        "chậm",
+        "sụt",
+        "áp lực",
+        "bán ròng",
+        "fall",
+        "falls",
+        "lower",
+        "slump",
+        "surplus",
+        "ceasefire"
+      ],
+      "strong_positive_keywords": [
+        "đột biến",
+        "tăng mạnh",
+        "vượt kế hoạch",
+        "trúng thầu",
+        "surge",
+        "jumps",
+        "disruption"
+      ],
+      "strong_negative_keywords": [
+        "lao dốc",
+        "lỗ lớn",
+        "dừng",
+        "hủy",
+        "plunge",
+        "crash",
+        "shutdown"
+      ]
     },
     "bds": {
       "file": "data-bds.js",
       "default_factor": "market",
-      "default_aff": ["VHM", "NLG", "KDH", "DXG", "KBC"],
-      "tickers": ["VHM", "VRE", "NLG", "KDH", "DXG", "PDR", "DIG", "NVL", "HDG", "KBC"],
-      "queries": ["cổ phiếu bất động sản VHM NLG KDH DXG", "KBC khu công nghiệp FDI bàn giao đất", "trái phiếu bất động sản NVL PDR DIG", "lãi suất vay mua nhà bất động sản"],
-      "international_queries": [
-        {"query": "Vietnam FDI manufacturing industrial parks supply chain relocation", "locale": {"hl": "en", "gl": "SG", "ceid": "SG:en"}},
-        {"query": "Vietnam real estate foreign investment housing market", "locale": {"hl": "en", "gl": "US", "ceid": "US:en"}},
-        {"query": "Federal Reserve rate cut emerging Asia property developers bonds", "locale": {"hl": "en", "gl": "US", "ceid": "US:en"}}
+      "default_aff": [
+        "VHM",
+        "NLG",
+        "KDH",
+        "DXG",
+        "KBC"
       ],
-      "include_keywords": ["bất động sản", "nhà ở", "khu công nghiệp", "trái phiếu", "vhm", "nlg", "kdh", "dxg", "pdr", "dig", "nvl", "kbc", "vietnam", "real estate", "property", "industrial park", "fdi", "foreign investment", "rate cut", "fed", "bonds"],
-      "exclude_keywords": ["rao bán", "tin tuyển dụng"],
+      "tickers": [
+        "VHM",
+        "VRE",
+        "NLG",
+        "KDH",
+        "DXG",
+        "PDR",
+        "DIG",
+        "NVL",
+        "HDG",
+        "KBC"
+      ],
+      "queries": [
+        "Bộ Xây dựng nhà ở thị trường bất động sản gỡ vướng dự án",
+        "chính sách pháp luật bất động sản nhà ở xã hội tiền sử dụng đất",
+        "Ngân hàng Nhà nước tín dụng bất động sản lãi suất vay mua nhà",
+        "Cục Đầu tư nước ngoài FDI khu công nghiệp bất động sản Việt Nam",
+        "HNX trái phiếu doanh nghiệp bất động sản đáo hạn chậm trả",
+        "đấu thầu dự án sử dụng đất lựa chọn nhà đầu tư bất động sản",
+        "Sở Xây dựng TP.HCM dự án đủ điều kiện bán nhà ở",
+        "Sở Xây dựng Hà Nội dự án đủ điều kiện bán nhà ở",
+        "VHM NLG KDH PDR DXG presales bàn giao dự án",
+        "CBRE Savills JLL VARS Batdongsan báo cáo thị trường bất động sản",
+        "FiinRatings VBMA trái phiếu bất động sản tín nhiệm",
+        "KBC khu công nghiệp FDI bàn giao đất"
+      ],
+      "international_queries": [
+        {
+          "query": "Vietnam real estate market housing policy project legal bottlenecks",
+          "locale": {
+            "hl": "en",
+            "gl": "SG",
+            "ceid": "SG:en"
+          }
+        },
+        {
+          "query": "Vietnam industrial parks FDI land lease developers KBC",
+          "locale": {
+            "hl": "en",
+            "gl": "SG",
+            "ceid": "SG:en"
+          }
+        },
+        {
+          "query": "Vietnam property bonds refinancing credit risk developers",
+          "locale": {
+            "hl": "en",
+            "gl": "US",
+            "ceid": "US:en"
+          }
+        },
+        {
+          "query": "Vietnam housing market CBRE Savills JLL report",
+          "locale": {
+            "hl": "en",
+            "gl": "US",
+            "ceid": "US:en"
+          }
+        }
+      ],
+      "include_keywords": [
+        "bất động sản",
+        "nhà ở",
+        "khu công nghiệp",
+        "trái phiếu",
+        "vhm",
+        "nlg",
+        "kdh",
+        "dxg",
+        "pdr",
+        "dig",
+        "nvl",
+        "kbc",
+        "vietnam",
+        "real estate",
+        "property",
+        "industrial park",
+        "fdi",
+        "foreign investment",
+        "rate cut",
+        "fed",
+        "bonds",
+        "bộ xây dựng",
+        "dự thảo",
+        "nghị định",
+        "thông tư",
+        "nhà ở xã hội",
+        "tiền sử dụng đất",
+        "sở xây dựng",
+        "đủ điều kiện bán",
+        "đấu thầu",
+        "dự án sử dụng đất",
+        "lựa chọn nhà đầu tư",
+        "quy hoạch",
+        "ngân hàng nhà nước",
+        "tín dụng bất động sản",
+        "room tín dụng",
+        "cbonds",
+        "fiinratings",
+        "vbma",
+        "xếp hạng tín nhiệm",
+        "chậm trả",
+        "tái cấu trúc",
+        "cbre",
+        "savills",
+        "jll",
+        "vars",
+        "batdongsan",
+        "tỷ lệ hấp thụ",
+        "giá sơ cấp",
+        "presales",
+        "backlog",
+        "rnav",
+        "quan hệ cổ đông",
+        "bctc",
+        "đhđcđ",
+        "hose",
+        "hnx",
+        "hsc",
+        "vietcap",
+        "ssi",
+        "mbs",
+        "reuters",
+        "vir",
+        "the investor",
+        "vietstock",
+        "vneconomy",
+        "industrial parks",
+        "land lease",
+        "refinancing",
+        "credit risk"
+      ],
+      "exclude_keywords": [
+        "rao bán",
+        "tin tuyển dụng"
+      ],
       "factor_keywords": {
-        "legal": ["pháp lý", "gỡ vướng", "tiền sử dụng đất", "luật đất đai"],
-        "supply": ["mở bán", "nguồn cung", "dự án", "bàn giao", "launch", "supply"],
-        "demand": ["giao dịch", "giá nhà", "hấp thụ", "sức mua", "housing demand", "home sales"],
-        "credit": ["lãi suất", "tín dụng", "vay mua nhà", "rate cut", "fed", "mortgage", "credit"],
-        "bond": ["trái phiếu", "đáo hạn", "tái cơ cấu nợ", "bond", "bonds", "refinancing"],
-        "infra": ["hạ tầng", "quy hoạch", "sân bay", "cao tốc"],
-        "finance": ["lợi nhuận", "doanh thu", "kqkd", "cổ tức"],
-        "market": ["cổ phiếu", "khối ngoại", "dòng tiền", "fdi", "foreign investment", "industrial park"]
+        "legal": [
+          "pháp lý",
+          "gỡ vướng",
+          "tiền sử dụng đất",
+          "luật đất đai",
+          "bộ xây dựng",
+          "dự thảo",
+          "nghị định",
+          "thông tư",
+          "văn bản pháp luật",
+          "nhà ở xã hội",
+          "kinh doanh bất động sản",
+          "quốc hội",
+          "vbpl",
+          "gỡ vướng pháp lý"
+        ],
+        "supply": [
+          "mở bán",
+          "nguồn cung",
+          "dự án",
+          "bàn giao",
+          "launch",
+          "supply",
+          "đủ điều kiện bán",
+          "dự án sử dụng đất",
+          "đấu thầu",
+          "lựa chọn nhà đầu tư",
+          "quỹ đất",
+          "presales",
+          "backlog",
+          "project launch",
+          "sold units",
+          "pipeline"
+        ],
+        "demand": [
+          "giao dịch",
+          "giá nhà",
+          "hấp thụ",
+          "sức mua",
+          "housing demand",
+          "home sales",
+          "batdongsan",
+          "cbre",
+          "savills",
+          "jll",
+          "vars",
+          "tỷ lệ hấp thụ",
+          "absorption",
+          "giá sơ cấp",
+          "giá thứ cấp",
+          "lượt tìm kiếm",
+          "asking price"
+        ],
+        "credit": [
+          "lãi suất",
+          "tín dụng",
+          "vay mua nhà",
+          "rate cut",
+          "fed",
+          "mortgage",
+          "credit",
+          "ngân hàng nhà nước",
+          "tín dụng bất động sản",
+          "room tín dụng",
+          "nợ xấu",
+          "thanh khoản ngân hàng"
+        ],
+        "bond": [
+          "trái phiếu",
+          "đáo hạn",
+          "tái cơ cấu nợ",
+          "bond",
+          "bonds",
+          "refinancing",
+          "cbonds",
+          "hnx",
+          "vbma",
+          "fiinratings",
+          "coupon",
+          "mua lại",
+          "chậm trả",
+          "tái cấu trúc",
+          "xếp hạng tín nhiệm",
+          "credit risk"
+        ],
+        "infra": [
+          "hạ tầng",
+          "quy hoạch",
+          "sân bay",
+          "cao tốc",
+          "sở xây dựng",
+          "tp.hcm",
+          "hà nội",
+          "thông tin quy hoạch",
+          "đầu tư công",
+          "fdI"
+        ],
+        "finance": [
+          "lợi nhuận",
+          "doanh thu",
+          "kqkd",
+          "cổ tức",
+          "hose",
+          "hnx",
+          "ir",
+          "quan hệ cổ đông",
+          "bctc",
+          "đhđcđ",
+          "nghị quyết",
+          "phát hành",
+          "presales",
+          "rnav",
+          "vhm",
+          "nlg",
+          "kdh",
+          "pdr",
+          "dxg",
+          "nvl",
+          "dig"
+        ],
+        "market": [
+          "cổ phiếu",
+          "khối ngoại",
+          "dòng tiền",
+          "fdi",
+          "foreign investment",
+          "industrial park",
+          "hsc",
+          "vietcap",
+          "ssi",
+          "mbs",
+          "reuters",
+          "vir",
+          "the investor",
+          "vietstock",
+          "vneconomy",
+          "research",
+          "sector report",
+          "top picks",
+          "target price"
+        ]
       },
-      "positive_keywords": ["tăng", "hồi phục", "gỡ vướng", "mở bán", "bàn giao", "lãi", "mua ròng", "fdI", "ký hợp đồng", "growth", "rebound", "rate cut", "inflow", "investment"],
-      "negative_keywords": ["giảm", "lỗ", "chậm", "áp lực", "đáo hạn", "bán ròng", "siết", "default", "distress", "higher rates", "slowdown"],
-      "strong_positive_keywords": ["đột biến", "tăng mạnh", "gỡ vướng pháp lý", "surge", "record inflow"],
-      "strong_negative_keywords": ["vỡ nợ", "lỗ lớn", "lao dốc", "bị xử phạt", "default", "crisis"]
+      "positive_keywords": [
+        "tăng",
+        "hồi phục",
+        "gỡ vướng",
+        "mở bán",
+        "bàn giao",
+        "lãi",
+        "mua ròng",
+        "fdI",
+        "ký hợp đồng",
+        "growth",
+        "rebound",
+        "rate cut",
+        "inflow",
+        "investment",
+        "đủ điều kiện bán",
+        "tháo gỡ",
+        "phê duyệt",
+        "khởi công",
+        "mua lại trái phiếu",
+        "tăng tín dụng",
+        "giảm lãi suất",
+        "record inflow",
+        "approval"
+      ],
+      "negative_keywords": [
+        "giảm",
+        "lỗ",
+        "chậm",
+        "áp lực",
+        "đáo hạn",
+        "bán ròng",
+        "siết",
+        "default",
+        "distress",
+        "higher rates",
+        "slowdown",
+        "chậm trả",
+        "tái cấu trúc",
+        "bị xử phạt",
+        "hủy đấu thầu",
+        "dừng dự án",
+        "nợ xấu",
+        "legal bottleneck",
+        "refinancing pressure",
+        "credit risk"
+      ],
+      "strong_positive_keywords": [
+        "đột biến",
+        "tăng mạnh",
+        "gỡ vướng pháp lý",
+        "surge",
+        "record inflow",
+        "đủ điều kiện bán",
+        "phê duyệt dự án",
+        "land auction win"
+      ],
+      "strong_negative_keywords": [
+        "vỡ nợ",
+        "lỗ lớn",
+        "lao dốc",
+        "bị xử phạt",
+        "default",
+        "crisis",
+        "chậm trả trái phiếu",
+        "dừng dự án",
+        "hủy dự án",
+        "refinancing crisis"
+      ]
     },
     "thuysan": {
       "file": "data-thuysan.js",
       "default_factor": "market",
-      "default_aff": ["VHC", "ANV", "FMC", "MPC"],
-      "tickers": ["VHC", "ANV", "FMC", "MPC", "IDI", "CMX"],
-      "queries": ["VHC ANV FMC MPC thủy sản xuất khẩu", "cá tra xuất khẩu VHC ANV IDI", "tôm xuất khẩu FMC MPC thuế Mỹ", "VASEP thủy sản cá tra tôm"],
-      "international_queries": [
-        {"query": "Ecuador shrimp exports China United States prices", "locale": {"hl": "en", "gl": "US", "ceid": "US:en"}},
-        {"query": "US antidumping duty shrimp Vietnam Ecuador India", "locale": {"hl": "en", "gl": "US", "ceid": "US:en"}},
-        {"query": "China pangasius imports Vietnam seafood demand", "locale": {"hl": "en", "gl": "SG", "ceid": "SG:en"}},
-        {"query": "global shrimp prices feed costs aquaculture", "locale": {"hl": "en", "gl": "US", "ceid": "US:en"}}
+      "default_aff": [
+        "VHC",
+        "ANV",
+        "FMC",
+        "MPC"
       ],
-      "include_keywords": ["thủy sản", "cá tra", "tôm", "vasep", "xuất khẩu", "vhc", "anv", "fmc", "mpc", "idi", "cmx", "seafood", "shrimp", "pangasius", "catfish", "ecuador", "antidumping", "anti-dumping", "tariff", "aquaculture"],
-      "exclude_keywords": ["ẩm thực", "món ăn", "recipe", "restaurant", "market analysis", "forecast, size", "guitar-playing", "salmon stock"],
+      "tickers": [
+        "VHC",
+        "ANV",
+        "FMC",
+        "MPC",
+        "IDI",
+        "CMX"
+      ],
+      "queries": [
+        "VHC ANV FMC MPC thủy sản xuất khẩu",
+        "cá tra xuất khẩu VHC ANV IDI",
+        "tôm xuất khẩu FMC MPC thuế Mỹ",
+        "VASEP thủy sản cá tra tôm"
+      ],
+      "international_queries": [
+        {
+          "query": "Ecuador shrimp exports China United States prices",
+          "locale": {
+            "hl": "en",
+            "gl": "US",
+            "ceid": "US:en"
+          }
+        },
+        {
+          "query": "US antidumping duty shrimp Vietnam Ecuador India",
+          "locale": {
+            "hl": "en",
+            "gl": "US",
+            "ceid": "US:en"
+          }
+        },
+        {
+          "query": "China pangasius imports Vietnam seafood demand",
+          "locale": {
+            "hl": "en",
+            "gl": "SG",
+            "ceid": "SG:en"
+          }
+        },
+        {
+          "query": "global shrimp prices feed costs aquaculture",
+          "locale": {
+            "hl": "en",
+            "gl": "US",
+            "ceid": "US:en"
+          }
+        }
+      ],
+      "include_keywords": [
+        "thủy sản",
+        "cá tra",
+        "tôm",
+        "vasep",
+        "xuất khẩu",
+        "vhc",
+        "anv",
+        "fmc",
+        "mpc",
+        "idi",
+        "cmx",
+        "seafood",
+        "shrimp",
+        "pangasius",
+        "catfish",
+        "ecuador",
+        "antidumping",
+        "anti-dumping",
+        "tariff",
+        "aquaculture"
+      ],
+      "exclude_keywords": [
+        "ẩm thực",
+        "món ăn",
+        "recipe",
+        "restaurant",
+        "market analysis",
+        "forecast, size",
+        "guitar-playing",
+        "salmon stock"
+      ],
       "factor_keywords": {
-        "export": ["xuất khẩu", "đơn hàng", "mỹ", "trung quốc", "eu", "exports", "imports", "china", "us", "europe"],
-        "tariff": ["thuế", "chống bán phá giá", "phòng vệ", "tariff", "antidumping", "anti-dumping", "duty"],
-        "material": ["nguyên liệu", "giá cá", "giá tôm", "vùng nuôi", "shrimp prices", "pangasius prices", "farmgate"],
-        "feed": ["thức ăn", "khô đậu", "bột cá", "feed", "fishmeal", "soybean meal"],
-        "fx": ["tỷ giá", "usd"],
-        "policy": ["iuu", "mmpa", "rào cản", "fda", "inspection", "traceability"],
-        "finance": ["lợi nhuận", "doanh thu", "kqkd"],
-        "market": ["cổ phiếu", "dòng tiền"]
+        "export": [
+          "xuất khẩu",
+          "đơn hàng",
+          "mỹ",
+          "trung quốc",
+          "eu",
+          "exports",
+          "imports",
+          "china",
+          "us",
+          "europe"
+        ],
+        "tariff": [
+          "thuế",
+          "chống bán phá giá",
+          "phòng vệ",
+          "tariff",
+          "antidumping",
+          "anti-dumping",
+          "duty"
+        ],
+        "material": [
+          "nguyên liệu",
+          "giá cá",
+          "giá tôm",
+          "vùng nuôi",
+          "shrimp prices",
+          "pangasius prices",
+          "farmgate"
+        ],
+        "feed": [
+          "thức ăn",
+          "khô đậu",
+          "bột cá",
+          "feed",
+          "fishmeal",
+          "soybean meal"
+        ],
+        "fx": [
+          "tỷ giá",
+          "usd"
+        ],
+        "policy": [
+          "iuu",
+          "mmpa",
+          "rào cản",
+          "fda",
+          "inspection",
+          "traceability"
+        ],
+        "finance": [
+          "lợi nhuận",
+          "doanh thu",
+          "kqkd"
+        ],
+        "market": [
+          "cổ phiếu",
+          "dòng tiền"
+        ]
       },
-      "positive_keywords": ["tăng", "hồi phục", "đơn hàng", "lãi", "vượt", "cao điểm", "mở rộng", "rise", "higher", "rebound", "demand growth", "lower duty"],
-      "negative_keywords": ["giảm", "thuế", "lỗ", "áp lực", "cảnh báo", "rào cản", "fall", "lower", "tariff", "duty", "oversupply", "weak demand"],
-      "strong_positive_keywords": ["tăng mạnh", "đột biến", "kỷ lục", "surge", "record", "duty cut"],
-      "strong_negative_keywords": ["thuế cao", "cấm", "lỗ lớn", "ban", "high duty", "import alert"]
+      "positive_keywords": [
+        "tăng",
+        "hồi phục",
+        "đơn hàng",
+        "lãi",
+        "vượt",
+        "cao điểm",
+        "mở rộng",
+        "rise",
+        "higher",
+        "rebound",
+        "demand growth",
+        "lower duty"
+      ],
+      "negative_keywords": [
+        "giảm",
+        "thuế",
+        "lỗ",
+        "áp lực",
+        "cảnh báo",
+        "rào cản",
+        "fall",
+        "lower",
+        "tariff",
+        "duty",
+        "oversupply",
+        "weak demand"
+      ],
+      "strong_positive_keywords": [
+        "tăng mạnh",
+        "đột biến",
+        "kỷ lục",
+        "surge",
+        "record",
+        "duty cut"
+      ],
+      "strong_negative_keywords": [
+        "thuế cao",
+        "cấm",
+        "lỗ lớn",
+        "ban",
+        "high duty",
+        "import alert"
+      ]
     },
     "detmay": {
       "file": "data-detmay.js",
       "default_factor": "market",
-      "default_aff": ["TNG", "MSH", "TCM", "STK"],
-      "tickers": ["TNG", "MSH", "TCM", "STK", "GIL", "ADS", "VGT", "HTG"],
-      "queries": ["TNG MSH TCM STK dệt may đơn hàng", "Vinatex VGT dệt may xuất khẩu", "dệt may Việt Nam thuế Mỹ đơn hàng", "giá bông dệt may Việt Nam"],
-      "international_queries": [
-        {"query": "ICE cotton futures textile apparel demand China", "locale": {"hl": "en", "gl": "US", "ceid": "US:en"}},
-        {"query": "US tariff apparel imports Vietnam China Bangladesh", "locale": {"hl": "en", "gl": "US", "ceid": "US:en"}},
-        {"query": "global apparel orders Vietnam textile exports brands inventory", "locale": {"hl": "en", "gl": "US", "ceid": "US:en"}}
+      "default_aff": [
+        "TNG",
+        "MSH",
+        "TCM",
+        "STK"
       ],
-      "include_keywords": ["dệt may", "may mặc", "sợi", "vinatex", "xuất khẩu", "đơn hàng", "tng", "msh", "tcm", "stk", "vgt", "htg", "textile", "apparel", "garment", "cotton", "yarn", "tariff", "fashion inventory", "orders"],
-      "exclude_keywords": ["thời trang sao", "show diễn", "fashion show", "celebrity"],
+      "tickers": [
+        "TNG",
+        "MSH",
+        "TCM",
+        "STK",
+        "GIL",
+        "ADS",
+        "VGT",
+        "HTG"
+      ],
+      "queries": [
+        "TNG MSH TCM STK dệt may đơn hàng",
+        "Vinatex VGT dệt may xuất khẩu",
+        "dệt may Việt Nam thuế Mỹ đơn hàng",
+        "giá bông dệt may Việt Nam"
+      ],
+      "international_queries": [
+        {
+          "query": "ICE cotton futures textile apparel demand China",
+          "locale": {
+            "hl": "en",
+            "gl": "US",
+            "ceid": "US:en"
+          }
+        },
+        {
+          "query": "US tariff apparel imports Vietnam China Bangladesh",
+          "locale": {
+            "hl": "en",
+            "gl": "US",
+            "ceid": "US:en"
+          }
+        },
+        {
+          "query": "global apparel orders Vietnam textile exports brands inventory",
+          "locale": {
+            "hl": "en",
+            "gl": "US",
+            "ceid": "US:en"
+          }
+        }
+      ],
+      "include_keywords": [
+        "dệt may",
+        "may mặc",
+        "sợi",
+        "vinatex",
+        "xuất khẩu",
+        "đơn hàng",
+        "tng",
+        "msh",
+        "tcm",
+        "stk",
+        "vgt",
+        "htg",
+        "textile",
+        "apparel",
+        "garment",
+        "cotton",
+        "yarn",
+        "tariff",
+        "fashion inventory",
+        "orders"
+      ],
+      "exclude_keywords": [
+        "thời trang sao",
+        "show diễn",
+        "fashion show",
+        "celebrity"
+      ],
       "factor_keywords": {
-        "export": ["xuất khẩu", "đơn hàng", "mỹ", "eu", "nhật", "exports", "orders", "apparel demand", "inventory"],
-        "tariff": ["thuế", "thuế quan", "mỹ", "đối ứng", "tariff", "duties", "trade"],
-        "input": ["bông", "sợi", "nguyên liệu", "xơ", "cotton", "yarn", "fiber"],
-        "fx": ["tỷ giá", "usd"],
-        "labor": ["lao động", "tiền lương", "nhân công", "wages", "labor"],
-        "esg": ["xanh", "esg", "tái chế", "recycled", "sustainability"],
-        "finance": ["lợi nhuận", "doanh thu", "kqkd", "cổ tức"],
-        "market": ["cổ phiếu", "dòng tiền"]
+        "export": [
+          "xuất khẩu",
+          "đơn hàng",
+          "mỹ",
+          "eu",
+          "nhật",
+          "exports",
+          "orders",
+          "apparel demand",
+          "inventory"
+        ],
+        "tariff": [
+          "thuế",
+          "thuế quan",
+          "mỹ",
+          "đối ứng",
+          "tariff",
+          "duties",
+          "trade"
+        ],
+        "input": [
+          "bông",
+          "sợi",
+          "nguyên liệu",
+          "xơ",
+          "cotton",
+          "yarn",
+          "fiber"
+        ],
+        "fx": [
+          "tỷ giá",
+          "usd"
+        ],
+        "labor": [
+          "lao động",
+          "tiền lương",
+          "nhân công",
+          "wages",
+          "labor"
+        ],
+        "esg": [
+          "xanh",
+          "esg",
+          "tái chế",
+          "recycled",
+          "sustainability"
+        ],
+        "finance": [
+          "lợi nhuận",
+          "doanh thu",
+          "kqkd",
+          "cổ tức"
+        ],
+        "market": [
+          "cổ phiếu",
+          "dòng tiền"
+        ]
       },
-      "positive_keywords": ["tăng", "hồi phục", "đơn hàng", "lãi", "vượt", "mở rộng", "cổ tức", "rise", "higher", "rebound", "restocking", "order growth"],
-      "negative_keywords": ["giảm", "thiếu đơn", "thuế", "áp lực", "lỗ", "chậm", "fall", "lower", "tariff", "weak demand", "destocking"],
-      "strong_positive_keywords": ["tăng mạnh", "đột biến", "kỷ lục", "surge", "record"],
-      "strong_negative_keywords": ["mất đơn", "lỗ lớn", "đình trệ", "order cancellation", "plunge"]
+      "positive_keywords": [
+        "tăng",
+        "hồi phục",
+        "đơn hàng",
+        "lãi",
+        "vượt",
+        "mở rộng",
+        "cổ tức",
+        "rise",
+        "higher",
+        "rebound",
+        "restocking",
+        "order growth"
+      ],
+      "negative_keywords": [
+        "giảm",
+        "thiếu đơn",
+        "thuế",
+        "áp lực",
+        "lỗ",
+        "chậm",
+        "fall",
+        "lower",
+        "tariff",
+        "weak demand",
+        "destocking"
+      ],
+      "strong_positive_keywords": [
+        "tăng mạnh",
+        "đột biến",
+        "kỷ lục",
+        "surge",
+        "record"
+      ],
+      "strong_negative_keywords": [
+        "mất đơn",
+        "lỗ lớn",
+        "đình trệ",
+        "order cancellation",
+        "plunge"
+      ]
     },
     "hanghoa": {
       "file": "data-hanghoa.js",
       "default_factor": "market",
-      "default_aff": ["SBT", "QNS", "VNM", "DBC", "BAF"],
-      "tickers": ["SBT", "SLS", "LSS", "QNS", "VNM", "IDP", "MCM", "DBC", "BAF", "HAG"],
-      "queries": ["SBT SLS QNS giá đường mía đường", "VNM IDP MCM sữa bột giá sữa", "DBC BAF HAG giá heo hơi thức ăn chăn nuôi", "giá ngô khô đậu tương Việt Nam thức ăn chăn nuôi"],
-      "international_queries": [
-        {"query": "world sugar prices Brazil production India exports", "locale": {"hl": "en", "gl": "US", "ceid": "US:en"}},
-        {"query": "Global Dairy Trade milk powder prices auction", "locale": {"hl": "en", "gl": "NZ", "ceid": "NZ:en"}},
-        {"query": "corn soybean meal prices feed costs livestock China", "locale": {"hl": "en", "gl": "US", "ceid": "US:en"}},
-        {"query": "African swine fever China hog prices feed demand", "locale": {"hl": "en", "gl": "SG", "ceid": "SG:en"}}
+      "default_aff": [
+        "SBT",
+        "QNS",
+        "VNM",
+        "DBC",
+        "BAF"
       ],
-      "include_keywords": ["đường", "mía", "sữa", "heo", "ngô", "khô đậu", "thức ăn chăn nuôi", "sbt", "sls", "qns", "vnm", "dbc", "baf", "hag", "sugar", "brazil", "india", "dairy", "milk powder", "corn", "soybean meal", "feed", "hog", "swine fever"],
-      "exclude_keywords": ["món ăn", "du lịch", "market analysis", "forecast, size", "bitcoin world"],
+      "tickers": [
+        "SBT",
+        "SLS",
+        "LSS",
+        "QNS",
+        "VNM",
+        "IDP",
+        "MCM",
+        "DBC",
+        "BAF",
+        "HAG"
+      ],
+      "queries": [
+        "SBT SLS QNS giá đường mía đường",
+        "VNM IDP MCM sữa bột giá sữa",
+        "DBC BAF HAG giá heo hơi thức ăn chăn nuôi",
+        "giá ngô khô đậu tương Việt Nam thức ăn chăn nuôi"
+      ],
+      "international_queries": [
+        {
+          "query": "world sugar prices Brazil production India exports",
+          "locale": {
+            "hl": "en",
+            "gl": "US",
+            "ceid": "US:en"
+          }
+        },
+        {
+          "query": "Global Dairy Trade milk powder prices auction",
+          "locale": {
+            "hl": "en",
+            "gl": "NZ",
+            "ceid": "NZ:en"
+          }
+        },
+        {
+          "query": "corn soybean meal prices feed costs livestock China",
+          "locale": {
+            "hl": "en",
+            "gl": "US",
+            "ceid": "US:en"
+          }
+        },
+        {
+          "query": "African swine fever China hog prices feed demand",
+          "locale": {
+            "hl": "en",
+            "gl": "SG",
+            "ceid": "SG:en"
+          }
+        }
+      ],
+      "include_keywords": [
+        "đường",
+        "mía",
+        "sữa",
+        "heo",
+        "ngô",
+        "khô đậu",
+        "thức ăn chăn nuôi",
+        "sbt",
+        "sls",
+        "qns",
+        "vnm",
+        "dbc",
+        "baf",
+        "hag",
+        "sugar",
+        "brazil",
+        "india",
+        "dairy",
+        "milk powder",
+        "corn",
+        "soybean meal",
+        "feed",
+        "hog",
+        "swine fever"
+      ],
+      "exclude_keywords": [
+        "món ăn",
+        "du lịch",
+        "market analysis",
+        "forecast, size",
+        "bitcoin world"
+      ],
       "factor_keywords": {
-        "sugar": ["đường", "mía", "sbt", "sls", "lss", "qns", "sugar", "brazil", "india", "ethanol"],
-        "milk": ["sữa", "bột sữa", "vnm", "idp", "mcm", "dairy", "milk powder", "global dairy trade", "gdt"],
-        "corn": ["ngô", "khô đậu", "heo", "thức ăn chăn nuôi", "dbc", "baf", "corn", "soybean meal", "feed", "hog"],
-        "cassava": ["sắn", "tinh bột"],
-        "input": ["chi phí", "logistics", "nguyên liệu", "input cost", "freight"],
-        "fx": ["tỷ giá", "usd"],
-        "policy": ["phòng vệ", "thuế", "nhập lậu", "tariff", "quota", "export ban"],
-        "finance": ["lợi nhuận", "doanh thu", "kqkd"],
-        "market": ["cổ phiếu", "dòng tiền"]
+        "sugar": [
+          "đường",
+          "mía",
+          "sbt",
+          "sls",
+          "lss",
+          "qns",
+          "sugar",
+          "brazil",
+          "india",
+          "ethanol"
+        ],
+        "milk": [
+          "sữa",
+          "bột sữa",
+          "vnm",
+          "idp",
+          "mcm",
+          "dairy",
+          "milk powder",
+          "global dairy trade",
+          "gdt"
+        ],
+        "corn": [
+          "ngô",
+          "khô đậu",
+          "heo",
+          "thức ăn chăn nuôi",
+          "dbc",
+          "baf",
+          "corn",
+          "soybean meal",
+          "feed",
+          "hog"
+        ],
+        "cassava": [
+          "sắn",
+          "tinh bột"
+        ],
+        "input": [
+          "chi phí",
+          "logistics",
+          "nguyên liệu",
+          "input cost",
+          "freight"
+        ],
+        "fx": [
+          "tỷ giá",
+          "usd"
+        ],
+        "policy": [
+          "phòng vệ",
+          "thuế",
+          "nhập lậu",
+          "tariff",
+          "quota",
+          "export ban"
+        ],
+        "finance": [
+          "lợi nhuận",
+          "doanh thu",
+          "kqkd"
+        ],
+        "market": [
+          "cổ phiếu",
+          "dòng tiền"
+        ]
       },
-      "positive_keywords": ["tăng", "hồi phục", "lãi", "vượt", "giá cao", "cổ tức", "rise", "higher", "rebound", "deficit", "tight supply"],
-      "negative_keywords": ["giảm", "lỗ", "áp lực", "dịch", "nhập lậu", "dư cung", "fall", "lower", "surplus", "oversupply", "disease"],
-      "strong_positive_keywords": ["tăng mạnh", "đột biến", "kỷ lục", "surge", "record"],
-      "strong_negative_keywords": ["dịch tả", "lỗ lớn", "lao dốc", "african swine fever", "plunge", "export ban"]
+      "positive_keywords": [
+        "tăng",
+        "hồi phục",
+        "lãi",
+        "vượt",
+        "giá cao",
+        "cổ tức",
+        "rise",
+        "higher",
+        "rebound",
+        "deficit",
+        "tight supply"
+      ],
+      "negative_keywords": [
+        "giảm",
+        "lỗ",
+        "áp lực",
+        "dịch",
+        "nhập lậu",
+        "dư cung",
+        "fall",
+        "lower",
+        "surplus",
+        "oversupply",
+        "disease"
+      ],
+      "strong_positive_keywords": [
+        "tăng mạnh",
+        "đột biến",
+        "kỷ lục",
+        "surge",
+        "record"
+      ],
+      "strong_negative_keywords": [
+        "dịch tả",
+        "lỗ lớn",
+        "lao dốc",
+        "african swine fever",
+        "plunge",
+        "export ban"
+      ]
     }
   }
 }
