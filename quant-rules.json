@@ -1,5 +1,6 @@
 {
   "_note": "Bảng luật cho quant_update.py — chỉnh ngưỡng/câu chữ ở đây, không cần sửa code. dir=+1 nghĩa là giá tăng TỐT cho nhóm mã; dir=-1 nghĩa là giá tăng XẤU (chi phí đầu vào).",
+  "_vnstock_pause_sec": 4.0,
   "oil": {
     "file": "data-oil.js",
     "key": "oil",
