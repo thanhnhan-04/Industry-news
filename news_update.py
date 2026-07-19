@@ -266,6 +266,9 @@ def run_sector(key: str) -> None:
             items.append(it)
         time.sleep(PAUSE_SEC)
     items = pick_items(items)
+    if not items:
+        print(f"  [warn] không lấy được item tin mới; giữ nguyên {sec['file']}\n")
+        return
     update_file(BASE / sec["file"], items, vn_now().strftime("%Y-%m-%dT%H:%M:%S+07:00"))
     print(f"  -> ghi {len(items)} item tin vào {sec['file']}\n")
 

@@ -16,7 +16,7 @@ warnings.filterwarnings("ignore")
 
 BASE = Path(__file__).resolve().parent
 RULES = json.loads((BASE / "quant-rules.json").read_text(encoding="utf-8"))
-VNSTOCK_PAUSE_SEC = float(RULES.get("_vnstock_pause_sec", 3.5))
+VNSTOCK_PAUSE_SEC = float(RULES.get("_vnstock_pause_sec", 7.0))
 
 
 def vn_now():
@@ -167,6 +167,9 @@ def run_sector(key):
     sec = RULES[key]
     print(f"== {key} ==")
     items = commodity_items(sec) + stock_item(sec)
+    if not items:
+        print(f"  [warn] không lấy được item số mới; giữ nguyên {sec['file']}\n")
+        return
     ts = vn_now().strftime("%Y-%m-%dT%H:%M:%S+07:00")
     update_file(BASE / sec["file"], items, ts)
     print(f"  -> ghi {len(items)} item số vào {sec['file']}\n")

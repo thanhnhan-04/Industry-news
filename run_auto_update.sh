@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/usr/bin/env bash
 set -euo pipefail
 
 BASE_DIR="${STOCK_MONITOR_DIR:-$(cd "$(dirname "$0")" && pwd)}"
