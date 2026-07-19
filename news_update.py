@@ -237,6 +237,10 @@ def update_file(path: Path, items: list[dict], ts: str) -> None:
     if "<NEWS-ITEMS>" not in text:
         text = text.replace("\n  valuechain: [", "\n" + block + "\n  valuechain: [", 1)
     else:
+        current = re.search(r"// <NEWS-ITEMS>.*?// </NEWS-ITEMS>", text, flags=re.S)
+        if current and current.group(0) == block:
+            print(f"  [same] tin chưa đổi; giữ nguyên {path.name}")
+            return
         text = re.sub(r"// <NEWS-ITEMS>.*?// </NEWS-ITEMS>", lambda _: block, text, count=1, flags=re.S)
     text = re.sub(r'lastUpdated:\s*"[^"]*"', f'lastUpdated: "{ts}"', text, count=1)
     path.write_text(text, encoding="utf-8")

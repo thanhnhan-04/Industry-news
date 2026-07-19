@@ -51,8 +51,10 @@ branch `main`, folder `/root`. Website sẽ tự cập nhật sau mỗi lần pu
 GitHub Pages là web tĩnh, nên trình duyệt không tự chạy crawler được. Repo này
 dùng GitHub Actions để tự cập nhật:
 
-- Lịch chạy: mỗi ngày 16:45 giờ Việt Nam.
+- Quét tin: mỗi 30 phút, nếu có tin mới thì cập nhật `data-*.js` và `index.html`.
+- Cập nhật số liệu thị trường: 16:45 giờ Việt Nam các ngày trong tuần, sau phiên.
 - Chạy tay: vào `Actions` > `Update industry dashboard` > `Run workflow`.
-- Workflow chạy `./run_auto_update.sh`, sau đó `python export_index.py`.
+- Workflow quét tin chạy `python news_update.py`; workflow full chạy `./run_auto_update.sh`,
+  sau đó `python export_index.py`.
 - Nếu có dữ liệu mới, workflow commit `data-*.js` và `index.html`; GitHub Pages
   sẽ tự deploy lại sau commit đó.
