@@ -12,6 +12,7 @@ Cron ví dụ (mỗi sáng 7:00):  0 7 * * *  cd /path/Stock\ monitor && python3
 """
 import json, re, sys, datetime, warnings, time
 from pathlib import Path
+from sentiment_update import refresh_sentiment
 warnings.filterwarnings("ignore")
 
 BASE = Path(__file__).resolve().parent
@@ -161,6 +162,7 @@ def update_file(path, items, ts):
         raise SystemExit(f"KHÔNG tìm thấy marker <PY-ITEMS> trong {path.name}")
     new = re.sub(r'lastUpdated:\s*"[^"]*"', f'lastUpdated: "{ts}"', new, count=1)
     path.write_text(new, encoding="utf-8")
+    refresh_sentiment(path)
 
 
 def run_sector(key):
@@ -169,6 +171,7 @@ def run_sector(key):
     items = commodity_items(sec) + stock_item(sec)
     if not items:
         print(f"  [warn] không lấy được item số mới; giữ nguyên {sec['file']}\n")
+        refresh_sentiment(BASE / sec["file"])
         return
     ts = vn_now().strftime("%Y-%m-%dT%H:%M:%S+07:00")
     update_file(BASE / sec["file"], items, ts)

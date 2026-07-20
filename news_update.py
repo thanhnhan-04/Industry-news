@@ -21,6 +21,8 @@ import urllib.request
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
+from sentiment_update import refresh_sentiment
+
 
 BASE = Path(__file__).resolve().parent
 RULES = json.loads((BASE / "news-rules.json").read_text(encoding="utf-8"))
@@ -240,10 +242,13 @@ def update_file(path: Path, items: list[dict], ts: str) -> None:
         current = re.search(r"// <NEWS-ITEMS>.*?// </NEWS-ITEMS>", text, flags=re.S)
         if current and current.group(0) == block:
             print(f"  [same] tin chưa đổi; giữ nguyên {path.name}")
+            if refresh_sentiment(path):
+                print(f"  [sentiment] cập nhật sentiment từ tin/số liệu mới")
             return
         text = re.sub(r"// <NEWS-ITEMS>.*?// </NEWS-ITEMS>", lambda _: block, text, count=1, flags=re.S)
     text = re.sub(r'lastUpdated:\s*"[^"]*"', f'lastUpdated: "{ts}"', text, count=1)
     path.write_text(text, encoding="utf-8")
+    refresh_sentiment(path)
 
 
 def run_sector(key: str) -> None:
@@ -272,6 +277,7 @@ def run_sector(key: str) -> None:
     items = pick_items(items)
     if not items:
         print(f"  [warn] không lấy được item tin mới; giữ nguyên {sec['file']}\n")
+        refresh_sentiment(BASE / sec["file"])
         return
     update_file(BASE / sec["file"], items, vn_now().strftime("%Y-%m-%dT%H:%M:%S+07:00"))
     print(f"  -> ghi {len(items)} item tin vào {sec['file']}\n")
