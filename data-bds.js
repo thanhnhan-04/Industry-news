@@ -8,7 +8,7 @@ window.SECTORS.bds = {
   order: 2,
   scope: "VHM, VRE, NLG, KDH, DXG, PDR, DIG, NVL, HDG, KBC",
   subtitle: "Sentiment ngành bất động sản VN theo chuỗi giá trị — pháp lý & gỡ vướng, nguồn cung & mở bán, cầu & giá, tín dụng & lãi suất, trái phiếu & đáo hạn, hạ tầng & quy hoạch, tài chính DN, dòng tiền. Phạm vi: VHM, VRE, NLG, KDH, DXG, PDR, DIG, NVL, HDG, KBC. Chỉ tin có nguồn cập nhật ≤ 30 ngày.",
-  lastUpdated: "2026-07-21T18:25:20+07:00",
+  lastUpdated: "2026-07-21T18:32:04+07:00",
   factors: {
     legal: "Pháp lý & gỡ vướng", supply: "Nguồn cung & mở bán", demand: "Cầu & giá",
     credit: "Tín dụng & lãi suất", bond: "Trái phiếu & đáo hạn", infra: "Hạ tầng & quy hoạch",
@@ -16,7 +16,7 @@ window.SECTORS.bds = {
   },
   sentiment: {
     score: 2, date: "2026-07-21",
-    reason: "Tự động tổng hợp từ 8 tín hiệu mới nhất trong 3 ngày gần nhất. Tích cực: Tuyên Quang thu hút 28 dự án FDI với tổng vốn hơn 288 triệu USD - Vietnam.vn (Vietnam.vn, 21/07/2026); Muốn bán nhà phải sạch nợ ngân hàng: Nghịch lý vốn của dự án nhà ở thương mại và cơ hội tháo gỡ khi sửa… (Tạp chí Điện tử Luật sư Việt Nam, 21/07/2026). Tiêu cực: Nhóm bất động sản phiên 20/07: 0 mã tăng / 10 mã giảm (vnstock (VCI), 20/07/2026 (truy xuất)). Đây là chấm điểm rule-based từ tin/số liệu tự động; mở nguồn để kiểm chứng trước khi ra quyết định."
+    reason: "Tự động tổng hợp từ 8 tín hiệu mới nhất trong 3 ngày gần nhất. Tích cực: Tuyên Quang thu hút 28 dự án FDI với tổng vốn hơn 288 triệu USD - Vietnam.vn (Vietnam.vn, 21/07/2026); Muốn bán nhà phải sạch nợ ngân hàng: Nghịch lý vốn của dự án nhà ở thương mại và cơ hội tháo gỡ khi sửa… (Tạp chí Điện tử Luật sư Việt Nam, 21/07/2026). Tiêu cực: Nhóm bất động sản phiên 21/07: 2 mã tăng / 8 mã giảm (vnstock (VCI), 21/07/2026 (truy xuất)). Đây là chấm điểm rule-based từ tin/số liệu tự động; mở nguồn để kiểm chứng trước khi ra quyết định."
   },
   items: [
     {
@@ -54,7 +54,7 @@ window.SECTORS.bds = {
   ],
   // <PY-ITEMS> khối này do quant_update.py tự ghi mỗi sáng — ĐỪNG sửa tay
   itemsPY: [
-    {"factor": "market", "impact": -1, "date": "2026-07-20", "srcDate": "20/07/2026 (truy xuất)", "isNew": true, "aff": ["DXG", "DIG", "HDG", "PDR", "VRE", "NLG"], "title": "Nhóm bất động sản phiên 20/07: 0 mã tăng / 10 mã giảm", "desc": "Ý nghĩa đầu tư: Diễn biến giá nhóm — DXG -7.0%; DIG -6.6%; HDG -5.6%; PDR -5.6%; VRE -5.3%; NLG -4.6%. Dùng để soi dòng tiền và xác nhận/tương phản với luận điểm cơ bản.", "srcName": "vnstock (VCI)", "url": "https://www.hsx.vn/", "src": "py"}
+    {"factor": "market", "impact": -1, "date": "2026-07-21", "srcDate": "21/07/2026 (truy xuất)", "isNew": true, "aff": ["DIG", "DXG", "PDR", "NLG", "HDG", "NVL"], "title": "Nhóm bất động sản phiên 21/07: 2 mã tăng / 8 mã giảm", "desc": "Ý nghĩa đầu tư: Diễn biến giá nhóm — DIG -3.6%; DXG -3.1%; PDR -2.4%; NLG -1.7%; HDG -1.5%; NVL +1.2%. Dùng để soi dòng tiền và xác nhận/tương phản với luận điểm cơ bản.", "srcName": "vnstock (VCI)", "url": "https://www.hsx.vn/", "src": "py"}
   ],
   // </PY-ITEMS>
   // <NEWS-ITEMS> khối này do news_update.py tự ghi — ĐỪNG sửa tay
