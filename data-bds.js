@@ -8,7 +8,7 @@ window.SECTORS.bds = {
   order: 2,
   scope: "VHM, VRE, NLG, KDH, DXG, PDR, DIG, NVL, HDG, KBC",
   subtitle: "Sentiment ngành bất động sản VN theo chuỗi giá trị — pháp lý & gỡ vướng, nguồn cung & mở bán, cầu & giá, tín dụng & lãi suất, trái phiếu & đáo hạn, hạ tầng & quy hoạch, tài chính DN, dòng tiền. Phạm vi: VHM, VRE, NLG, KDH, DXG, PDR, DIG, NVL, HDG, KBC. Chỉ tin có nguồn cập nhật ≤ 30 ngày.",
-  lastUpdated: "2026-07-23T18:28:04+07:00",
+  lastUpdated: "2026-07-23T18:35:05+07:00",
   factors: {
     legal: "Pháp lý & gỡ vướng", supply: "Nguồn cung & mở bán", demand: "Cầu & giá",
     credit: "Tín dụng & lãi suất", bond: "Trái phiếu & đáo hạn", infra: "Hạ tầng & quy hoạch",
@@ -54,7 +54,7 @@ window.SECTORS.bds = {
   ],
   // <PY-ITEMS> khối này do quant_update.py tự ghi mỗi sáng — ĐỪNG sửa tay
   itemsPY: [
-    {"factor": "market", "impact": 0, "date": "2026-07-22", "srcDate": "22/07/2026 (truy xuất)", "isNew": true, "aff": ["VHM", "VRE", "NLG", "PDR", "DIG", "DXG"], "title": "Nhóm bất động sản phiên 22/07: 3 mã tăng / 6 mã giảm", "desc": "Ý nghĩa đầu tư: Diễn biến giá nhóm — VHM -7.0%; VRE -5.6%; NLG -2.8%; PDR -2.4%; DIG +1.4%; DXG +0.9%. Dùng để soi dòng tiền và xác nhận/tương phản với luận điểm cơ bản.", "srcName": "vnstock (VCI)", "url": "https://www.hsx.vn/", "src": "py"}
+    {"factor": "market", "impact": 0, "date": "2026-07-23", "srcDate": "23/07/2026 (truy xuất)", "isNew": true, "aff": ["DXG", "VHM", "NLG", "KBC", "DIG", "VRE"], "title": "Nhóm bất động sản phiên 23/07: 4 mã tăng / 3 mã giảm", "desc": "Ý nghĩa đầu tư: Diễn biến giá nhóm — DXG -5.0%; VHM +4.0%; NLG -3.8%; KBC +3.5%; DIG -1.8%; VRE +1.1%. Dùng để soi dòng tiền và xác nhận/tương phản với luận điểm cơ bản.", "srcName": "vnstock (VCI)", "url": "https://www.hsx.vn/", "src": "py"}
   ],
   // </PY-ITEMS>
   // <NEWS-ITEMS> khối này do news_update.py tự ghi — ĐỪNG sửa tay

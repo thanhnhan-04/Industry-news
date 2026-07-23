@@ -8,14 +8,14 @@ window.SECTORS.thuysan = {
   order: 3,
   scope: "VHC, ANV, FMC, MPC, IDI, CMX",
   subtitle: "Sentiment ngành thủy sản VN theo chuỗi giá trị — xuất khẩu & thị trường, thuế & phòng vệ thương mại, nguyên liệu/nuôi trồng, chi phí đầu vào, tỷ giá, rào cản (IUU), tài chính, dòng tiền. Phạm vi: VHC, ANV, FMC, MPC, IDI, CMX (+ ASM, ABT). Chỉ tin có nguồn cập nhật ≤ 30 ngày.",
-  lastUpdated: "2026-07-23T16:29:21+07:00",
+  lastUpdated: "2026-07-23T18:35:53+07:00",
   factors: {
   export:"Xuất khẩu & thị trường", tariff:"Thuế & phòng vệ TM", material:"Nguyên liệu & nuôi trồng",
   feed:"Chi phí đầu vào", fx:"Tỷ giá", policy:"Pháp lý & rào cản (IUU)", finance:"Tài chính DN", market:"Thị trường & dòng tiền"
 },
   sentiment: {
     score: 1, date: "2026-07-23",
-    reason: "Tự động tổng hợp từ 11 tín hiệu mới nhất trong 3 ngày gần nhất. Tích cực: Giá thủy sản bán lẻ tại Mỹ tiếp tục tăng mạnh trong tháng 6/2026 - Vasep. (Vasep., 23/07/2026); Giá bột cá Peru lập kỷ lục khi tồn kho tại Trung Quốc cạn dần, kỳ vọng nguồn cung mới suy giảm - Vasep. (Vasep., 23/07/2026). Tiêu cực: Mỹ áp thuế 25% với hàng Brazil từ 22/7 sau điều tra thương mại - Vasep. (Vasep., 23/07/2026); Nhóm thủy sản phiên 22/07: 1 mã tăng / 5 mã giảm (vnstock (VCI), 22/07/2026 (truy xuất)). Có 5 tín hiệu trung tính/chờ kiểm chứng. Đây là chấm điểm rule-based từ tin/số liệu tự động; mở nguồn để kiểm chứng trước khi ra quyết định."
+    reason: "Tự động tổng hợp từ 11 tín hiệu mới nhất trong 3 ngày gần nhất. Tích cực: Giá thủy sản bán lẻ tại Mỹ tiếp tục tăng mạnh trong tháng 6/2026 - Vasep. (Vasep., 23/07/2026); Giá bột cá Peru lập kỷ lục khi tồn kho tại Trung Quốc cạn dần, kỳ vọng nguồn cung mới suy giảm - Vasep. (Vasep., 23/07/2026). Tiêu cực: Mỹ áp thuế 25% với hàng Brazil từ 22/7 sau điều tra thương mại - Vasep. (Vasep., 23/07/2026). Có 6 tín hiệu trung tính/chờ kiểm chứng. Đây là chấm điểm rule-based từ tin/số liệu tự động; mở nguồn để kiểm chứng trước khi ra quyết định."
   },
   items: [
     {factor:"finance", impact:2, date:"2026-06-30", srcDate:"30/06/2026", isNew:true, aff:["VHC"], title:"Vĩnh Hoàn tháng 5: doanh thu thuần 1.737 tỷ (+44%), Mỹ +46%, sản phẩm phụ (C&G) +102%", desc:"Ý nghĩa đầu tư: Thị trường Mỹ (633 tỷ, +46%) và EU (+81%), TQ (+50%) đồng loạt phục hồi; mảng sản phẩm phụ collagen/gelatin bật +102% lên 336 tỷ — củng cố biên lợi nhuận và vị thế dẫn đầu cá tra của VHC.", srcName:"Tin nhanh chứng khoán (ĐTCK)", url:"https://www.tinnhanhchungkhoan.vn/co-phieu-thuy-san-don-mua-cao-diem-don-hang-post393075.html"},
@@ -28,9 +28,9 @@ window.SECTORS.thuysan = {
   ],
   // <PY-ITEMS> khối này do quant_update.py tự ghi mỗi sáng — ĐỪNG sửa tay
   itemsPY: [
-    {"factor": "feed", "impact": 0, "date": "2026-07-22", "srcDate": "22/07/2026 (truy xuất)", "isNew": false, "aff": ["VHC", "ANV", "FMC", "MPC"], "title": "Khô đậu tương CBOT: 329.3 USD/tấn ngắn (+0.8% phiên 22/07)", "desc": "Ý nghĩa đầu tư: Khô đậu đi ngang, chi phí thức ăn ít thay đổi.", "srcName": "Yahoo Finance (ZM=F)", "url": "https://finance.yahoo.com/quote/ZM=F", "src": "py"},
-    {"factor": "fx", "impact": 0, "date": "2026-07-22", "srcDate": "22/07/2026 (truy xuất)", "isNew": false, "aff": ["VHC", "ANV", "FMC", "MPC", "IDI", "CMX"], "title": "Tỷ giá USD/VND: 26310.0 đồng (+0.1% phiên 22/07)", "desc": "Ý nghĩa đầu tư: Tỷ giá ổn định, ít tạo tín hiệu mới.", "srcName": "Yahoo Finance (VND=X)", "url": "https://finance.yahoo.com/quote/VND=X", "src": "py"},
-    {"factor": "market", "impact": -1, "date": "2026-07-22", "srcDate": "22/07/2026 (truy xuất)", "isNew": true, "aff": ["IDI", "VHC", "ANV", "CMX", "MPC", "FMC"], "title": "Nhóm thủy sản phiên 22/07: 1 mã tăng / 5 mã giảm", "desc": "Ý nghĩa đầu tư: Diễn biến giá nhóm — IDI -3.9%; VHC -2.6%; ANV -2.3%; CMX -2.0%; MPC -1.3%; FMC +0.1%. Dùng để soi dòng tiền và xác nhận/tương phản với luận điểm cơ bản.", "srcName": "vnstock (VCI)", "url": "https://www.hsx.vn/", "src": "py"}
+    {"factor": "feed", "impact": 0, "date": "2026-07-23", "srcDate": "23/07/2026 (truy xuất)", "isNew": false, "aff": ["VHC", "ANV", "FMC", "MPC"], "title": "Khô đậu tương CBOT: 333.6 USD/tấn ngắn (+0.6% phiên 23/07)", "desc": "Ý nghĩa đầu tư: Khô đậu đi ngang, chi phí thức ăn ít thay đổi.", "srcName": "Yahoo Finance (ZM=F)", "url": "https://finance.yahoo.com/quote/ZM=F", "src": "py"},
+    {"factor": "fx", "impact": 0, "date": "2026-07-23", "srcDate": "23/07/2026 (truy xuất)", "isNew": false, "aff": ["VHC", "ANV", "FMC", "MPC", "IDI", "CMX"], "title": "Tỷ giá USD/VND: 26312.0 đồng (+0.0% phiên 23/07)", "desc": "Ý nghĩa đầu tư: Tỷ giá ổn định, ít tạo tín hiệu mới.", "srcName": "Yahoo Finance (VND=X)", "url": "https://finance.yahoo.com/quote/VND=X", "src": "py"},
+    {"factor": "market", "impact": 0, "date": "2026-07-23", "srcDate": "23/07/2026 (truy xuất)", "isNew": true, "aff": ["FMC", "VHC", "IDI", "MPC", "ANV", "CMX"], "title": "Nhóm thủy sản phiên 23/07: 3 mã tăng / 3 mã giảm", "desc": "Ý nghĩa đầu tư: Diễn biến giá nhóm — FMC -1.6%; VHC +1.5%; IDI +1.3%; MPC +0.7%; ANV -0.3%; CMX -0.2%. Dùng để soi dòng tiền và xác nhận/tương phản với luận điểm cơ bản.", "srcName": "vnstock (VCI)", "url": "https://www.hsx.vn/", "src": "py"}
   ],
   // </PY-ITEMS>
   // <NEWS-ITEMS> khối này do news_update.py tự ghi — ĐỪNG sửa tay

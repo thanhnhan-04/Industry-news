@@ -8,15 +8,15 @@ window.SECTORS.hanghoa = {
   order: 5,
   scope: "SBT, SLS, LSS, QNS, VNM, IDP, MCM, DBC, BAF, HAG",
   subtitle: "Sentiment nhóm hàng hóa nông nghiệp VN (đường, sữa, sắn, ngô/TĂCN) theo giá hàng hóa & chuỗi giá trị — giá đường, giá sữa bột, ngô & thức ăn chăn nuôi, sắn, chi phí đầu vào, tỷ giá, chính sách & phòng vệ TM, tài chính DN. Phạm vi: SBT, SLS, LSS, QNS, VNM, IDP, MCM, DBC, BAF, HAG. Chỉ tin có nguồn cập nhật ≤ 30 ngày.",
-  lastUpdated: "2026-07-23T16:29:43+07:00",
+  lastUpdated: "2026-07-23T18:38:18+07:00",
   factors: {
     sugar: "Đường", milk: "Sữa", corn: "Ngô & TĂCN", cassava: "Sắn",
     input: "Chi phí đầu vào & logistics", fx: "Tỷ giá & nhập khẩu",
     policy: "Chính sách & phòng vệ TM", finance: "Tài chính DN", market: "Thị trường & dòng tiền"
   },
   sentiment: {
-    score: -1, date: "2026-07-23",
-    reason: "Tự động tổng hợp từ 13 tín hiệu mới nhất trong 3 ngày gần nhất. Tích cực: Mixed Herd Feed Market Forecast Points Higher Toward 2035, Driven by Livestock Intensification and Preci… (IndexBox, 23/07/2026); Sugar Prices Settle Higher on Crude Oil Strength - Barchart.com (Barchart.com, 22/07/2026). Tiêu cực: Headwinds Mounted: Fonterra Trims 2026/27 Milk Price Forecast To $9.25/kgMS Amid Global Oversupply - en.… (en.edairynews.com, 23/07/2026); Ngô CBOT: 481.0 cent/bushel (+6.2% phiên 22/07) (Yahoo Finance (ZC=F), 22/07/2026 (truy xuất)). Có 7 tín hiệu trung tính/chờ kiểm chứng. Đây là chấm điểm rule-based từ tin/số liệu tự động; mở nguồn để kiểm chứng trước khi ra quyết định."
+    score: 1, date: "2026-07-23",
+    reason: "Tự động tổng hợp từ 13 tín hiệu mới nhất trong 3 ngày gần nhất. Tích cực: Mixed Herd Feed Market Forecast Points Higher Toward 2035, Driven by Livestock Intensification and Preci… (IndexBox, 23/07/2026); Sugar Prices Settle Higher on Crude Oil Strength - Barchart.com (Barchart.com, 22/07/2026). Tiêu cực: Headwinds Mounted: Fonterra Trims 2026/27 Milk Price Forecast To $9.25/kgMS Amid Global Oversupply - en.… (en.edairynews.com, 23/07/2026); Ngô CBOT: 488.5 cent/bushel (+5.7% phiên 23/07) (Yahoo Finance (ZC=F), 23/07/2026 (truy xuất)). Có 8 tín hiệu trung tính/chờ kiểm chứng. Đây là chấm điểm rule-based từ tin/số liệu tự động; mở nguồn để kiểm chứng trước khi ra quyết định."
   },
   items: [
     { factor: "corn", impact: -1, date: "2026-06-29", srcDate: "29/06/2026 (truy xuất)", isNew: true, aff: ["DBC","BAF","HAG"], title: "Giá heo hơi tiếp tục giảm: miền Bắc 67–68k, miền Trung 62–67k, miền Nam 61–63k đ/kg", desc: "Ý nghĩa đầu tư: Heo hơi hạ nhiệt và giảm tuần thứ hai liên tiếp ép biên đầu ra của DBC/BAF/HAG; vùng giá 60–68k vẫn có lãi nhưng xu hướng giảm là tín hiệu thận trọng cho lợi nhuận quý 2–3.", srcName: "Thanh Niên", url: "https://thanhnien.vn/gia-heo-hoi-hom-nay-2962026-lai-tiep-tuc-giam-185260629081524846.htm" },
@@ -30,11 +30,11 @@ window.SECTORS.hanghoa = {
   ],
   // <PY-ITEMS> khối này do quant_update.py tự ghi mỗi sáng — ĐỪNG sửa tay
   itemsPY: [
-    {"factor": "sugar", "impact": 0, "date": "2026-07-22", "srcDate": "22/07/2026 (truy xuất)", "isNew": false, "aff": ["SBT", "SLS", "LSS", "QNS"], "title": "Đường thô ICE #11: 14.79 cent/lb (-0.6% phiên 22/07)", "desc": "Ý nghĩa đầu tư: Giá đường thế giới đi ngang, ít tác động tới nhóm mía đường trong ngắn hạn.", "srcName": "Yahoo Finance (SB=F)", "url": "https://finance.yahoo.com/quote/SB=F", "src": "py"},
-    {"factor": "corn", "impact": -2, "date": "2026-07-22", "srcDate": "22/07/2026 (truy xuất)", "isNew": true, "aff": ["DBC", "BAF", "HAG"], "title": "Ngô CBOT: 481.0 cent/bushel (+6.2% phiên 22/07)", "desc": "Ý nghĩa đầu tư: Giá ngô tăng đẩy chi phí thức ăn chăn nuôi, bất lợi biên cho DBC/BAF/HAG.", "srcName": "Yahoo Finance (ZC=F)", "url": "https://finance.yahoo.com/quote/ZC=F", "src": "py"},
-    {"factor": "corn", "impact": 0, "date": "2026-07-22", "srcDate": "22/07/2026 (truy xuất)", "isNew": false, "aff": ["DBC", "BAF"], "title": "Khô đậu tương CBOT: 329.3 USD/tấn ngắn (+0.8% phiên 22/07)", "desc": "Ý nghĩa đầu tư: Khô đậu tương đi ngang.", "srcName": "Yahoo Finance (ZM=F)", "url": "https://finance.yahoo.com/quote/ZM=F", "src": "py"},
-    {"factor": "fx", "impact": 0, "date": "2026-07-22", "srcDate": "22/07/2026 (truy xuất)", "isNew": false, "aff": ["VNM", "IDP", "MCM", "DBC", "BAF"], "title": "Tỷ giá USD/VND: 26310.0 đồng (+0.1% phiên 22/07)", "desc": "Ý nghĩa đầu tư: Tỷ giá USD/VND ổn định, ít tác động chi phí nhập khẩu.", "srcName": "Yahoo Finance (VND=X)", "url": "https://finance.yahoo.com/quote/VND=X", "src": "py"},
-    {"factor": "market", "impact": -1, "date": "2026-07-22", "srcDate": "22/07/2026 (truy xuất)", "isNew": true, "aff": ["SLS", "IDP", "DBC", "LSS", "BAF", "MCM"], "title": "Nhóm hàng hóa phiên 22/07: 2 mã tăng / 7 mã giảm", "desc": "Ý nghĩa đầu tư: Diễn biến giá nhóm — SLS -4.1%; IDP +3.5%; DBC -1.8%; LSS -1.7%; BAF -1.4%; MCM -1.3%. Dùng để soi dòng tiền và xác nhận/tương phản với luận điểm cơ bản.", "srcName": "vnstock (VCI)", "url": "https://www.hsx.vn/", "src": "py"}
+    {"factor": "sugar", "impact": 0, "date": "2026-07-23", "srcDate": "23/07/2026 (truy xuất)", "isNew": false, "aff": ["SBT", "SLS", "LSS", "QNS"], "title": "Đường thô ICE #11: 14.85 cent/lb (+0.7% phiên 23/07)", "desc": "Ý nghĩa đầu tư: Giá đường thế giới đi ngang, ít tác động tới nhóm mía đường trong ngắn hạn.", "srcName": "Yahoo Finance (SB=F)", "url": "https://finance.yahoo.com/quote/SB=F", "src": "py"},
+    {"factor": "corn", "impact": -1, "date": "2026-07-23", "srcDate": "23/07/2026 (truy xuất)", "isNew": true, "aff": ["DBC", "BAF", "HAG"], "title": "Ngô CBOT: 488.5 cent/bushel (+5.7% phiên 23/07)", "desc": "Ý nghĩa đầu tư: Giá ngô tăng đẩy chi phí thức ăn chăn nuôi, bất lợi biên cho DBC/BAF/HAG.", "srcName": "Yahoo Finance (ZC=F)", "url": "https://finance.yahoo.com/quote/ZC=F", "src": "py"},
+    {"factor": "corn", "impact": 0, "date": "2026-07-23", "srcDate": "23/07/2026 (truy xuất)", "isNew": false, "aff": ["DBC", "BAF"], "title": "Khô đậu tương CBOT: 333.6 USD/tấn ngắn (+0.6% phiên 23/07)", "desc": "Ý nghĩa đầu tư: Khô đậu tương đi ngang.", "srcName": "Yahoo Finance (ZM=F)", "url": "https://finance.yahoo.com/quote/ZM=F", "src": "py"},
+    {"factor": "fx", "impact": 0, "date": "2026-07-23", "srcDate": "23/07/2026 (truy xuất)", "isNew": false, "aff": ["VNM", "IDP", "MCM", "DBC", "BAF"], "title": "Tỷ giá USD/VND: 26312.0 đồng (+0.0% phiên 23/07)", "desc": "Ý nghĩa đầu tư: Tỷ giá USD/VND ổn định, ít tác động chi phí nhập khẩu.", "srcName": "Yahoo Finance (VND=X)", "url": "https://finance.yahoo.com/quote/VND=X", "src": "py"},
+    {"factor": "market", "impact": 0, "date": "2026-07-23", "srcDate": "23/07/2026 (truy xuất)", "isNew": true, "aff": ["SLS", "IDP", "VNM", "MCM", "LSS", "DBC"], "title": "Nhóm hàng hóa phiên 23/07: 4 mã tăng / 5 mã giảm", "desc": "Ý nghĩa đầu tư: Diễn biến giá nhóm — SLS -5.1%; IDP +3.5%; VNM -2.2%; MCM -1.5%; LSS +0.7%; DBC +0.6%. Dùng để soi dòng tiền và xác nhận/tương phản với luận điểm cơ bản.", "srcName": "vnstock (VCI)", "url": "https://www.hsx.vn/", "src": "py"}
   ],
   // </PY-ITEMS>
   // <NEWS-ITEMS> khối này do news_update.py tự ghi — ĐỪNG sửa tay
