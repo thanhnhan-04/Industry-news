@@ -21,14 +21,5 @@ if [[ -z "$PYTHON_BIN" ]]; then
   fi
 fi
 
-{
-  echo "===== $(date '+%Y-%m-%d %H:%M:%S') auto update ====="
-  echo "Mode: token-free quant update"
-  "$PYTHON_BIN" quant_update.py
-} >> logs/quant_update.log 2>&1
-
-{
-  echo "===== $(date '+%Y-%m-%d %H:%M:%S') news update ====="
-  echo "Mode: token-free RSS/news rule update"
-  "$PYTHON_BIN" news_update.py
-} >> logs/news_update.log 2>&1
+MODE="${1:-full}"
+exec "$PYTHON_BIN" auto_update.py "$MODE"

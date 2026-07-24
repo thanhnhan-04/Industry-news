@@ -20,6 +20,12 @@ http://127.0.0.1:8787/dashboard.html
 ./run_auto_update.sh
 ```
 
+Các chế độ:
+
+- `./run_auto_update.sh news`: quét tin nhanh, phù hợp chạy 30 phút/lần.
+- `./run_auto_update.sh full`: cập nhật số liệu thị trường và quét tin.
+- Mỗi lần chạy sẽ build lại `index.html` từ `dashboard.html` và `data-*.js`.
+
 Hoặc mở dashboard local và dùng các nút:
 
 - `Cập nhật số liệu`
@@ -46,7 +52,7 @@ git push
 Trong GitHub, bật Pages ở `Settings > Pages`, chọn `Deploy from a branch`,
 branch `main`, folder `/root`. Website sẽ tự cập nhật sau mỗi lần push.
 
-## Tự cập nhật bản web public
+## Tự cập nhật bản web public và local
 
 GitHub Pages là web tĩnh, nên trình duyệt không tự chạy crawler được. Repo này
 dùng GitHub Actions để tự cập nhật:
@@ -58,3 +64,8 @@ dùng GitHub Actions để tự cập nhật:
   sau đó `python export_index.py`.
 - Nếu có dữ liệu mới, workflow commit `data-*.js` và `index.html`; GitHub Pages
   sẽ tự deploy lại sau commit đó.
+
+Máy local dùng LaunchAgent trong `launchd/`:
+
+- Quét tin: mỗi 30 phút.
+- Cập nhật full: 16:45 giờ Việt Nam các ngày trong tuần, sau phiên.
