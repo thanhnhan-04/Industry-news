@@ -8,14 +8,14 @@ window.SECTORS.oil = {
   order: 1,
   scope: "PVD, PVS, GAS, PVT, BSR, PLX, OIL, POW, DPM, DCM",
   subtitle: "Sentiment ngành dầu khí VN theo chuỗi giá trị — giá dầu, khí/LNG, pháp lý, dự án, biên lọc dầu, vận tải, tài chính, dòng tiền. Phạm vi: PVD, PVS, GAS, PVT, BSR, PLX, OIL, POW, DPM, DCM. Chỉ tin có nguồn cập nhật ≤ 30 ngày.",
-  lastUpdated: "2026-07-28T18:23:35+07:00",
+  lastUpdated: "2026-07-28T18:46:32+07:00",
   factors: {
   oil:"Giá dầu & OPEC+", gas:"Khí & LNG", legal:"Pháp lý & chính sách", project:"Dự án",
   refining:"Biên lọc dầu", shipping:"Vận tải biển", fuel:"Giá xăng dầu", finance:"Tài chính DN", market:"Thị trường & dòng tiền"
 },
   sentiment: {
-    score: -1, date: "2026-07-28",
-    reason: "Tự động tổng hợp từ 12 tín hiệu mới nhất trong 3 ngày gần nhất. Tích cực: WTI Crude Trades Close to $82 Following Iran Pause, War-Driven Surge Recedes - TechStock² (TechStock², 28/07/2026). Tiêu cực: Brent crude: 90.32 USD/thùng (-6.7% phiên 27/07) (Yahoo Finance (BZ=F), 27/07/2026 (truy xuất)); WTI crude: 83.91 USD/thùng (-6.0% phiên 27/07) (Yahoo Finance (CL=F), 27/07/2026 (truy xuất)). Có 8 tín hiệu trung tính/chờ kiểm chứng. Đây là chấm điểm rule-based từ tin/số liệu tự động; mở nguồn để kiểm chứng trước khi ra quyết định."
+    score: 1, date: "2026-07-28",
+    reason: "Tự động tổng hợp từ 12 tín hiệu mới nhất trong 3 ngày gần nhất. Tích cực: WTI Crude Trades Close to $82 Following Iran Pause, War-Driven Surge Recedes - TechStock² (TechStock², 28/07/2026); Nhóm dầu khí phiên 28/07: 9 mã tăng / 1 mã giảm (vnstock (VCI), 28/07/2026 (truy xuất)). Có 10 tín hiệu trung tính/chờ kiểm chứng. Đây là chấm điểm rule-based từ tin/số liệu tự động; mở nguồn để kiểm chứng trước khi ra quyết định."
   },
   items: [
   {factor:"oil", impact:1, date:"2026-06-30", srcDate:"30/06/2026", isNew:true, aff:["BSR","PVD","PVS","PLX","OIL","GAS"],
@@ -133,10 +133,10 @@ window.SECTORS.oil = {
 ],
   // <PY-ITEMS> khối này do quant_update.py tự ghi mỗi sáng — ĐỪNG sửa tay
   itemsPY: [
-    {"factor": "oil", "impact": -2, "date": "2026-07-27", "srcDate": "27/07/2026 (truy xuất)", "isNew": true, "aff": ["PVD", "PVS", "BSR", "PLX", "OIL", "GAS"], "title": "Brent crude: 90.32 USD/thùng (-6.7% phiên 27/07)", "desc": "Ý nghĩa đầu tư: Giá dầu giảm gây áp lực sentiment thượng nguồn và tồn kho lọc dầu; PVD/PVS vẫn bám backlog dự án hơn là spot.", "srcName": "Yahoo Finance (BZ=F)", "url": "https://finance.yahoo.com/quote/BZ=F", "src": "py"},
-    {"factor": "oil", "impact": -2, "date": "2026-07-27", "srcDate": "27/07/2026 (truy xuất)", "isNew": true, "aff": ["PVD", "PVS", "BSR", "PLX", "OIL"], "title": "WTI crude: 83.91 USD/thùng (-6.0% phiên 27/07)", "desc": "Ý nghĩa đầu tư: WTI giảm xác nhận áp lực giá dầu, bất lợi tâm lý nhóm dầu khí.", "srcName": "Yahoo Finance (CL=F)", "url": "https://finance.yahoo.com/quote/CL=F", "src": "py"},
-    {"factor": "gas", "impact": 0, "date": "2026-07-27", "srcDate": "27/07/2026 (truy xuất)", "isNew": false, "aff": ["GAS", "POW", "DPM", "DCM"], "title": "Khí tự nhiên Henry Hub: 2.8 USD/MMBtu (-2.5% phiên 27/07)", "desc": "Ý nghĩa đầu tư: Giá khí đi ngang, ít tác động ngắn hạn.", "srcName": "Yahoo Finance (NG=F)", "url": "https://finance.yahoo.com/quote/NG=F", "src": "py"},
-    {"factor": "market", "impact": -1, "date": "2026-07-27", "srcDate": "27/07/2026 (truy xuất)", "isNew": true, "aff": ["PVD", "PVT", "OIL", "PLX", "PVS", "DCM"], "title": "Nhóm dầu khí phiên 27/07: 0 mã tăng / 10 mã giảm", "desc": "Ý nghĩa đầu tư: Diễn biến giá nhóm — PVD -3.7%; PVT -3.3%; OIL -3.0%; PLX -3.0%; PVS -2.6%; DCM -1.9%. Dùng để soi dòng tiền và xác nhận/tương phản với luận điểm cơ bản.", "srcName": "vnstock (VCI)", "url": "https://www.hsx.vn/", "src": "py"}
+    {"factor": "oil", "impact": 0, "date": "2026-07-28", "srcDate": "28/07/2026 (truy xuất)", "isNew": false, "aff": ["PVD", "PVS", "BSR", "PLX", "OIL", "GAS"], "title": "Brent crude: 86.78 USD/thùng (-1.8% phiên 28/07)", "desc": "Ý nghĩa đầu tư: Giá dầu biến động hẹp, tác động ngắn hạn tới nhóm dầu khí không lớn.", "srcName": "Yahoo Finance (BZ=F)", "url": "https://finance.yahoo.com/quote/BZ=F", "src": "py"},
+    {"factor": "oil", "impact": 0, "date": "2026-07-28", "srcDate": "28/07/2026 (truy xuất)", "isNew": false, "aff": ["PVD", "PVS", "BSR", "PLX", "OIL"], "title": "WTI crude: 81.49 USD/thùng (-1.4% phiên 28/07)", "desc": "Ý nghĩa đầu tư: WTI đi ngang, chưa tạo tín hiệu mới.", "srcName": "Yahoo Finance (CL=F)", "url": "https://finance.yahoo.com/quote/CL=F", "src": "py"},
+    {"factor": "gas", "impact": 0, "date": "2026-07-28", "srcDate": "28/07/2026 (truy xuất)", "isNew": false, "aff": ["GAS", "POW", "DPM", "DCM"], "title": "Khí tự nhiên Henry Hub: 2.73 USD/MMBtu (-1.4% phiên 28/07)", "desc": "Ý nghĩa đầu tư: Giá khí đi ngang, ít tác động ngắn hạn.", "srcName": "Yahoo Finance (NG=F)", "url": "https://finance.yahoo.com/quote/NG=F", "src": "py"},
+    {"factor": "market", "impact": 1, "date": "2026-07-28", "srcDate": "28/07/2026 (truy xuất)", "isNew": true, "aff": ["DCM", "BSR", "PVT", "DPM", "PVS", "OIL"], "title": "Nhóm dầu khí phiên 28/07: 9 mã tăng / 1 mã giảm", "desc": "Ý nghĩa đầu tư: Diễn biến giá nhóm — DCM +4.5%; BSR +2.3%; PVT +2.1%; DPM +1.8%; PVS +0.9%; OIL +0.8%. Dùng để soi dòng tiền và xác nhận/tương phản với luận điểm cơ bản.", "srcName": "vnstock (VCI)", "url": "https://www.hsx.vn/", "src": "py"}
   ],
   // </PY-ITEMS>
   // <NEWS-ITEMS> khối này do news_update.py tự ghi — ĐỪNG sửa tay
