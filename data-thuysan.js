@@ -8,7 +8,7 @@ window.SECTORS.thuysan = {
   order: 3,
   scope: "VHC, ANV, FMC, MPC, IDI, CMX",
   subtitle: "Sentiment ngành thủy sản VN theo chuỗi giá trị — xuất khẩu & thị trường, thuế & phòng vệ thương mại, nguyên liệu/nuôi trồng, chi phí đầu vào, tỷ giá, rào cản (IUU), tài chính, dòng tiền. Phạm vi: VHC, ANV, FMC, MPC, IDI, CMX (+ ASM, ABT). Chỉ tin có nguồn cập nhật ≤ 30 ngày.",
-  lastUpdated: "2026-07-29T16:42:17+07:00",
+  lastUpdated: "2026-07-29T18:52:48+07:00",
   factors: {
   export:"Xuất khẩu & thị trường", tariff:"Thuế & phòng vệ TM", material:"Nguyên liệu & nuôi trồng",
   feed:"Chi phí đầu vào", fx:"Tỷ giá", policy:"Pháp lý & rào cản (IUU)", finance:"Tài chính DN", market:"Thị trường & dòng tiền"
@@ -28,9 +28,9 @@ window.SECTORS.thuysan = {
   ],
   // <PY-ITEMS> khối này do quant_update.py tự ghi mỗi sáng — ĐỪNG sửa tay
   itemsPY: [
-    {"factor": "feed", "impact": 0, "date": "2026-07-28", "srcDate": "28/07/2026 (truy xuất)", "isNew": false, "aff": ["VHC", "ANV", "FMC", "MPC"], "title": "Khô đậu tương CBOT: 322.8 USD/tấn ngắn (+0.6% phiên 28/07)", "desc": "Ý nghĩa đầu tư: Khô đậu đi ngang, chi phí thức ăn ít thay đổi.", "srcName": "Yahoo Finance (ZM=F)", "url": "https://finance.yahoo.com/quote/ZM=F", "src": "py"},
-    {"factor": "fx", "impact": 0, "date": "2026-07-28", "srcDate": "28/07/2026 (truy xuất)", "isNew": false, "aff": ["VHC", "ANV", "FMC", "MPC", "IDI", "CMX"], "title": "Tỷ giá USD/VND: 26313.0 đồng (+0.0% phiên 28/07)", "desc": "Ý nghĩa đầu tư: Tỷ giá ổn định, ít tạo tín hiệu mới.", "srcName": "Yahoo Finance (VND=X)", "url": "https://finance.yahoo.com/quote/VND=X", "src": "py"},
-    {"factor": "market", "impact": 0, "date": "2026-07-28", "srcDate": "28/07/2026 (truy xuất)", "isNew": true, "aff": ["ANV", "MPC", "VHC", "FMC", "CMX", "IDI"], "title": "Nhóm thủy sản phiên 28/07: 2 mã tăng / 4 mã giảm", "desc": "Ý nghĩa đầu tư: Diễn biến giá nhóm — ANV +4.3%; MPC -1.3%; VHC +1.1%; FMC -0.7%; CMX -0.6%; IDI -0.2%. Dùng để soi dòng tiền và xác nhận/tương phản với luận điểm cơ bản.", "srcName": "vnstock (VCI)", "url": "https://www.hsx.vn/", "src": "py"}
+    {"factor": "feed", "impact": 0, "date": "2026-07-29", "srcDate": "29/07/2026 (truy xuất)", "isNew": false, "aff": ["VHC", "ANV", "FMC", "MPC"], "title": "Khô đậu tương CBOT: 323.2 USD/tấn ngắn (+0.9% phiên 29/07)", "desc": "Ý nghĩa đầu tư: Khô đậu đi ngang, chi phí thức ăn ít thay đổi.", "srcName": "Yahoo Finance (ZM=F)", "url": "https://finance.yahoo.com/quote/ZM=F", "src": "py"},
+    {"factor": "fx", "impact": 0, "date": "2026-07-29", "srcDate": "29/07/2026 (truy xuất)", "isNew": false, "aff": ["VHC", "ANV", "FMC", "MPC", "IDI", "CMX"], "title": "Tỷ giá USD/VND: 26330.0 đồng (+0.1% phiên 29/07)", "desc": "Ý nghĩa đầu tư: Tỷ giá ổn định, ít tạo tín hiệu mới.", "srcName": "Yahoo Finance (VND=X)", "url": "https://finance.yahoo.com/quote/VND=X", "src": "py"},
+    {"factor": "market", "impact": 0, "date": "2026-07-29", "srcDate": "29/07/2026 (truy xuất)", "isNew": true, "aff": ["VHC", "IDI", "ANV", "FMC", "MPC", "CMX"], "title": "Nhóm thủy sản phiên 29/07: 2 mã tăng / 2 mã giảm", "desc": "Ý nghĩa đầu tư: Diễn biến giá nhóm — VHC -0.7%; IDI +0.7%; ANV +0.6%; FMC -0.6%; MPC +0.0%; CMX +0.0%. Dùng để soi dòng tiền và xác nhận/tương phản với luận điểm cơ bản.", "srcName": "vnstock (VCI)", "url": "https://www.hsx.vn/", "src": "py"}
   ],
   // </PY-ITEMS>
   // <NEWS-ITEMS> khối này do news_update.py tự ghi — ĐỪNG sửa tay
