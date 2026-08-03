@@ -8,14 +8,14 @@ window.SECTORS.thuysan = {
   order: 3,
   scope: "VHC, ANV, FMC, MPC, IDI, CMX",
   subtitle: "Sentiment ngành thủy sản VN theo chuỗi giá trị — xuất khẩu & thị trường, thuế & phòng vệ thương mại, nguyên liệu/nuôi trồng, chi phí đầu vào, tỷ giá, rào cản (IUU), tài chính, dòng tiền. Phạm vi: VHC, ANV, FMC, MPC, IDI, CMX (+ ASM, ABT). Chỉ tin có nguồn cập nhật ≤ 30 ngày.",
-  lastUpdated: "2026-08-03T14:59:11+07:00",
+  lastUpdated: "2026-08-03T19:49:00+07:00",
   factors: {
   export:"Xuất khẩu & thị trường", tariff:"Thuế & phòng vệ TM", material:"Nguyên liệu & nuôi trồng",
   feed:"Chi phí đầu vào", fx:"Tỷ giá", policy:"Pháp lý & rào cản (IUU)", finance:"Tài chính DN", market:"Thị trường & dòng tiền"
 },
   sentiment: {
     score: 1, date: "2026-08-03",
-    reason: "Tự động tổng hợp từ 3 tín hiệu mới nhất trong 3 ngày gần nhất. Tích cực: Xuất khẩu thủy sản duy trì trên 1 tỷ USD trong tháng 7: Đà tăng sẽ chậm lại khi thuế Mỹ bắt đầu “ngấm” v… (Vasep., 03/08/2026). Có 2 tín hiệu trung tính/chờ kiểm chứng. Đây là chấm điểm rule-based từ tin/số liệu tự động; mở nguồn để kiểm chứng trước khi ra quyết định."
+    reason: "Tự động tổng hợp từ 6 tín hiệu mới nhất trong 3 ngày gần nhất. Tích cực: Xuất khẩu thủy sản duy trì trên 1 tỷ USD trong tháng 7: Đà tăng sẽ chậm lại khi thuế Mỹ bắt đầu “ngấm” v… (Vasep., 03/08/2026); Nhóm thủy sản phiên 03/08: 6 mã tăng / 0 mã giảm (vnstock (VCI), 03/08/2026 (truy xuất)). Có 4 tín hiệu trung tính/chờ kiểm chứng. Đây là chấm điểm rule-based từ tin/số liệu tự động; mở nguồn để kiểm chứng trước khi ra quyết định."
   },
   items: [
     {factor:"finance", impact:2, date:"2026-06-30", srcDate:"30/06/2026", isNew:true, aff:["VHC"], title:"Vĩnh Hoàn tháng 5: doanh thu thuần 1.737 tỷ (+44%), Mỹ +46%, sản phẩm phụ (C&G) +102%", desc:"Ý nghĩa đầu tư: Thị trường Mỹ (633 tỷ, +46%) và EU (+81%), TQ (+50%) đồng loạt phục hồi; mảng sản phẩm phụ collagen/gelatin bật +102% lên 336 tỷ — củng cố biên lợi nhuận và vị thế dẫn đầu cá tra của VHC.", srcName:"Tin nhanh chứng khoán (ĐTCK)", url:"https://www.tinnhanhchungkhoan.vn/co-phieu-thuy-san-don-mua-cao-diem-don-hang-post393075.html"},
@@ -28,9 +28,9 @@ window.SECTORS.thuysan = {
   ],
   // <PY-ITEMS> khối này do quant_update.py tự ghi mỗi sáng — ĐỪNG sửa tay
   itemsPY: [
-    {"factor": "feed", "impact": 0, "date": "2026-07-31", "srcDate": "31/07/2026 (truy xuất)", "isNew": false, "aff": ["VHC", "ANV", "FMC", "MPC"], "title": "Khô đậu tương CBOT: 322.6 USD/tấn ngắn (+2.7% phiên 31/07)", "desc": "Ý nghĩa đầu tư: Khô đậu đi ngang, chi phí thức ăn ít thay đổi.", "srcName": "Yahoo Finance (ZM=F)", "url": "https://finance.yahoo.com/quote/ZM=F", "src": "py"},
-    {"factor": "fx", "impact": 0, "date": "2026-07-31", "srcDate": "31/07/2026 (truy xuất)", "isNew": false, "aff": ["VHC", "ANV", "FMC", "MPC", "IDI", "CMX"], "title": "Tỷ giá USD/VND: 26279.0 đồng (-0.2% phiên 31/07)", "desc": "Ý nghĩa đầu tư: Tỷ giá ổn định, ít tạo tín hiệu mới.", "srcName": "Yahoo Finance (VND=X)", "url": "https://finance.yahoo.com/quote/VND=X", "src": "py"},
-    {"factor": "market", "impact": 0, "date": "2026-07-31", "srcDate": "31/07/2026 (truy xuất)", "isNew": true, "aff": ["ANV", "VHC", "MPC", "IDI", "CMX", "FMC"], "title": "Nhóm thủy sản phiên 31/07: 2 mã tăng / 4 mã giảm", "desc": "Ý nghĩa đầu tư: Diễn biến giá nhóm — ANV -3.1%; VHC -2.8%; MPC -2.6%; IDI +2.1%; CMX +1.3%; FMC -0.6%. Dùng để soi dòng tiền và xác nhận/tương phản với luận điểm cơ bản.", "srcName": "vnstock (VCI)", "url": "https://www.hsx.vn/", "src": "py"}
+    {"factor": "feed", "impact": 0, "date": "2026-08-03", "srcDate": "03/08/2026 (truy xuất)", "isNew": false, "aff": ["VHC", "ANV", "FMC", "MPC"], "title": "Khô đậu tương CBOT: 319.0 USD/tấn ngắn (+2.2% phiên 03/08)", "desc": "Ý nghĩa đầu tư: Khô đậu đi ngang, chi phí thức ăn ít thay đổi.", "srcName": "Yahoo Finance (ZM=F)", "url": "https://finance.yahoo.com/quote/ZM=F", "src": "py"},
+    {"factor": "fx", "impact": 0, "date": "2026-08-03", "srcDate": "03/08/2026 (truy xuất)", "isNew": false, "aff": ["VHC", "ANV", "FMC", "MPC", "IDI", "CMX"], "title": "Tỷ giá USD/VND: 26286.0 đồng (+0.0% phiên 03/08)", "desc": "Ý nghĩa đầu tư: Tỷ giá ổn định, ít tạo tín hiệu mới.", "srcName": "Yahoo Finance (VND=X)", "url": "https://finance.yahoo.com/quote/VND=X", "src": "py"},
+    {"factor": "market", "impact": 1, "date": "2026-08-03", "srcDate": "03/08/2026 (truy xuất)", "isNew": true, "aff": ["CMX", "IDI", "MPC", "ANV", "VHC", "FMC"], "title": "Nhóm thủy sản phiên 03/08: 6 mã tăng / 0 mã giảm", "desc": "Ý nghĩa đầu tư: Diễn biến giá nhóm — CMX +2.6%; IDI +2.3%; MPC +2.0%; ANV +1.8%; VHC +0.8%; FMC +0.1%. Dùng để soi dòng tiền và xác nhận/tương phản với luận điểm cơ bản.", "srcName": "vnstock (VCI)", "url": "https://www.hsx.vn/", "src": "py"}
   ],
   // </PY-ITEMS>
   // <NEWS-ITEMS> khối này do news_update.py tự ghi — ĐỪNG sửa tay
