@@ -8,7 +8,7 @@ window.SECTORS.hanghoa = {
   order: 5,
   scope: "SBT, SLS, LSS, QNS, VNM, IDP, MCM, DBC, BAF, HAG",
   subtitle: "Sentiment nhóm hàng hóa nông nghiệp VN (đường, sữa, sắn, ngô/TĂCN) theo giá hàng hóa & chuỗi giá trị — giá đường, giá sữa bột, ngô & thức ăn chăn nuôi, sắn, chi phí đầu vào, tỷ giá, chính sách & phòng vệ TM, tài chính DN. Phạm vi: SBT, SLS, LSS, QNS, VNM, IDP, MCM, DBC, BAF, HAG. Chỉ tin có nguồn cập nhật ≤ 30 ngày.",
-  lastUpdated: "2026-08-10T11:15:29+07:00",
+  lastUpdated: "2026-08-10T17:53:46+07:00",
   factors: {
     sugar: "Đường", milk: "Sữa", corn: "Ngô & TĂCN", cassava: "Sắn",
     input: "Chi phí đầu vào & logistics", fx: "Tỷ giá & nhập khẩu",
@@ -16,7 +16,7 @@ window.SECTORS.hanghoa = {
   },
   sentiment: {
     score: 1, date: "2026-08-10",
-    reason: "Tự động tổng hợp từ 6 tín hiệu mới nhất trong 3 ngày gần nhất. Tích cực: Global Dairy Markets: U.S. Milk Production Surges As Dairy Herd Reaches 30-Year High - en.edairynews.com (en.edairynews.com, 10/08/2026); Global Food Prices Rise as Wheat, Oils and Sugar Gain on Weather and Geopolitical Risks - RuralVoice (RuralVoice, 09/08/2026). Có 4 tín hiệu trung tính/chờ kiểm chứng. Đây là chấm điểm rule-based từ tin/số liệu tự động; mở nguồn để kiểm chứng trước khi ra quyết định."
+    reason: "Tự động tổng hợp từ 11 tín hiệu mới nhất trong 3 ngày gần nhất. Tích cực: Global Dairy Markets: U.S. Milk Production Surges As Dairy Herd Reaches 30-Year High - en.edairynews.com (en.edairynews.com, 10/08/2026); Nhóm hàng hóa phiên 10/08: 7 mã tăng / 2 mã giảm (vnstock (VCI), 10/08/2026 (truy xuất)). Tiêu cực: Ngô CBOT: 463.0 cent/bushel (+5.5% phiên 10/08) (Yahoo Finance (ZC=F), 10/08/2026 (truy xuất)). Có 7 tín hiệu trung tính/chờ kiểm chứng. Đây là chấm điểm rule-based từ tin/số liệu tự động; mở nguồn để kiểm chứng trước khi ra quyết định."
   },
   items: [
     { factor: "corn", impact: -1, date: "2026-06-29", srcDate: "29/06/2026 (truy xuất)", isNew: true, aff: ["DBC","BAF","HAG"], title: "Giá heo hơi tiếp tục giảm: miền Bắc 67–68k, miền Trung 62–67k, miền Nam 61–63k đ/kg", desc: "Ý nghĩa đầu tư: Heo hơi hạ nhiệt và giảm tuần thứ hai liên tiếp ép biên đầu ra của DBC/BAF/HAG; vùng giá 60–68k vẫn có lãi nhưng xu hướng giảm là tín hiệu thận trọng cho lợi nhuận quý 2–3.", srcName: "Thanh Niên", url: "https://thanhnien.vn/gia-heo-hoi-hom-nay-2962026-lai-tiep-tuc-giam-185260629081524846.htm" },
@@ -30,11 +30,11 @@ window.SECTORS.hanghoa = {
   ],
   // <PY-ITEMS> khối này do quant_update.py tự ghi mỗi sáng — ĐỪNG sửa tay
   itemsPY: [
-    {"factor": "sugar", "impact": 0, "date": "2026-08-07", "srcDate": "07/08/2026 (truy xuất)", "isNew": false, "aff": ["SBT", "SLS", "LSS", "QNS"], "title": "Đường thô ICE #11: 15.78 cent/lb (+1.3% phiên 07/08)", "desc": "Ý nghĩa đầu tư: Giá đường thế giới đi ngang, ít tác động tới nhóm mía đường trong ngắn hạn.", "srcName": "Yahoo Finance (SB=F)", "url": "https://finance.yahoo.com/quote/SB=F", "src": "py"},
-    {"factor": "corn", "impact": -1, "date": "2026-08-07", "srcDate": "07/08/2026 (truy xuất)", "isNew": true, "aff": ["DBC", "BAF", "HAG"], "title": "Ngô CBOT: 465.2 cent/bushel (+6.0% phiên 07/08)", "desc": "Ý nghĩa đầu tư: Giá ngô tăng đẩy chi phí thức ăn chăn nuôi, bất lợi biên cho DBC/BAF/HAG.", "srcName": "Yahoo Finance (ZC=F)", "url": "https://finance.yahoo.com/quote/ZC=F", "src": "py"},
-    {"factor": "corn", "impact": 0, "date": "2026-08-07", "srcDate": "07/08/2026 (truy xuất)", "isNew": false, "aff": ["DBC", "BAF"], "title": "Khô đậu tương CBOT: 316.9 USD/tấn ngắn (+2.0% phiên 07/08)", "desc": "Ý nghĩa đầu tư: Khô đậu tương đi ngang.", "srcName": "Yahoo Finance (ZM=F)", "url": "https://finance.yahoo.com/quote/ZM=F", "src": "py"},
-    {"factor": "fx", "impact": 0, "date": "2026-08-07", "srcDate": "07/08/2026 (truy xuất)", "isNew": false, "aff": ["VNM", "IDP", "MCM", "DBC", "BAF"], "title": "Tỷ giá USD/VND: 26234.0 đồng (-0.1% phiên 07/08)", "desc": "Ý nghĩa đầu tư: Tỷ giá USD/VND ổn định, ít tác động chi phí nhập khẩu.", "srcName": "Yahoo Finance (VND=X)", "url": "https://finance.yahoo.com/quote/VND=X", "src": "py"},
-    {"factor": "market", "impact": 0, "date": "2026-08-07", "srcDate": "07/08/2026 (truy xuất)", "isNew": true, "aff": ["VNM", "IDP", "MCM", "QNS", "SLS", "HAG"], "title": "Nhóm hàng hóa phiên 07/08: 6 mã tăng / 4 mã giảm", "desc": "Ý nghĩa đầu tư: Diễn biến giá nhóm — VNM +5.1%; IDP +3.5%; MCM +2.5%; QNS -0.6%; SLS -0.4%; HAG -0.4%. Dùng để soi dòng tiền và xác nhận/tương phản với luận điểm cơ bản.", "srcName": "vnstock (VCI)", "url": "https://www.hsx.vn/", "src": "py"}
+    {"factor": "sugar", "impact": 0, "date": "2026-08-10", "srcDate": "10/08/2026 (truy xuất)", "isNew": false, "aff": ["SBT", "SLS", "LSS", "QNS"], "title": "Đường thô ICE #11: 16.45 cent/lb (+0.0% phiên 10/08)", "desc": "Ý nghĩa đầu tư: Giá đường thế giới đi ngang, ít tác động tới nhóm mía đường trong ngắn hạn.", "srcName": "Yahoo Finance (SB=F)", "url": "https://finance.yahoo.com/quote/SB=F", "src": "py"},
+    {"factor": "corn", "impact": -1, "date": "2026-08-10", "srcDate": "10/08/2026 (truy xuất)", "isNew": true, "aff": ["DBC", "BAF", "HAG"], "title": "Ngô CBOT: 463.0 cent/bushel (+5.5% phiên 10/08)", "desc": "Ý nghĩa đầu tư: Giá ngô tăng đẩy chi phí thức ăn chăn nuôi, bất lợi biên cho DBC/BAF/HAG.", "srcName": "Yahoo Finance (ZC=F)", "url": "https://finance.yahoo.com/quote/ZC=F", "src": "py"},
+    {"factor": "corn", "impact": 0, "date": "2026-08-10", "srcDate": "10/08/2026 (truy xuất)", "isNew": false, "aff": ["DBC", "BAF"], "title": "Khô đậu tương CBOT: 314.6 USD/tấn ngắn (+2.1% phiên 10/08)", "desc": "Ý nghĩa đầu tư: Khô đậu tương đi ngang.", "srcName": "Yahoo Finance (ZM=F)", "url": "https://finance.yahoo.com/quote/ZM=F", "src": "py"},
+    {"factor": "fx", "impact": 0, "date": "2026-08-10", "srcDate": "10/08/2026 (truy xuất)", "isNew": false, "aff": ["VNM", "IDP", "MCM", "DBC", "BAF"], "title": "Tỷ giá USD/VND: 26203.0 đồng (-0.1% phiên 10/08)", "desc": "Ý nghĩa đầu tư: Tỷ giá USD/VND ổn định, ít tác động chi phí nhập khẩu.", "srcName": "Yahoo Finance (VND=X)", "url": "https://finance.yahoo.com/quote/VND=X", "src": "py"},
+    {"factor": "market", "impact": 1, "date": "2026-08-10", "srcDate": "10/08/2026 (truy xuất)", "isNew": true, "aff": ["IDP", "BAF", "SBT", "SLS", "DBC", "MCM"], "title": "Nhóm hàng hóa phiên 10/08: 7 mã tăng / 2 mã giảm", "desc": "Ý nghĩa đầu tư: Diễn biến giá nhóm — IDP +3.5%; BAF -1.3%; SBT +1.2%; SLS +0.9%; DBC +0.9%; MCM -0.8%. Dùng để soi dòng tiền và xác nhận/tương phản với luận điểm cơ bản.", "srcName": "vnstock (VCI)", "url": "https://www.hsx.vn/", "src": "py"}
   ],
   // </PY-ITEMS>
   // <NEWS-ITEMS> khối này do news_update.py tự ghi — ĐỪNG sửa tay
