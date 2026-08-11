@@ -8,7 +8,7 @@ window.SECTORS.detmay = {
   order: 4,
   scope: "TNG, MSH, TCM, STK, GIL, ADS, VGT, HTG",
   subtitle: "Sentiment ngành dệt may VN theo chuỗi giá trị — đơn hàng & xuất khẩu, thuế & thương mại, nguyên liệu (bông/sợi), tỷ giá, lao động, ESG & xanh hóa, tài chính DN, dòng tiền. Phạm vi: TNG, MSH, TCM, STK, GIL, ADS, VGT, HTG. Chỉ tin có nguồn cập nhật ≤ 30 ngày.",
-  lastUpdated: "2026-08-11T17:05:20+07:00",
+  lastUpdated: "2026-08-11T17:38:51+07:00",
   factors: {
     export: "Đơn hàng & xuất khẩu", tariff: "Thuế & thương mại", input: "Nguyên liệu (bông/sợi)",
     fx: "Tỷ giá", labor: "Lao động & chi phí", esg: "ESG & xanh hóa",
@@ -16,7 +16,7 @@ window.SECTORS.detmay = {
   },
   sentiment: {
     score: 1, date: "2026-08-11",
-    reason: "Tự động tổng hợp từ 11 tín hiệu mới nhất trong 3 ngày gần nhất. Tích cực: Xuất khẩu sang Australia tăng cao 7 tháng đầu năm 2026 - baodautu (baodautu, 11/08/2026); Hướng đi bắt buộc để doanh nghiệp dệt may duy trì đơn hàng - bnews.vn (bnews.vn, 11/08/2026). Tiêu cực: | $8.3 bn out, $192 mn in: China-Africa zero-tariff test - Fibre2Fashion (Fibre2Fashion, 11/08/2026); Turkish textile industry slams Trump tariffs as ‘stab in back’ - Apparel Views (Apparel Views, 10/08/2026). Có 4 tín hiệu trung tính/chờ kiểm chứng. Đây là chấm điểm rule-based từ tin/số liệu tự động; mở nguồn để kiểm chứng trước khi ra quyết định."
+    reason: "Tự động tổng hợp từ 11 tín hiệu mới nhất trong 3 ngày gần nhất. Tích cực: Xuất khẩu sang Australia tăng cao 7 tháng đầu năm 2026 - baodautu (baodautu, 11/08/2026); Hướng đi bắt buộc để doanh nghiệp dệt may duy trì đơn hàng - bnews.vn (bnews.vn, 11/08/2026). Tiêu cực: | $8.3 bn out, $192 mn in: China-Africa zero-tariff test - Fibre2Fashion (Fibre2Fashion, 11/08/2026); Turkish textile industry slams Trump tariffs as ‘stab in back’ - Apparel Views (Apparel Views, 10/08/2026). Có 5 tín hiệu trung tính/chờ kiểm chứng. Đây là chấm điểm rule-based từ tin/số liệu tự động; mở nguồn để kiểm chứng trước khi ra quyết định."
   },
   items: [
     {factor:"finance", impact:1, date:"2026-06-28", srcDate:"28/06/2026", isNew:true, aff:["HTG","VGT"], title:"Dệt may Hòa Thọ (HTG): XK nửa đầu năm 2026 ~148,5 triệu USD (+14%), doanh thu hợp nhất 2.893 tỷ (+9%), lãi riêng 224,3 tỷ (đạt 56% KH năm)", desc:"Ý nghĩa đầu tư: HTG (mảng may FOB, thuộc VGT) duy trì đà tăng trưởng 2 con số bất chấp thị trường biến động — green flag cho KQKD 6T; cổ tức tiền mặt cao là điểm cộng. Theo dõi đơn hàng nửa cuối năm và rủi ro thị trường Mỹ.", srcName:"Báo Đầu tư", url:"https://baodautu.vn/det-may-hoa-tho-xuat-khau-nua-dau-nam-2026-xap-xi-149-trieu-usd-d629575.html"},
@@ -28,9 +28,9 @@ window.SECTORS.detmay = {
   ],
   // <PY-ITEMS> khối này do quant_update.py tự ghi mỗi sáng — ĐỪNG sửa tay
   itemsPY: [
-    {"factor": "input", "impact": 0, "date": "2026-08-10", "srcDate": "10/08/2026 (truy xuất)", "isNew": false, "aff": ["TCM", "STK", "ADS", "VGT", "TNG", "MSH"], "title": "Bông ICE: 84.35 cent/lb (+1.4% phiên 10/08)", "desc": "Ý nghĩa đầu tư: Giá bông đi ngang, tác động chi phí ngắn hạn thấp.", "srcName": "Yahoo Finance (CT=F)", "url": "https://finance.yahoo.com/quote/CT=F", "src": "py"},
-    {"factor": "fx", "impact": 0, "date": "2026-08-10", "srcDate": "10/08/2026 (truy xuất)", "isNew": false, "aff": ["TNG", "MSH", "TCM", "STK", "GIL", "ADS", "VGT", "HTG"], "title": "Tỷ giá USD/VND: 26203.0 đồng (-0.1% phiên 10/08)", "desc": "Ý nghĩa đầu tư: Tỷ giá ổn định, ít tạo tín hiệu mới.", "srcName": "Yahoo Finance (VND=X)", "url": "https://finance.yahoo.com/quote/VND=X", "src": "py"},
-    {"factor": "market", "impact": 1, "date": "2026-08-10", "srcDate": "10/08/2026 (truy xuất)", "isNew": true, "aff": ["GIL", "MSH", "HTG", "TNG", "VGT", "ADS"], "title": "Nhóm dệt may phiên 10/08: 5 mã tăng / 2 mã giảm", "desc": "Ý nghĩa đầu tư: Diễn biến giá nhóm — GIL +6.9%; MSH +2.3%; HTG +1.8%; TNG +1.2%; VGT +0.9%; ADS -0.2%. Dùng để soi dòng tiền và xác nhận/tương phản với luận điểm cơ bản.", "srcName": "vnstock (VCI)", "url": "https://www.hsx.vn/", "src": "py"}
+    {"factor": "input", "impact": 0, "date": "2026-08-11", "srcDate": "11/08/2026 (truy xuất)", "isNew": false, "aff": ["TCM", "STK", "ADS", "VGT", "TNG", "MSH"], "title": "Bông ICE: 84.25 cent/lb (+1.8% phiên 11/08)", "desc": "Ý nghĩa đầu tư: Giá bông đi ngang, tác động chi phí ngắn hạn thấp.", "srcName": "Yahoo Finance (CT=F)", "url": "https://finance.yahoo.com/quote/CT=F", "src": "py"},
+    {"factor": "fx", "impact": 0, "date": "2026-08-11", "srcDate": "11/08/2026 (truy xuất)", "isNew": false, "aff": ["TNG", "MSH", "TCM", "STK", "GIL", "ADS", "VGT", "HTG"], "title": "Tỷ giá USD/VND: 26150.0 đồng (-0.2% phiên 11/08)", "desc": "Ý nghĩa đầu tư: Tỷ giá ổn định, ít tạo tín hiệu mới.", "srcName": "Yahoo Finance (VND=X)", "url": "https://finance.yahoo.com/quote/VND=X", "src": "py"},
+    {"factor": "market", "impact": 0, "date": "2026-08-11", "srcDate": "11/08/2026 (truy xuất)", "isNew": true, "aff": ["GIL", "ADS", "VGT", "TNG", "HTG", "STK"], "title": "Nhóm dệt may phiên 11/08: 4 mã tăng / 3 mã giảm", "desc": "Ý nghĩa đầu tư: Diễn biến giá nhóm — GIL +5.7%; ADS +1.0%; VGT -0.9%; TNG +0.6%; HTG -0.6%; STK -0.5%. Dùng để soi dòng tiền và xác nhận/tương phản với luận điểm cơ bản.", "srcName": "vnstock (VCI)", "url": "https://www.hsx.vn/", "src": "py"}
   ],
   // </PY-ITEMS>
   // <NEWS-ITEMS> khối này do news_update.py tự ghi — ĐỪNG sửa tay
