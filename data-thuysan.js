@@ -8,14 +8,14 @@ window.SECTORS.thuysan = {
   order: 3,
   scope: "VHC, ANV, FMC, MPC, IDI, CMX",
   subtitle: "Sentiment ngành thủy sản VN theo chuỗi giá trị — xuất khẩu & thị trường, thuế & phòng vệ thương mại, nguyên liệu/nuôi trồng, chi phí đầu vào, tỷ giá, rào cản (IUU), tài chính, dòng tiền. Phạm vi: VHC, ANV, FMC, MPC, IDI, CMX (+ ASM, ABT). Chỉ tin có nguồn cập nhật ≤ 30 ngày.",
-  lastUpdated: "2026-08-14T13:56:16+07:00",
+  lastUpdated: "2026-08-14T17:42:52+07:00",
   factors: {
   export:"Xuất khẩu & thị trường", tariff:"Thuế & phòng vệ TM", material:"Nguyên liệu & nuôi trồng",
   feed:"Chi phí đầu vào", fx:"Tỷ giá", policy:"Pháp lý & rào cản (IUU)", finance:"Tài chính DN", market:"Thị trường & dòng tiền"
 },
   sentiment: {
     score: -1, date: "2026-08-14",
-    reason: "Tự động tổng hợp từ 11 tín hiệu mới nhất trong 3 ngày gần nhất. Tích cực: Cá ngừ Việt Nam tăng trưởng tại Chile, thị phần vẫn còn mong manh - VASEP (VASEP, 14/08/2026); New Zealand King Salmon (ASX:NZK) Shares Move Higher as Investors Watch Seafood Demand Trends - Kalkine (Kalkine, 13/08/2026). Tiêu cực: Con giống chất lượng giúp giảm rủi ro trong nuôi tôm nước lợ - VASEP (VASEP, 14/08/2026); Châu Âu đối mặt áp lực cạnh tranh trong ngành thức ăn thủy sản toàn cầu - VASEP (VASEP, 13/08/2026). Có 6 tín hiệu trung tính/chờ kiểm chứng. Đây là chấm điểm rule-based từ tin/số liệu tự động; mở nguồn để kiểm chứng trước khi ra quyết định."
+    reason: "Tự động tổng hợp từ 11 tín hiệu mới nhất trong 3 ngày gần nhất. Tích cực: Cá ngừ Việt Nam tăng trưởng tại Chile, thị phần vẫn còn mong manh - VASEP (VASEP, 14/08/2026); New Zealand King Salmon (ASX:NZK) Shares Move Higher as Investors Watch Seafood Demand Trends - Kalkine (Kalkine, 13/08/2026). Tiêu cực: Con giống chất lượng giúp giảm rủi ro trong nuôi tôm nước lợ - VASEP (VASEP, 14/08/2026); Nhóm thủy sản phiên 14/08: 1 mã tăng / 4 mã giảm (vnstock (VCI), 14/08/2026 (truy xuất)). Có 6 tín hiệu trung tính/chờ kiểm chứng. Đây là chấm điểm rule-based từ tin/số liệu tự động; mở nguồn để kiểm chứng trước khi ra quyết định."
   },
   items: [
     {factor:"finance", impact:2, date:"2026-06-30", srcDate:"30/06/2026", isNew:true, aff:["VHC"], title:"Vĩnh Hoàn tháng 5: doanh thu thuần 1.737 tỷ (+44%), Mỹ +46%, sản phẩm phụ (C&G) +102%", desc:"Ý nghĩa đầu tư: Thị trường Mỹ (633 tỷ, +46%) và EU (+81%), TQ (+50%) đồng loạt phục hồi; mảng sản phẩm phụ collagen/gelatin bật +102% lên 336 tỷ — củng cố biên lợi nhuận và vị thế dẫn đầu cá tra của VHC.", srcName:"Tin nhanh chứng khoán (ĐTCK)", url:"https://www.tinnhanhchungkhoan.vn/co-phieu-thuy-san-don-mua-cao-diem-don-hang-post393075.html"},
@@ -28,9 +28,9 @@ window.SECTORS.thuysan = {
   ],
   // <PY-ITEMS> khối này do quant_update.py tự ghi mỗi sáng — ĐỪNG sửa tay
   itemsPY: [
-    {"factor": "feed", "impact": 0, "date": "2026-08-13", "srcDate": "13/08/2026 (truy xuất)", "isNew": false, "aff": ["VHC", "ANV", "FMC", "MPC"], "title": "Khô đậu tương CBOT: 316.3 USD/tấn ngắn (+1.7% phiên 13/08)", "desc": "Ý nghĩa đầu tư: Khô đậu đi ngang, chi phí thức ăn ít thay đổi.", "srcName": "Yahoo Finance (ZM=F)", "url": "https://finance.yahoo.com/quote/ZM=F", "src": "py"},
-    {"factor": "fx", "impact": 0, "date": "2026-08-13", "srcDate": "13/08/2026 (truy xuất)", "isNew": false, "aff": ["VHC", "ANV", "FMC", "MPC", "IDI", "CMX"], "title": "Tỷ giá USD/VND: 26045.0 đồng (-0.3% phiên 13/08)", "desc": "Ý nghĩa đầu tư: Tỷ giá ổn định, ít tạo tín hiệu mới.", "srcName": "Yahoo Finance (VND=X)", "url": "https://finance.yahoo.com/quote/VND=X", "src": "py"},
-    {"factor": "market", "impact": -1, "date": "2026-08-13", "srcDate": "13/08/2026 (truy xuất)", "isNew": true, "aff": ["ANV", "VHC", "CMX", "FMC", "MPC", "IDI"], "title": "Nhóm thủy sản phiên 13/08: 1 mã tăng / 5 mã giảm", "desc": "Ý nghĩa đầu tư: Diễn biến giá nhóm — ANV -2.5%; VHC +1.9%; CMX -0.8%; FMC -0.7%; MPC -0.7%; IDI -0.6%. Dùng để soi dòng tiền và xác nhận/tương phản với luận điểm cơ bản.", "srcName": "vnstock (VCI)", "url": "https://www.hsx.vn/", "src": "py"}
+    {"factor": "feed", "impact": 0, "date": "2026-08-14", "srcDate": "14/08/2026 (truy xuất)", "isNew": false, "aff": ["VHC", "ANV", "FMC", "MPC"], "title": "Khô đậu tương CBOT: 316.4 USD/tấn ngắn (+2.1% phiên 14/08)", "desc": "Ý nghĩa đầu tư: Khô đậu đi ngang, chi phí thức ăn ít thay đổi.", "srcName": "Yahoo Finance (ZM=F)", "url": "https://finance.yahoo.com/quote/ZM=F", "src": "py"},
+    {"factor": "fx", "impact": 0, "date": "2026-08-14", "srcDate": "14/08/2026 (truy xuất)", "isNew": false, "aff": ["VHC", "ANV", "FMC", "MPC", "IDI", "CMX"], "title": "Tỷ giá USD/VND: 26068.0 đồng (+0.1% phiên 14/08)", "desc": "Ý nghĩa đầu tư: Tỷ giá ổn định, ít tạo tín hiệu mới.", "srcName": "Yahoo Finance (VND=X)", "url": "https://finance.yahoo.com/quote/VND=X", "src": "py"},
+    {"factor": "market", "impact": -1, "date": "2026-08-14", "srcDate": "14/08/2026 (truy xuất)", "isNew": true, "aff": ["ANV", "IDI", "MPC", "VHC", "CMX", "FMC"], "title": "Nhóm thủy sản phiên 14/08: 1 mã tăng / 4 mã giảm", "desc": "Ý nghĩa đầu tư: Diễn biến giá nhóm — ANV -2.6%; IDI -0.8%; MPC -0.7%; VHC +0.6%; CMX -0.4%; FMC +0.0%. Dùng để soi dòng tiền và xác nhận/tương phản với luận điểm cơ bản.", "srcName": "vnstock (VCI)", "url": "https://www.hsx.vn/", "src": "py"}
   ],
   // </PY-ITEMS>
   // <NEWS-ITEMS> khối này do news_update.py tự ghi — ĐỪNG sửa tay
