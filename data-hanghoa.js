@@ -8,15 +8,15 @@ window.SECTORS.hanghoa = {
   order: 5,
   scope: "SBT, SLS, LSS, QNS, VNM, IDP, MCM, DBC, BAF, HAG",
   subtitle: "Sentiment nhóm hàng hóa nông nghiệp VN (đường, sữa, sắn, ngô/TĂCN) theo giá hàng hóa & chuỗi giá trị — giá đường, giá sữa bột, ngô & thức ăn chăn nuôi, sắn, chi phí đầu vào, tỷ giá, chính sách & phòng vệ TM, tài chính DN. Phạm vi: SBT, SLS, LSS, QNS, VNM, IDP, MCM, DBC, BAF, HAG. Chỉ tin có nguồn cập nhật ≤ 30 ngày.",
-  lastUpdated: "2026-08-18T16:39:54+07:00",
+  lastUpdated: "2026-08-18T17:11:11+07:00",
   factors: {
     sugar: "Đường", milk: "Sữa", corn: "Ngô & TĂCN", cassava: "Sắn",
     input: "Chi phí đầu vào & logistics", fx: "Tỷ giá & nhập khẩu",
     policy: "Chính sách & phòng vệ TM", finance: "Tài chính DN", market: "Thị trường & dòng tiền"
   },
   sentiment: {
-    score: 0, date: "2026-08-18",
-    reason: "Tự động tổng hợp từ 11 tín hiệu mới nhất trong 3 ngày gần nhất. Tích cực: Global Sugar Deficit Fears Underpin Prices - Barchart.com (Barchart.com, 18/08/2026); Could a Super El Niño Send Cocoa, Coffee and Sugar Prices Higher? - Modern Diplomacy (Modern Diplomacy, 18/08/2026). Tiêu cực: Ngô siết tồn kho, khô đậu tương dư cung: Chi phí thức ăn chăn nuôi đang phân hóa - VietnamBiz (VietnamBiz, 18/08/2026); Ngô CBOT: 486.5 cent/bushel (+6.0% phiên 17/08) (Yahoo Finance (ZC=F), 17/08/2026 (truy xuất)). Có 7 tín hiệu trung tính/chờ kiểm chứng. Đây là chấm điểm rule-based từ tin/số liệu tự động; mở nguồn để kiểm chứng trước khi ra quyết định."
+    score: -1, date: "2026-08-18",
+    reason: "Tự động tổng hợp từ 11 tín hiệu mới nhất trong 3 ngày gần nhất. Tích cực: Global Sugar Deficit Fears Underpin Prices - Barchart.com (Barchart.com, 18/08/2026); Could a Super El Niño Send Cocoa, Coffee and Sugar Prices Higher? - Modern Diplomacy (Modern Diplomacy, 18/08/2026). Tiêu cực: Ngô siết tồn kho, khô đậu tương dư cung: Chi phí thức ăn chăn nuôi đang phân hóa - VietnamBiz (VietnamBiz, 18/08/2026); Ngô CBOT: 492.5 cent/bushel (+5.9% phiên 18/08) (Yahoo Finance (ZC=F), 18/08/2026 (truy xuất)). Có 6 tín hiệu trung tính/chờ kiểm chứng. Đây là chấm điểm rule-based từ tin/số liệu tự động; mở nguồn để kiểm chứng trước khi ra quyết định."
   },
   items: [
     { factor: "corn", impact: -1, date: "2026-06-29", srcDate: "29/06/2026 (truy xuất)", isNew: true, aff: ["DBC","BAF","HAG"], title: "Giá heo hơi tiếp tục giảm: miền Bắc 67–68k, miền Trung 62–67k, miền Nam 61–63k đ/kg", desc: "Ý nghĩa đầu tư: Heo hơi hạ nhiệt và giảm tuần thứ hai liên tiếp ép biên đầu ra của DBC/BAF/HAG; vùng giá 60–68k vẫn có lãi nhưng xu hướng giảm là tín hiệu thận trọng cho lợi nhuận quý 2–3.", srcName: "Thanh Niên", url: "https://thanhnien.vn/gia-heo-hoi-hom-nay-2962026-lai-tiep-tuc-giam-185260629081524846.htm" },
@@ -30,10 +30,10 @@ window.SECTORS.hanghoa = {
   ],
   // <PY-ITEMS> khối này do quant_update.py tự ghi mỗi sáng — ĐỪNG sửa tay
   itemsPY: [
-    {"factor": "sugar", "impact": 0, "date": "2026-08-17", "srcDate": "17/08/2026 (truy xuất)", "isNew": false, "aff": ["SBT", "SLS", "LSS", "QNS"], "title": "Đường thô ICE #11: 16.89 cent/lb (+1.7% phiên 17/08)", "desc": "Ý nghĩa đầu tư: Giá đường thế giới đi ngang, ít tác động tới nhóm mía đường trong ngắn hạn.", "srcName": "Yahoo Finance (SB=F)", "url": "https://finance.yahoo.com/quote/SB=F", "src": "py"},
-    {"factor": "corn", "impact": -1, "date": "2026-08-17", "srcDate": "17/08/2026 (truy xuất)", "isNew": true, "aff": ["DBC", "BAF", "HAG"], "title": "Ngô CBOT: 486.5 cent/bushel (+6.0% phiên 17/08)", "desc": "Ý nghĩa đầu tư: Giá ngô tăng đẩy chi phí thức ăn chăn nuôi, bất lợi biên cho DBC/BAF/HAG.", "srcName": "Yahoo Finance (ZC=F)", "url": "https://finance.yahoo.com/quote/ZC=F", "src": "py"},
-    {"factor": "corn", "impact": 0, "date": "2026-08-17", "srcDate": "17/08/2026 (truy xuất)", "isNew": false, "aff": ["DBC", "BAF"], "title": "Khô đậu tương CBOT: 317.7 USD/tấn ngắn (+2.9% phiên 17/08)", "desc": "Ý nghĩa đầu tư: Khô đậu tương đi ngang.", "srcName": "Yahoo Finance (ZM=F)", "url": "https://finance.yahoo.com/quote/ZM=F", "src": "py"},
-    {"factor": "fx", "impact": 0, "date": "2026-08-17", "srcDate": "17/08/2026 (truy xuất)", "isNew": false, "aff": ["VNM", "IDP", "MCM", "DBC", "BAF"], "title": "Tỷ giá USD/VND: 26147.0 đồng (+0.3% phiên 17/08)", "desc": "Ý nghĩa đầu tư: Tỷ giá USD/VND ổn định, ít tác động chi phí nhập khẩu.", "srcName": "Yahoo Finance (VND=X)", "url": "https://finance.yahoo.com/quote/VND=X", "src": "py"}
+    {"factor": "sugar", "impact": 0, "date": "2026-08-18", "srcDate": "18/08/2026 (truy xuất)", "isNew": false, "aff": ["SBT", "SLS", "LSS", "QNS"], "title": "Đường thô ICE #11: 17.12 cent/lb (+1.5% phiên 18/08)", "desc": "Ý nghĩa đầu tư: Giá đường thế giới đi ngang, ít tác động tới nhóm mía đường trong ngắn hạn.", "srcName": "Yahoo Finance (SB=F)", "url": "https://finance.yahoo.com/quote/SB=F", "src": "py"},
+    {"factor": "corn", "impact": -1, "date": "2026-08-18", "srcDate": "18/08/2026 (truy xuất)", "isNew": true, "aff": ["DBC", "BAF", "HAG"], "title": "Ngô CBOT: 492.5 cent/bushel (+5.9% phiên 18/08)", "desc": "Ý nghĩa đầu tư: Giá ngô tăng đẩy chi phí thức ăn chăn nuôi, bất lợi biên cho DBC/BAF/HAG.", "srcName": "Yahoo Finance (ZC=F)", "url": "https://finance.yahoo.com/quote/ZC=F", "src": "py"},
+    {"factor": "corn", "impact": -1, "date": "2026-08-18", "srcDate": "18/08/2026 (truy xuất)", "isNew": true, "aff": ["DBC", "BAF"], "title": "Khô đậu tương CBOT: 322.2 USD/tấn ngắn (+3.2% phiên 18/08)", "desc": "Ý nghĩa đầu tư: Khô đậu tăng đẩy chi phí đạm trong thức ăn chăn nuôi, bất lợi biên DBC/BAF.", "srcName": "Yahoo Finance (ZM=F)", "url": "https://finance.yahoo.com/quote/ZM=F", "src": "py"},
+    {"factor": "fx", "impact": 0, "date": "2026-08-18", "srcDate": "18/08/2026 (truy xuất)", "isNew": false, "aff": ["VNM", "IDP", "MCM", "DBC", "BAF"], "title": "Tỷ giá USD/VND: 26200.0 đồng (+0.2% phiên 18/08)", "desc": "Ý nghĩa đầu tư: Tỷ giá USD/VND ổn định, ít tác động chi phí nhập khẩu.", "srcName": "Yahoo Finance (VND=X)", "url": "https://finance.yahoo.com/quote/VND=X", "src": "py"}
   ],
   // </PY-ITEMS>
   // <NEWS-ITEMS> khối này do news_update.py tự ghi — ĐỪNG sửa tay

@@ -8,14 +8,14 @@ window.SECTORS.thuysan = {
   order: 3,
   scope: "VHC, ANV, FMC, MPC, IDI, CMX",
   subtitle: "Sentiment ngành thủy sản VN theo chuỗi giá trị — xuất khẩu & thị trường, thuế & phòng vệ thương mại, nguyên liệu/nuôi trồng, chi phí đầu vào, tỷ giá, rào cản (IUU), tài chính, dòng tiền. Phạm vi: VHC, ANV, FMC, MPC, IDI, CMX (+ ASM, ABT). Chỉ tin có nguồn cập nhật ≤ 30 ngày.",
-  lastUpdated: "2026-08-18T16:39:31+07:00",
+  lastUpdated: "2026-08-18T17:07:52+07:00",
   factors: {
   export:"Xuất khẩu & thị trường", tariff:"Thuế & phòng vệ TM", material:"Nguyên liệu & nuôi trồng",
   feed:"Chi phí đầu vào", fx:"Tỷ giá", policy:"Pháp lý & rào cản (IUU)", finance:"Tài chính DN", market:"Thị trường & dòng tiền"
 },
   sentiment: {
     score: 1, date: "2026-08-18",
-    reason: "Tự động tổng hợp từ 10 tín hiệu mới nhất trong 3 ngày gần nhất. Tích cực: Na Uy: Cá tuyết nuôi lần đầu vượt cá tuyết khai thác về giá trị xuất khẩu - VASEP (VASEP, 18/08/2026); Doanh nghiệp thủy sản nặng gánh lãi vay trong quý 2 - Vietstock (Vietstock, 18/08/2026). Có 8 tín hiệu trung tính/chờ kiểm chứng. Đây là chấm điểm rule-based từ tin/số liệu tự động; mở nguồn để kiểm chứng trước khi ra quyết định."
+    reason: "Tự động tổng hợp từ 10 tín hiệu mới nhất trong 3 ngày gần nhất. Tích cực: Na Uy: Cá tuyết nuôi lần đầu vượt cá tuyết khai thác về giá trị xuất khẩu - VASEP (VASEP, 18/08/2026); Doanh nghiệp thủy sản nặng gánh lãi vay trong quý 2 - Vietstock (Vietstock, 18/08/2026). Tiêu cực: Khô đậu tương CBOT: 322.2 USD/tấn ngắn (+3.2% phiên 18/08) (Yahoo Finance (ZM=F), 18/08/2026 (truy xuất)). Có 7 tín hiệu trung tính/chờ kiểm chứng. Đây là chấm điểm rule-based từ tin/số liệu tự động; mở nguồn để kiểm chứng trước khi ra quyết định."
   },
   items: [
     {factor:"finance", impact:2, date:"2026-06-30", srcDate:"30/06/2026", isNew:true, aff:["VHC"], title:"Vĩnh Hoàn tháng 5: doanh thu thuần 1.737 tỷ (+44%), Mỹ +46%, sản phẩm phụ (C&G) +102%", desc:"Ý nghĩa đầu tư: Thị trường Mỹ (633 tỷ, +46%) và EU (+81%), TQ (+50%) đồng loạt phục hồi; mảng sản phẩm phụ collagen/gelatin bật +102% lên 336 tỷ — củng cố biên lợi nhuận và vị thế dẫn đầu cá tra của VHC.", srcName:"Tin nhanh chứng khoán (ĐTCK)", url:"https://www.tinnhanhchungkhoan.vn/co-phieu-thuy-san-don-mua-cao-diem-don-hang-post393075.html"},
@@ -28,8 +28,8 @@ window.SECTORS.thuysan = {
   ],
   // <PY-ITEMS> khối này do quant_update.py tự ghi mỗi sáng — ĐỪNG sửa tay
   itemsPY: [
-    {"factor": "feed", "impact": 0, "date": "2026-08-17", "srcDate": "17/08/2026 (truy xuất)", "isNew": false, "aff": ["VHC", "ANV", "FMC", "MPC"], "title": "Khô đậu tương CBOT: 317.6 USD/tấn ngắn (+2.9% phiên 17/08)", "desc": "Ý nghĩa đầu tư: Khô đậu đi ngang, chi phí thức ăn ít thay đổi.", "srcName": "Yahoo Finance (ZM=F)", "url": "https://finance.yahoo.com/quote/ZM=F", "src": "py"},
-    {"factor": "fx", "impact": 0, "date": "2026-08-17", "srcDate": "17/08/2026 (truy xuất)", "isNew": false, "aff": ["VHC", "ANV", "FMC", "MPC", "IDI", "CMX"], "title": "Tỷ giá USD/VND: 26147.0 đồng (+0.3% phiên 17/08)", "desc": "Ý nghĩa đầu tư: Tỷ giá ổn định, ít tạo tín hiệu mới.", "srcName": "Yahoo Finance (VND=X)", "url": "https://finance.yahoo.com/quote/VND=X", "src": "py"}
+    {"factor": "feed", "impact": -1, "date": "2026-08-18", "srcDate": "18/08/2026 (truy xuất)", "isNew": true, "aff": ["VHC", "ANV", "FMC", "MPC"], "title": "Khô đậu tương CBOT: 322.2 USD/tấn ngắn (+3.2% phiên 18/08)", "desc": "Ý nghĩa đầu tư: Khô đậu tăng làm tăng tham chiếu chi phí thức ăn thủy sản, bất lợi biên nuôi trồng/chế biến.", "srcName": "Yahoo Finance (ZM=F)", "url": "https://finance.yahoo.com/quote/ZM=F", "src": "py"},
+    {"factor": "fx", "impact": 0, "date": "2026-08-18", "srcDate": "18/08/2026 (truy xuất)", "isNew": false, "aff": ["VHC", "ANV", "FMC", "MPC", "IDI", "CMX"], "title": "Tỷ giá USD/VND: 26200.0 đồng (+0.2% phiên 18/08)", "desc": "Ý nghĩa đầu tư: Tỷ giá ổn định, ít tạo tín hiệu mới.", "srcName": "Yahoo Finance (VND=X)", "url": "https://finance.yahoo.com/quote/VND=X", "src": "py"}
   ],
   // </PY-ITEMS>
   // <NEWS-ITEMS> khối này do news_update.py tự ghi — ĐỪNG sửa tay
