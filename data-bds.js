@@ -8,7 +8,7 @@ window.SECTORS.bds = {
   order: 2,
   scope: "VHM, VRE, NLG, KDH, DXG, PDR, DIG, NVL, HDG, KBC",
   subtitle: "Sentiment ngành bất động sản VN theo chuỗi giá trị — pháp lý & gỡ vướng, nguồn cung & mở bán, cầu & giá, tín dụng & lãi suất, trái phiếu & đáo hạn, hạ tầng & quy hoạch, tài chính DN, dòng tiền. Phạm vi: VHM, VRE, NLG, KDH, DXG, PDR, DIG, NVL, HDG, KBC. Chỉ tin có nguồn cập nhật ≤ 30 ngày.",
-  lastUpdated: "2026-08-21T17:02:43+07:00",
+  lastUpdated: "2026-08-21T17:08:50+07:00",
   factors: {
     legal: "Pháp lý & gỡ vướng", supply: "Nguồn cung & mở bán", demand: "Cầu & giá",
     credit: "Tín dụng & lãi suất", bond: "Trái phiếu & đáo hạn", infra: "Hạ tầng & quy hoạch",
@@ -16,7 +16,7 @@ window.SECTORS.bds = {
   },
   sentiment: {
     score: 1, date: "2026-08-21",
-    reason: "Tự động tổng hợp từ 8 tín hiệu mới nhất trong 3 ngày gần nhất. Tích cực: Nguồn cung bất động sản tăng mạnh, thanh khoản thị trường có dấu hiệu chững lại - nguoixaydung.com.vn (nguoixaydung.com.vn, 21/08/2026); Việt Nam bùng nổ 34,7 tỷ USD vốn FDI 2026 – động lực mới cho bất động sản công nghiệp - Tạp chí Nhịp sốn… (Tạp chí Nhịp sống thị trường, 21/08/2026). Tiêu cực: Chung cư giảm giá, thanh khoản lao dốc, Hà Nội vẫn 123 triệu đồng/m2 - Vietnam.vn (Vietnam.vn, 21/08/2026). Có 2 tín hiệu trung tính/chờ kiểm chứng. Đây là chấm điểm rule-based từ tin/số liệu tự động; mở nguồn để kiểm chứng trước khi ra quyết định."
+    reason: "Tự động tổng hợp từ 9 tín hiệu mới nhất trong 3 ngày gần nhất. Tích cực: Nguồn cung bất động sản tăng mạnh, thanh khoản thị trường có dấu hiệu chững lại - nguoixaydung.com.vn (nguoixaydung.com.vn, 21/08/2026); Việt Nam bùng nổ 34,7 tỷ USD vốn FDI 2026 – động lực mới cho bất động sản công nghiệp - Tạp chí Nhịp sốn… (Tạp chí Nhịp sống thị trường, 21/08/2026). Tiêu cực: Chung cư giảm giá, thanh khoản lao dốc, Hà Nội vẫn 123 triệu đồng/m2 - Vietnam.vn (Vietnam.vn, 21/08/2026). Có 2 tín hiệu trung tính/chờ kiểm chứng. Đây là chấm điểm rule-based từ tin/số liệu tự động; mở nguồn để kiểm chứng trước khi ra quyết định."
   },
   items: [
     {
@@ -54,7 +54,7 @@ window.SECTORS.bds = {
   ],
   // <PY-ITEMS> khối này do quant_update.py tự ghi mỗi sáng — ĐỪNG sửa tay
   itemsPY: [
-    {"factor": "market", "impact": 0, "date": "2026-08-14", "srcDate": "14/08/2026 (truy xuất)", "isNew": true, "aff": ["DXG", "VHM", "VRE", "KBC", "DIG", "NLG"], "title": "Nhóm bất động sản phiên 14/08: 3 mã tăng / 6 mã giảm", "desc": "Ý nghĩa đầu tư: Diễn biến giá nhóm — DXG +6.0%; VHM -5.0%; VRE -2.6%; KBC -2.2%; DIG +1.4%; NLG +1.3%. Dùng để soi dòng tiền và xác nhận/tương phản với luận điểm cơ bản.", "srcName": "vnstock (VCI)", "url": "https://www.hsx.vn/", "src": "py"}
+    {"factor": "market", "impact": 1, "date": "2026-08-21", "srcDate": "21/08/2026 (truy xuất)", "isNew": true, "aff": ["DIG", "DXG", "KDH", "VRE", "PDR", "HDG"], "title": "Nhóm bất động sản phiên 21/08: 10 mã tăng / 0 mã giảm", "desc": "Ý nghĩa đầu tư: Diễn biến giá nhóm — DIG +6.8%; DXG +6.5%; KDH +5.0%; VRE +4.8%; PDR +4.2%; HDG +3.8%. Dùng để soi dòng tiền và xác nhận/tương phản với luận điểm cơ bản.", "srcName": "vnstock (VCI)", "url": "https://www.hsx.vn/", "src": "py"}
   ],
   // </PY-ITEMS>
   // <NEWS-ITEMS> khối này do news_update.py tự ghi — ĐỪNG sửa tay
