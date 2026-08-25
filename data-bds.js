@@ -8,7 +8,7 @@ window.SECTORS.bds = {
   order: 2,
   scope: "VHM, VRE, NLG, KDH, DXG, PDR, DIG, NVL, HDG, KBC",
   subtitle: "Sentiment ngành bất động sản VN theo chuỗi giá trị — pháp lý & gỡ vướng, nguồn cung & mở bán, cầu & giá, tín dụng & lãi suất, trái phiếu & đáo hạn, hạ tầng & quy hoạch, tài chính DN, dòng tiền. Phạm vi: VHM, VRE, NLG, KDH, DXG, PDR, DIG, NVL, HDG, KBC. Chỉ tin có nguồn cập nhật ≤ 30 ngày.",
-  lastUpdated: "2026-08-25T17:02:57+07:00",
+  lastUpdated: "2026-08-25T17:08:57+07:00",
   factors: {
     legal: "Pháp lý & gỡ vướng", supply: "Nguồn cung & mở bán", demand: "Cầu & giá",
     credit: "Tín dụng & lãi suất", bond: "Trái phiếu & đáo hạn", infra: "Hạ tầng & quy hoạch",
@@ -16,7 +16,7 @@ window.SECTORS.bds = {
   },
   sentiment: {
     score: 1, date: "2026-08-25",
-    reason: "Tự động tổng hợp từ 9 tín hiệu mới nhất trong 3 ngày gần nhất. Tích cực: VIB áp dụng gói vay với lãi suất cố định 60 tháng cho khách hàng cá nhân - Vietnam.vn (Vietnam.vn, 25/08/2026); Thị trường bất động sản dịch chuyển từ tăng trưởng cao sang tạo lập giá trị - Việt Báo (Việt Báo, 25/08/2026). Tiêu cực: Áp lực thanh khoản đè nặng thị trường bất động sản - Tạp chí Nhịp sống thị trường (Tạp chí Nhịp sống thị trường, 25/08/2026). Có 2 tín hiệu trung tính/chờ kiểm chứng. Đây là chấm điểm rule-based từ tin/số liệu tự động; mở nguồn để kiểm chứng trước khi ra quyết định."
+    reason: "Tự động tổng hợp từ 9 tín hiệu mới nhất trong 3 ngày gần nhất. Tích cực: VIB áp dụng gói vay với lãi suất cố định 60 tháng cho khách hàng cá nhân - Vietnam.vn (Vietnam.vn, 25/08/2026); Thị trường bất động sản dịch chuyển từ tăng trưởng cao sang tạo lập giá trị - Việt Báo (Việt Báo, 25/08/2026). Tiêu cực: Áp lực thanh khoản đè nặng thị trường bất động sản - Tạp chí Nhịp sống thị trường (Tạp chí Nhịp sống thị trường, 25/08/2026). Có 3 tín hiệu trung tính/chờ kiểm chứng. Đây là chấm điểm rule-based từ tin/số liệu tự động; mở nguồn để kiểm chứng trước khi ra quyết định."
   },
   items: [
     {
@@ -54,7 +54,7 @@ window.SECTORS.bds = {
   ],
   // <PY-ITEMS> khối này do quant_update.py tự ghi mỗi sáng — ĐỪNG sửa tay
   itemsPY: [
-    {"factor": "market", "impact": 1, "date": "2026-08-24", "srcDate": "24/08/2026 (truy xuất)", "isNew": true, "aff": ["PDR", "KDH", "HDG", "VHM", "DIG", "DXG"], "title": "Nhóm bất động sản phiên 24/08: 9 mã tăng / 0 mã giảm", "desc": "Ý nghĩa đầu tư: Diễn biến giá nhóm — PDR +4.5%; KDH +3.1%; HDG +2.4%; VHM +2.4%; DIG +2.3%; DXG +2.2%. Dùng để soi dòng tiền và xác nhận/tương phản với luận điểm cơ bản.", "srcName": "vnstock (VCI)", "url": "https://www.hsx.vn/", "src": "py"}
+    {"factor": "market", "impact": 0, "date": "2026-08-25", "srcDate": "25/08/2026 (truy xuất)", "isNew": true, "aff": ["NLG", "KDH", "NVL", "PDR", "HDG", "DIG"], "title": "Nhóm bất động sản phiên 25/08: 3 mã tăng / 6 mã giảm", "desc": "Ý nghĩa đầu tư: Diễn biến giá nhóm — NLG -2.0%; KDH -1.9%; NVL -1.8%; PDR -1.2%; HDG -0.9%; DIG +0.9%. Dùng để soi dòng tiền và xác nhận/tương phản với luận điểm cơ bản.", "srcName": "vnstock (VCI)", "url": "https://www.hsx.vn/", "src": "py"}
   ],
   // </PY-ITEMS>
   // <NEWS-ITEMS> khối này do news_update.py tự ghi — ĐỪNG sửa tay
