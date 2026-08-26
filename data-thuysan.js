@@ -8,14 +8,14 @@ window.SECTORS.thuysan = {
   order: 3,
   scope: "VHC, ANV, FMC, MPC, IDI, CMX",
   subtitle: "Sentiment ngành thủy sản VN theo chuỗi giá trị — xuất khẩu & thị trường, thuế & phòng vệ thương mại, nguyên liệu/nuôi trồng, chi phí đầu vào, tỷ giá, rào cản (IUU), tài chính, dòng tiền. Phạm vi: VHC, ANV, FMC, MPC, IDI, CMX (+ ASM, ABT). Chỉ tin có nguồn cập nhật ≤ 30 ngày.",
-  lastUpdated: "2026-08-26T17:07:48+07:00",
+  lastUpdated: "2026-08-26T17:21:18+07:00",
   factors: {
   export:"Xuất khẩu & thị trường", tariff:"Thuế & phòng vệ TM", material:"Nguyên liệu & nuôi trồng",
   feed:"Chi phí đầu vào", fx:"Tỷ giá", policy:"Pháp lý & rào cản (IUU)", finance:"Tài chính DN", market:"Thị trường & dòng tiền"
 },
   sentiment: {
     score: 1, date: "2026-08-26",
-    reason: "Tự động tổng hợp từ 11 tín hiệu mới nhất trong 3 ngày gần nhất. Tích cực: Nhập khẩu thủy sản của Hà Lan vượt 5,4 tỷ eur - VASEP (VASEP, 26/08/2026); Canada Tariffs Hit U.S. Agriculture as Trade Costs Surge - AgroLatam (AgroLatam, 26/08/2026). Tiêu cực: US section 301 tariffs create new competitive pressures for Vietnamese seafood - Vietnam Economic Times (Vietnam Economic Times, 26/08/2026); Thuế Section 301 tạo áp lực cạnh tranh mới cho thủy sản Việt Nam - VnEconomy (VnEconomy, 25/08/2026). Có 5 tín hiệu trung tính/chờ kiểm chứng. Đây là chấm điểm rule-based từ tin/số liệu tự động; mở nguồn để kiểm chứng trước khi ra quyết định."
+    reason: "Tự động tổng hợp từ 11 tín hiệu mới nhất trong 3 ngày gần nhất. Tích cực: Nhập khẩu thủy sản của Hà Lan vượt 5,4 tỷ eur - VASEP (VASEP, 26/08/2026); Canada Tariffs Hit U.S. Agriculture as Trade Costs Surge - AgroLatam (AgroLatam, 26/08/2026). Tiêu cực: US section 301 tariffs create new competitive pressures for Vietnamese seafood - Vietnam Economic Times (Vietnam Economic Times, 26/08/2026); Khô đậu tương CBOT: 334.0 USD/tấn ngắn (+4.3% phiên 26/08) (Yahoo Finance (ZM=F), 26/08/2026 (truy xuất)). Có 4 tín hiệu trung tính/chờ kiểm chứng. Đây là chấm điểm rule-based từ tin/số liệu tự động; mở nguồn để kiểm chứng trước khi ra quyết định."
   },
   items: [
     {factor:"finance", impact:2, date:"2026-06-30", srcDate:"30/06/2026", isNew:true, aff:["VHC"], title:"Vĩnh Hoàn tháng 5: doanh thu thuần 1.737 tỷ (+44%), Mỹ +46%, sản phẩm phụ (C&G) +102%", desc:"Ý nghĩa đầu tư: Thị trường Mỹ (633 tỷ, +46%) và EU (+81%), TQ (+50%) đồng loạt phục hồi; mảng sản phẩm phụ collagen/gelatin bật +102% lên 336 tỷ — củng cố biên lợi nhuận và vị thế dẫn đầu cá tra của VHC.", srcName:"Tin nhanh chứng khoán (ĐTCK)", url:"https://www.tinnhanhchungkhoan.vn/co-phieu-thuy-san-don-mua-cao-diem-don-hang-post393075.html"},
@@ -28,9 +28,9 @@ window.SECTORS.thuysan = {
   ],
   // <PY-ITEMS> khối này do quant_update.py tự ghi mỗi sáng — ĐỪNG sửa tay
   itemsPY: [
-    {"factor": "feed", "impact": 0, "date": "2026-08-25", "srcDate": "25/08/2026 (truy xuất)", "isNew": false, "aff": ["VHC", "ANV", "FMC", "MPC"], "title": "Khô đậu tương CBOT: 328.1 USD/tấn ngắn (+2.4% phiên 25/08)", "desc": "Ý nghĩa đầu tư: Khô đậu đi ngang, chi phí thức ăn ít thay đổi.", "srcName": "Yahoo Finance (ZM=F)", "url": "https://finance.yahoo.com/quote/ZM=F", "src": "py"},
-    {"factor": "fx", "impact": 0, "date": "2026-08-25", "srcDate": "25/08/2026 (truy xuất)", "isNew": false, "aff": ["VHC", "ANV", "FMC", "MPC", "IDI", "CMX"], "title": "Tỷ giá USD/VND: 26172.0 đồng (+0.2% phiên 25/08)", "desc": "Ý nghĩa đầu tư: Tỷ giá ổn định, ít tạo tín hiệu mới.", "srcName": "Yahoo Finance (VND=X)", "url": "https://finance.yahoo.com/quote/VND=X", "src": "py"},
-    {"factor": "market", "impact": 0, "date": "2026-08-25", "srcDate": "25/08/2026 (truy xuất)", "isNew": true, "aff": ["ANV", "IDI", "VHC", "FMC", "MPC", "CMX"], "title": "Nhóm thủy sản phiên 25/08: 1 mã tăng / 2 mã giảm", "desc": "Ý nghĩa đầu tư: Diễn biến giá nhóm — ANV +2.0%; IDI -1.0%; VHC -0.6%; FMC +0.0%; MPC +0.0%; CMX +0.0%. Dùng để soi dòng tiền và xác nhận/tương phản với luận điểm cơ bản.", "srcName": "vnstock (VCI)", "url": "https://www.hsx.vn/", "src": "py"}
+    {"factor": "feed", "impact": -1, "date": "2026-08-26", "srcDate": "26/08/2026 (truy xuất)", "isNew": true, "aff": ["VHC", "ANV", "FMC", "MPC"], "title": "Khô đậu tương CBOT: 334.0 USD/tấn ngắn (+4.3% phiên 26/08)", "desc": "Ý nghĩa đầu tư: Khô đậu tăng làm tăng tham chiếu chi phí thức ăn thủy sản, bất lợi biên nuôi trồng/chế biến.", "srcName": "Yahoo Finance (ZM=F)", "url": "https://finance.yahoo.com/quote/ZM=F", "src": "py"},
+    {"factor": "fx", "impact": 0, "date": "2026-08-26", "srcDate": "26/08/2026 (truy xuất)", "isNew": false, "aff": ["VHC", "ANV", "FMC", "MPC", "IDI", "CMX"], "title": "Tỷ giá USD/VND: 26109.0 đồng (-0.2% phiên 26/08)", "desc": "Ý nghĩa đầu tư: Tỷ giá ổn định, ít tạo tín hiệu mới.", "srcName": "Yahoo Finance (VND=X)", "url": "https://finance.yahoo.com/quote/VND=X", "src": "py"},
+    {"factor": "market", "impact": 0, "date": "2026-08-26", "srcDate": "26/08/2026 (truy xuất)", "isNew": true, "aff": ["ANV", "CMX", "FMC", "VHC", "MPC", "IDI"], "title": "Nhóm thủy sản phiên 26/08: 1 mã tăng / 2 mã giảm", "desc": "Ý nghĩa đầu tư: Diễn biến giá nhóm — ANV -0.3%; CMX -0.2%; FMC +0.1%; VHC +0.0%; MPC +0.0%; IDI +0.0%. Dùng để soi dòng tiền và xác nhận/tương phản với luận điểm cơ bản.", "srcName": "vnstock (VCI)", "url": "https://www.hsx.vn/", "src": "py"}
   ],
   // </PY-ITEMS>
   // <NEWS-ITEMS> khối này do news_update.py tự ghi — ĐỪNG sửa tay
