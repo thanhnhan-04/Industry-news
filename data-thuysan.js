@@ -8,7 +8,7 @@ window.SECTORS.thuysan = {
   order: 3,
   scope: "VHC, ANV, FMC, MPC, IDI, CMX",
   subtitle: "Sentiment ngành thủy sản VN theo chuỗi giá trị — xuất khẩu & thị trường, thuế & phòng vệ thương mại, nguyên liệu/nuôi trồng, chi phí đầu vào, tỷ giá, rào cản (IUU), tài chính, dòng tiền. Phạm vi: VHC, ANV, FMC, MPC, IDI, CMX (+ ASM, ABT). Chỉ tin có nguồn cập nhật ≤ 30 ngày.",
-  lastUpdated: "2026-09-03T20:59:50+07:00",
+  lastUpdated: "2026-09-04T00:44:46+07:00",
   factors: {
   export:"Xuất khẩu & thị trường", tariff:"Thuế & phòng vệ TM", material:"Nguyên liệu & nuôi trồng",
   feed:"Chi phí đầu vào", fx:"Tỷ giá", policy:"Pháp lý & rào cản (IUU)", finance:"Tài chính DN", market:"Thị trường & dòng tiền"
@@ -35,8 +35,7 @@ window.SECTORS.thuysan = {
   // </PY-ITEMS>
   // <NEWS-ITEMS> khối này do news_update.py tự ghi — ĐỪNG sửa tay
   itemsNews: [
-    {"id": "09388dbd9eae063d", "factor": "export", "impact": 0, "date": "2026-09-03", "srcDate": "03/09/2026", "isNew": true, "aff": ["VHC", "ANV", "FMC", "MPC"], "title": "Global marine feed ingredient shortage looming on horizon, with few solutions available for shrimp industry - SeafoodSource", "desc": "Rule-based: Global marine feed ingredient shortage looming on horizon, with few solutions available for shrimp industry SeafoodSource Tác động sơ bộ: trung tính/chờ kiểm chứng theo keyword; mở nguồn để kiểm chứng trước khi ra quyết định.", "srcName": "SeafoodSource", "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPMmJLLVg0UEV6czlHSzJQVTBaYnp4dFlRNGEwR0FBd0RBSTQ0Y2RKT3ZIRTJXZ3d2TUI4TGJJaW9PSkRUVGw2NzZPUS1TVDd5RUdEWmotaG5uZzNsLUZsaS1OZ3BVQ2Z2eXBwZ3BERmJXY3ViNk9ETlFFbzREMzdNQXI0UFBjQzZybVFRZE1EUl9Dbk01Zk52QTlacTJFSkZBcWhmOFIyandvSDZzdHo5OHFKWG9KbnJOUUYyRW9wdU9mSld2RHpCSU5fRVZ0eElqcUNfUkVQQ0E?oc=5", "src": "news", "sourceScope": "intl"},
-    {"id": "f8b9ee4fc1626ce4", "factor": "export", "impact": 0, "date": "2026-08-31", "srcDate": "31/08/2026", "isNew": true, "aff": ["VHC", "ANV", "FMC", "MPC"], "title": "Avanti Feeds Targets 5.85 Lakh MT Feed Sales, 19,000 MT Shrimp Exports, ₹175 Crore CAPEX - Sahi", "desc": "Rule-based: Avanti Feeds Targets 5.85 Lakh MT Feed Sales, 19,000 MT Shrimp Exports, ₹175 Crore CAPEX Sahi Tác động sơ bộ: trung tính/chờ kiểm chứng theo keyword; mở nguồn để kiểm chứng trước khi ra quyết định.", "srcName": "Sahi", "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQdWNCMm1lcXp1NlpQTDgyTmFfNzc2Y09JdTZDY3VDMlVRbFAxWGdKSUlYTTZpQ3FoR2UzWldoWHBEc3RNekJOcmRQeDZ5ejAxR2VwYTRfSVlVY0R0R3BpLVUwWFhsTTRGdHNCNEhDMnlfcFBpNW9RdjR6a2JYT2hVUGMtMUFpWUNMal83OWxXT1JKcUlmbUN5MjV1clhmUFFMOG9nTW9JNDdYVWtXYjFxeTRObUpLRml3OXZ3UmZVTFBldw?oc=5", "src": "news", "sourceScope": "intl"}
+    {"id": "09388dbd9eae063d", "factor": "export", "impact": 0, "date": "2026-09-03", "srcDate": "03/09/2026", "isNew": true, "aff": ["VHC", "ANV", "FMC", "MPC"], "title": "Global marine feed ingredient shortage looming on horizon, with few solutions available for shrimp industry - SeafoodSource", "desc": "Rule-based: Global marine feed ingredient shortage looming on horizon, with few solutions available for shrimp industry SeafoodSource Tác động sơ bộ: trung tính/chờ kiểm chứng theo keyword; mở nguồn để kiểm chứng trước khi ra quyết định.", "srcName": "SeafoodSource", "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPMmJLLVg0UEV6czlHSzJQVTBaYnp4dFlRNGEwR0FBd0RBSTQ0Y2RKT3ZIRTJXZ3d2TUI4TGJJaW9PSkRUVGw2NzZPUS1TVDd5RUdEWmotaG5uZzNsLUZsaS1OZ3BVQ2Z2eXBwZ3BERmJXY3ViNk9ETlFFbzREMzdNQXI0UFBjQzZybVFRZE1EUl9Dbk01Zk52QTlacTJFSkZBcWhmOFIyandvSDZzdHo5OHFKWG9KbnJOUUYyRW9wdU9mSld2RHpCSU5fRVZ0eElqcUNfUkVQQ0E?oc=5", "src": "news", "sourceScope": "intl"}
   ],
   // </NEWS-ITEMS>
   valuechain: [
