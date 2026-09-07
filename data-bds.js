@@ -8,7 +8,7 @@ window.SECTORS.bds = {
   order: 2,
   scope: "VHM, VRE, NLG, KDH, DXG, PDR, DIG, NVL, HDG, KBC",
   subtitle: "Sentiment ngành bất động sản VN theo chuỗi giá trị — pháp lý & gỡ vướng, nguồn cung & mở bán, cầu & giá, tín dụng & lãi suất, trái phiếu & đáo hạn, hạ tầng & quy hoạch, tài chính DN, dòng tiền. Phạm vi: VHM, VRE, NLG, KDH, DXG, PDR, DIG, NVL, HDG, KBC. Chỉ tin có nguồn cập nhật ≤ 30 ngày.",
-  lastUpdated: "2026-09-07T20:25:11+07:00",
+  lastUpdated: "2026-09-07T22:18:28+07:00",
   factors: {
     legal: "Pháp lý & gỡ vướng", supply: "Nguồn cung & mở bán", demand: "Cầu & giá",
     credit: "Tín dụng & lãi suất", bond: "Trái phiếu & đáo hạn", infra: "Hạ tầng & quy hoạch",
@@ -16,7 +16,7 @@ window.SECTORS.bds = {
   },
   sentiment: {
     score: 1, date: "2026-09-07",
-    reason: "Tự động tổng hợp từ 7 tín hiệu mới nhất trong 3 ngày gần nhất. Tích cực: Vốn FDI thực hiện 8 tháng năm 2026 lập đỉnh 5 năm - Vietnam+ (VietnamPlus) (Vietnam+ (VietnamPlus), 07/09/2026); Việt Nam hướng tới dòng vốn FDI chất lượng cao - Laodong.vn (Laodong.vn, 07/09/2026). Tiêu cực: Những đối tượng được miễn, giảm tiền thuê nhà ở Lai Châu - Laodong.vn (Laodong.vn, 07/09/2026). Có 1 tín hiệu trung tính/chờ kiểm chứng. Đây là chấm điểm rule-based từ tin/số liệu tự động; mở nguồn để kiểm chứng trước khi ra quyết định."
+    reason: "Tự động tổng hợp từ 8 tín hiệu mới nhất trong 3 ngày gần nhất. Tích cực: Vốn FDI thực hiện 8 tháng năm 2026 lập đỉnh 5 năm - Vietnam+ (VietnamPlus) (Vietnam+ (VietnamPlus), 07/09/2026); Việt Nam hướng tới dòng vốn FDI chất lượng cao - Laodong.vn (Laodong.vn, 07/09/2026). Tiêu cực: Những đối tượng được miễn, giảm tiền thuê nhà ở Lai Châu - Laodong.vn (Laodong.vn, 07/09/2026). Có 2 tín hiệu trung tính/chờ kiểm chứng. Đây là chấm điểm rule-based từ tin/số liệu tự động; mở nguồn để kiểm chứng trước khi ra quyết định."
   },
   items: [
     {
@@ -54,7 +54,7 @@ window.SECTORS.bds = {
   ],
   // <PY-ITEMS> khối này do quant_update.py tự ghi mỗi sáng — ĐỪNG sửa tay
   itemsPY: [
-    {"factor": "market", "impact": 0, "date": "2026-09-04", "srcDate": "04/09/2026 (truy xuất)", "isNew": true, "aff": ["HDG", "NLG", "VHM", "KDH", "DIG", "VRE"], "title": "Nhóm bất động sản phiên 04/09: 5 mã tăng / 4 mã giảm", "desc": "Ý nghĩa đầu tư: Diễn biến giá nhóm — HDG +4.8%; NLG +4.5%; VHM +2.5%; KDH -1.7%; DIG -1.3%; VRE +0.8%. Dùng để soi dòng tiền và xác nhận/tương phản với luận điểm cơ bản.", "srcName": "vnstock (VCI)", "url": "https://www.hsx.vn/", "src": "py"}
+    {"factor": "market", "impact": 0, "date": "2026-09-07", "srcDate": "07/09/2026 (truy xuất)", "isNew": true, "aff": ["HDG", "DXG", "VRE", "PDR", "VHM", "NLG"], "title": "Nhóm bất động sản phiên 07/09: 3 mã tăng / 6 mã giảm", "desc": "Ý nghĩa đầu tư: Diễn biến giá nhóm — HDG -2.9%; DXG -2.5%; VRE +1.9%; PDR -1.2%; VHM -0.9%; NLG -0.8%. Dùng để soi dòng tiền và xác nhận/tương phản với luận điểm cơ bản.", "srcName": "vnstock (VCI)", "url": "https://www.hsx.vn/", "src": "py"}
   ],
   // </PY-ITEMS>
   // <NEWS-ITEMS> khối này do news_update.py tự ghi — ĐỪNG sửa tay
