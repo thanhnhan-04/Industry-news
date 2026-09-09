@@ -8,14 +8,14 @@ window.SECTORS.oil = {
   order: 1,
   scope: "PVD, PVS, GAS, PVT, BSR, PLX, OIL, POW, DPM, DCM",
   subtitle: "Sentiment ngành dầu khí VN theo chuỗi giá trị — giá dầu, khí/LNG, pháp lý, dự án, biên lọc dầu, vận tải, tài chính, dòng tiền. Phạm vi: PVD, PVS, GAS, PVT, BSR, PLX, OIL, POW, DPM, DCM. Chỉ tin có nguồn cập nhật ≤ 30 ngày.",
-  lastUpdated: "2026-09-09T20:51:34+07:00",
+  lastUpdated: "2026-09-09T20:57:16+07:00",
   factors: {
   oil:"Giá dầu & OPEC+", gas:"Khí & LNG", legal:"Pháp lý & chính sách", project:"Dự án",
   refining:"Biên lọc dầu", shipping:"Vận tải biển", fuel:"Giá xăng dầu", finance:"Tài chính DN", market:"Thị trường & dòng tiền"
 },
   sentiment: {
     score: 2, date: "2026-09-09",
-    reason: "Tự động tổng hợp từ 12 tín hiệu mới nhất trong 3 ngày gần nhất. Tích cực: Why isn’t oil above $100 despite supply disruptions? - Finance & Commerce (Finance & Commerce, 09/09/2026); US-Iran Conflict Escalates Yet Oil Prices Stay Below $100 as Three Buffers Counter Supply Disruptions -… (finance.biggo.com, 09/09/2026). Có 4 tín hiệu trung tính/chờ kiểm chứng. Đây là chấm điểm rule-based từ tin/số liệu tự động; mở nguồn để kiểm chứng trước khi ra quyết định."
+    reason: "Tự động tổng hợp từ 12 tín hiệu mới nhất trong 3 ngày gần nhất. Tích cực: Why isn’t oil above $100 despite supply disruptions? - Finance & Commerce (Finance & Commerce, 09/09/2026); US-Iran Conflict Escalates Yet Oil Prices Stay Below $100 as Three Buffers Counter Supply Disruptions -… (finance.biggo.com, 09/09/2026). Có 5 tín hiệu trung tính/chờ kiểm chứng. Đây là chấm điểm rule-based từ tin/số liệu tự động; mở nguồn để kiểm chứng trước khi ra quyết định."
   },
   items: [
   {factor:"oil", impact:1, date:"2026-06-30", srcDate:"30/06/2026", isNew:true, aff:["BSR","PVD","PVS","PLX","OIL","GAS"],
@@ -133,10 +133,10 @@ window.SECTORS.oil = {
 ],
   // <PY-ITEMS> khối này do quant_update.py tự ghi mỗi sáng — ĐỪNG sửa tay
   itemsPY: [
-    {"factor": "oil", "impact": 0, "date": "2026-09-08", "srcDate": "08/09/2026 (truy xuất)", "isNew": false, "aff": ["PVD", "PVS", "BSR", "PLX", "OIL", "GAS"], "title": "Brent crude: 98.35 USD/thùng (+2.1% phiên 08/09)", "desc": "Ý nghĩa đầu tư: Giá dầu biến động hẹp, tác động ngắn hạn tới nhóm dầu khí không lớn.", "srcName": "Yahoo Finance (BZ=F)", "url": "https://finance.yahoo.com/quote/BZ=F", "src": "py"},
-    {"factor": "oil", "impact": 0, "date": "2026-09-08", "srcDate": "08/09/2026 (truy xuất)", "isNew": false, "aff": ["PVD", "PVS", "BSR", "PLX", "OIL"], "title": "WTI crude: 93.43 USD/thùng (+2.1% phiên 08/09)", "desc": "Ý nghĩa đầu tư: WTI đi ngang, chưa tạo tín hiệu mới.", "srcName": "Yahoo Finance (CL=F)", "url": "https://finance.yahoo.com/quote/CL=F", "src": "py"},
-    {"factor": "gas", "impact": 0, "date": "2026-09-08", "srcDate": "08/09/2026 (truy xuất)", "isNew": false, "aff": ["GAS", "POW", "DPM", "DCM"], "title": "Khí tự nhiên Henry Hub: 2.93 USD/MMBtu (-1.5% phiên 08/09)", "desc": "Ý nghĩa đầu tư: Giá khí đi ngang, ít tác động ngắn hạn.", "srcName": "Yahoo Finance (NG=F)", "url": "https://finance.yahoo.com/quote/NG=F", "src": "py"},
-    {"factor": "market", "impact": 1, "date": "2026-09-08", "srcDate": "08/09/2026 (truy xuất)", "isNew": true, "aff": ["PVT", "PVS", "DCM", "BSR", "DPM", "GAS"], "title": "Nhóm dầu khí phiên 08/09: 9 mã tăng / 1 mã giảm", "desc": "Ý nghĩa đầu tư: Diễn biến giá nhóm — PVT +6.8%; PVS +4.3%; DCM +3.0%; BSR +2.7%; DPM +2.5%; GAS +1.9%. Dùng để soi dòng tiền và xác nhận/tương phản với luận điểm cơ bản.", "srcName": "vnstock (VCI)", "url": "https://www.hsx.vn/", "src": "py"}
+    {"factor": "oil", "impact": 0, "date": "2026-09-09", "srcDate": "09/09/2026 (truy xuất)", "isNew": false, "aff": ["PVD", "PVS", "BSR", "PLX", "OIL", "GAS"], "title": "Brent crude: 100.6 USD/thùng (+2.8% phiên 09/09)", "desc": "Ý nghĩa đầu tư: Giá dầu biến động hẹp, tác động ngắn hạn tới nhóm dầu khí không lớn.", "srcName": "Yahoo Finance (BZ=F)", "url": "https://finance.yahoo.com/quote/BZ=F", "src": "py"},
+    {"factor": "oil", "impact": 0, "date": "2026-09-09", "srcDate": "09/09/2026 (truy xuất)", "isNew": false, "aff": ["PVD", "PVS", "BSR", "PLX", "OIL"], "title": "WTI crude: 95.7 USD/thùng (+2.9% phiên 09/09)", "desc": "Ý nghĩa đầu tư: WTI đi ngang, chưa tạo tín hiệu mới.", "srcName": "Yahoo Finance (CL=F)", "url": "https://finance.yahoo.com/quote/CL=F", "src": "py"},
+    {"factor": "gas", "impact": 0, "date": "2026-09-09", "srcDate": "09/09/2026 (truy xuất)", "isNew": false, "aff": ["GAS", "POW", "DPM", "DCM"], "title": "Khí tự nhiên Henry Hub: 2.85 USD/MMBtu (-2.2% phiên 09/09)", "desc": "Ý nghĩa đầu tư: Giá khí đi ngang, ít tác động ngắn hạn.", "srcName": "Yahoo Finance (NG=F)", "url": "https://finance.yahoo.com/quote/NG=F", "src": "py"},
+    {"factor": "market", "impact": 0, "date": "2026-09-09", "srcDate": "09/09/2026 (truy xuất)", "isNew": true, "aff": ["GAS", "OIL", "PVT", "BSR", "PVS", "POW"], "title": "Nhóm dầu khí phiên 09/09: 5 mã tăng / 4 mã giảm", "desc": "Ý nghĩa đầu tư: Diễn biến giá nhóm — GAS +1.5%; OIL +1.5%; PVT -1.4%; BSR +1.3%; PVS -1.3%; POW +1.2%. Dùng để soi dòng tiền và xác nhận/tương phản với luận điểm cơ bản.", "srcName": "vnstock (VCI)", "url": "https://www.hsx.vn/", "src": "py"}
   ],
   // </PY-ITEMS>
   // <NEWS-ITEMS> khối này do news_update.py tự ghi — ĐỪNG sửa tay
